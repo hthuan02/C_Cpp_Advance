@@ -43,13 +43,13 @@ Cho 1 mảng:
    Đây là con trỏ có thể trỏ đến bất kỳ vị trí nào, không quan tâm đến kiểu dữ liệu (char, int double,...đều trỏ được).
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
 
-```void *ptr;  //Khai bao con tro Void
+
+```void * ptr; //Khai bao con tro Void
 ```
 ### 2.2 Function Pointer
    Biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
-   
-```void (*func_ptr)(int, int);  // Khai bao con tro Func
-```
+
+```void (*func_ptr)(int, int); //Khai bao con tro ham
 **So sánh Void & Function Pointer**
 - Code VD1: Tổng, hiệu, tích, thương.
 ```#include<stdio.h>
