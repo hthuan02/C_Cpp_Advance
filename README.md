@@ -22,7 +22,7 @@ alert("Hello");
 console.log("ping");
 ```
 
-Hi there, I am `Nguyen Huynh Minh Tien`.
+Hi there, I am `Huynh Minh Thuan`.
 
 ### Trích dẫn
 
