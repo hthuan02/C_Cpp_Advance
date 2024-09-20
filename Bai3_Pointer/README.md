@@ -8,5 +8,18 @@
 ```int a = 10;
    int * ptr = &a;  
 ```
-   ```ptr``` là một con trỏ, có thể trỏ đến 1 biến kiểu ```int```. Dấu ```*``` để chỉ ```ptr``` là 1 con trở.
+   ```ptr``` là một con trỏ, có thể trỏ đến 1 biến kiểu dữ liệu ```int```. Dấu ```*``` để chỉ ```ptr``` là 1 con trỏ.
+   ```ptr``` lưu địa chỉ của ```a``` và trỏ tới địa chỉ ```a```.
+   
+### Truy xuất giá trị con trỏ
+
+```int a = 10;
+   int * ptr = &a;
+   printf("Dia chi: %p\n", &a);
+   printf("Dia chi: %p\n", ptr);
+   printf("Gia tri tai dia chi: %d\n", *ptr);
+  
+```
+
+
    
