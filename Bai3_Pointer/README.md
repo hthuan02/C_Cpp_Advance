@@ -1,9 +1,11 @@
 # POINTER
 
-### 1. Pointer(Con trỏ):
+## 1. Pointer(Con trỏ)
+
+### 1.1 Khái niệm
    Là 1 biến dùng để lưu địa chỉ của 1 biến, 1 hàm. Con trỏ không lưu giá trị mà nó lưu địa chỉ bộ nhớ nơi biến khác đang sử dụng.
 
-### Khởi tạo con trỏ
+### 1.2 Khởi tạo con trỏ
 
 ```int a = 10;
    int * ptr = &a;  
@@ -11,7 +13,7 @@
    ```ptr``` là một con trỏ, có thể trỏ đến 1 biến kiểu dữ liệu ```int```. Dấu ```*``` để chỉ ```ptr``` là 1 con trỏ.
    ```ptr``` lưu địa chỉ của ```a``` và trỏ tới địa chỉ ```a```.
    
-### Truy xuất giá trị con trỏ
+### 1.3 Truy xuất giá trị con trỏ
 
 ```int a = 10;
    int * ptr = &a;
@@ -20,6 +22,7 @@
    printf("Gia tri tai dia chi: %d\n", *ptr);
   
 ```
+### 1.4 Mảng với con trở
 
 
    
