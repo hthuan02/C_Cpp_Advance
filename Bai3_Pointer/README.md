@@ -22,7 +22,7 @@
    printf("Gia tri tai dia chi: %d\n", *ptr); // In ra giá trị a = 10
 ```
 
-### 1.4 Mảng với con trở
+### 1.4 Mảng với con trỏ
 
 Cho 1 mảng:
 ``` int arr[] = { 2, 3, 5, 7, 8 };
@@ -34,7 +34,7 @@ Cho 1 mảng:
     printf("Gia tri phan tu 1: %d\n", *ptr) // Xuất 2
     printf("Gia tri phan tu 2: %d\n", *(ptr+1) // Xuất 3
     printf("Gia tri phan tu 3: %d\n", *(ptr+2) // Xuất 5   
-
+```
 ### 1.5 Kích thước con trỏ
 
 ##  loại con trỏ
