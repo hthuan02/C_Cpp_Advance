@@ -47,12 +47,11 @@ Cho 1 mảng:
 ```
 
 ### 2.2 Function Pointer
-   Biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
-```void (*func_ptr)(int, int); //Khai bao con tro ham
-```
 
 **So sánh Void & Function Pointer**
+
 - Code VD1: Tổng, hiệu, tích, thương.
+
 ```#include<stdio.h>
   void tong(int a, int b){
     printf("%d + %d = %d\n",a ,b, a + b); 
