@@ -10,8 +10,8 @@
 ```int a = 10;
    int * ptr = &a;  
 ```
-   ```ptr``` là một con trỏ, trỏ đến 1 biến kiểu dữ liệu ```int```. Dấu ```*``` để chỉ ```ptr``` là 1 con trỏ.
-   ```ptr``` lưu địa chỉ của ```a``` và trỏ tới địa chỉ ```a```.
+   `ptr` là một con trỏ, trỏ đến 1 biến kiểu dữ liệu `int`. Dấu `*` để chỉ `ptr` là 1 con trỏ.
+   `ptr` lưu địa chỉ của `a` và trỏ tới địa chỉ `a`.
    
 ### 1.3 Truy xuất giá trị con trỏ
 
@@ -43,14 +43,13 @@ Cho 1 mảng:
    Đây là con trỏ có thể trỏ đến bất kỳ vị trí nào, không quan tâm đến kiểu dữ liệu (char, int double,...đều trỏ được).
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
 
-
 ```void * ptr; //Khai bao con tro Void
 ```
-```void (*func_ptr)(int, int); //Khai bao con tro ham
-```
+
 ### 2.2 Function Pointer
    Biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
-
+```void (*func_ptr)(int, int); //Khai bao con tro ham
+```
 
 **So sánh Void & Function Pointer**
 - Code VD1: Tổng, hiệu, tích, thương.
