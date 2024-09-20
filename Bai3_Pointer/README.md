@@ -37,17 +37,20 @@ Cho 1 mảng:
 ```
 ### 1.5 Kích thước con trỏ
 
-##  loại con trỏ
+##  Phân loại con trỏ
 
 ### 2.1 Void Pointer
-
+   K
 ### 2.2 Function Pointer
 
 ### 2.3 Pointer to Constant(Con trỏ hằng)
 
 ### 2.4 Constant Pointer
 
-### 2.5 NULL Pointer 
+### 2.5 NULL Pointer
+
+### 2.6 Pointer to Pointer
+
 
 
 
