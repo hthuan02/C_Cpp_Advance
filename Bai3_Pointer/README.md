@@ -46,7 +46,8 @@ Cho 1 mảng:
 
 ```void * ptr; //Khai bao con tro Void
 ```
-
+```void (*func_ptr)(int, int); //Khai bao con tro ham
+```
 ### 2.2 Function Pointer
    Biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
 
