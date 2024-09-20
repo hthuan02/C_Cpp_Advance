@@ -44,6 +44,9 @@ Cho 1 mảng:
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
 
 
+```void * ptr; //Khai bao con tro Void
+```
+
 ### 2.2 Function Pointer
    Biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
 
