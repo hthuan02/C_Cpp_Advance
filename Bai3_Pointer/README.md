@@ -41,9 +41,46 @@ Cho 1 mảng:
 
 ### 2.1 Void Pointer
    Đây là con trỏ có thể trỏ đến bất kỳ vị trí nào, không quan tâm đến kiểu dữ liệu (char, int double,...đều trỏ được).
-   
+   - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
+
+   ```void *ptr;  //Khai bao con tro Void
+   ```
 ### 2.2 Function Pointer
    Biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
+   
+  ```void (*func_ptr)(int, int);  // Khai bao con tro Func
+  ```
+**So sánh Void & Function Pointer**
+- Code VD1: Tổng, hiệu, tích, thương.
+```#include<stdio.h>
+  void tong(int a, int b){
+    printf("%d + %d = %d\n",a ,b, a + b); 
+}
+  void hieu(int a, int b){
+    printf("%d - %d = %d\n",a ,b, a - b); 
+}
+  void tich(int a, int b){
+    printf("%d * %d = %d\n",a ,b, a * b); 
+}
+  void thuong(int a, int b){
+    printf("%d / %d = %d\n",a ,b, a / b); 
+}
+
+int main(){
+  int a = 10, b = 5;
+  void (*ptr) (int, int);
+  ptr = tong;
+  ptr(a,b);
+
+  ptr = hieu;
+  ptr(a,b);
+
+  ptr = tich;
+  ptr(a,b);
+
+  ptr = thuong;
+  ptr(a,b);
+```
    
 ### 2.3 Pointer to Constant(Con trỏ hằng)
    Trỏ tới hằng số, đây là số không đổi. Chỉ có thể đọc chứ **không đổi**  
