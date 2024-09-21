@@ -107,7 +107,11 @@ int main(int argc, char *argv[]) {
    Chỉ trỏ đến 1 địa chỉ duy nhất.
    
 ### 2.5 NULL Pointer
-   Con trỏ trống, chưa có biến giá trị.
+>Con trỏ trống, không trỏ đến vùng nhớ nào.
+>Khai báo nhưng chưa sử dụng liền, khi khởi tạo và kết thúc phải gán NULL
+```
+int *ptr = NULL;
+```
    
 ### 2.6 Pointer to Pointer
    Con trỏ trong con trỏ( con trỏ cấp 2, 3, 4,...).
