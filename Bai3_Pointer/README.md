@@ -111,10 +111,9 @@ int main(int argc, char *argv[]) {
 >Khai báo nhưng chưa sử dụng liền.
 
 **Chú ý:** 
-- Khi khai báo con trỏ mà chưa sử dụng thì dùng con trỏ NULL(sẽ không bị **random** giá trị).
+- Khi khai báo con trỏ mà chưa sử dụng thì dùng con trỏ NULL(sẽ không bị **random** giá trị vào địa chỉ rác hoặc trùng lặp địa ).
 - Khởi tạo và kết thúc phải gán NULL.
 
- khi khởi tạo và kết thúc phải gán NULL
 ```
 int *ptr = NULL;
 ```
