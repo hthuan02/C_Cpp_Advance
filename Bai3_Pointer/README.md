@@ -27,7 +27,8 @@
 
 Cho 1 mảng:
 
-``` int arr[] = { 2, 3, 5, 7, 8 };
+```
+    int arr[] = { 2, 3, 5, 7, 8 };
     int * ptr = arr;
 
     printf("Dia chi phan tu 1: %p\n", ptr) 
