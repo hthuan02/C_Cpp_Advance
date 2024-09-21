@@ -7,13 +7,13 @@
 
 ### 1. Regular Pointer(Con trỏ với biến)
 ```
-int a = 10;
-int * ptr = &a;
+    int a = 10;
+    int * ptr = &a;
 
-//Truy xuat con tro
-printf("Dia chi: %p\n", &a); // dia chi cua a
-printf("Dia chi: %p\n", ptr); // dia chi ma ptr tro den 
-printf("Gia tri tai dia chi: %d\n", *ptr); // a = 10
+    //Truy xuat con tro
+    printf("Dia chi: %p\n", &a); // dia chi cua a
+    printf("Dia chi: %p\n", ptr); // dia chi ma ptr tro den 
+    printf("Gia tri tai dia chi: %d\n", *ptr); // a = 10
 ```
 
 ### 1.4 Array Pointer(Con trỏ mảng)
@@ -37,22 +37,22 @@ printf("Gia tri tai dia chi: %d\n", *ptr); // a = 10
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
 
 ```
-void * ptr; //Khai bao con tro Void
+    void * ptr; //Khai bao con tro Void
 ```
 - _VD1: Xuất giá trị ._
 
 ```
-#include <stdio.h>
+    #include <stdio.h>
 
-void Value(void*ptr) {
-   printf("A = %d\n", *(int*)(ptr)); //Ep kieu du lieu int
-}
+    void Value(void*ptr) {
+       printf("A = %d\n", *(int*)(ptr)); //Ep kieu du lieu int
+    }
 
-int main() {
-    int a = 10;
-    Value(&a);
-    return 0;
-}
+    int main() {
+        int a = 10;
+        Value(&a);
+        return 0;
+    }
 ```
 
 ### 2.2 Function Pointer
@@ -66,29 +66,28 @@ int main() {
 - _VD2: Tổng, hiệu, tích, thương._
 
 ```
-#include<stdio.h>
+    #include<stdio.h>
+    void tong(int a, int b){
+        printf("%d + %d = %d\n",a ,b, a + b); 
+    }
+    void hieu(int a, int b){
+        printf("%d - %d = %d\n",a ,b, a - b); 
+    }
+    void tich(int a, int b){
+        printf("%d * %d = %d\n",a ,b, a * b); 
+    }
+    void thuong(int a, int b){
+        printf("%d / %d = %d\n",a ,b, a / b);
+    }
 
-  void tong(int a, int b){
-    printf("%d + %d = %d\n",a ,b, a + b); 
-}
-  void hieu(int a, int b){
-    printf("%d - %d = %d\n",a ,b, a - b); 
-}
-  void tich(int a, int b){
-    printf("%d * %d = %d\n",a ,b, a * b); 
-}
-  void thuong(int a, int b){
-    printf("%d / %d = %d\n",a ,b, a / b); 
-}
+    int main(int argc, char *argv[]) {
+    int a = 10, b = 5;
 
-int main(int argc, char *argv[]) {
-   int a = 10, b = 5;
-
-   //Khai bao mang con tro Ham
-   void (*cal[])(int, int) = {tong, hieu, tich, thuong};
+    //Khai bao mang con tro Ham
+    void (*cal[])(int, int) = {tong, hieu, tich, thuong};
     for (int i = 0; i < 4; i++) {
        cal[i](a, b);
-   }     
+    }     
 ```
 
 
@@ -108,7 +107,7 @@ int main(int argc, char *argv[]) {
 - Khởi tạo và kết thúc phải gán NULL.
 
 ```
-int *ptr = NULL;
+    int *ptr = NULL;
 ```
    
 ### 2.6 Pointer to Pointer
