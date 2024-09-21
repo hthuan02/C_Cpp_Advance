@@ -1,6 +1,6 @@
 # BÀI 4: POINTER
 
-- Con trỏ là 1 biến dùng để lưu địa chỉ của 1 biến, 1 hàm
+- Con trỏ là 1 biến thay vì lưu giá trị thì dùng để lưu địa chỉ của 1 đối(biến, hàm, mảng,...). 
 - Con trỏ không lưu giá trị mà nó lưu địa chỉ bộ nhớ nơi biến khác đang sử dụng.
 
 ## I. Các loại con trỏ
@@ -39,19 +39,21 @@
 ```
     void * ptr; //Khai bao con tro Void
 ```
-- _VD1: Xuất giá trị ._
+- _VD1: Xuất giá trị kiểu int, char._
 
 ```
     #include <stdio.h>
 
-    void Value(void*ptr) {
-       printf("A = %d\n", *(int*)(ptr)); //Ep kieu du lieu int
-    }
+    int main{int argc, char const *argv[]){
+        void *ptr;
 
-    int main() {
         int a = 10;
-        Value(&a);
-        return 0;
+        ptr = &a;
+        printf("Dia chi: %p, Gia tri: %d\n", ptr, *(int*)(ptr));
+ 
+        char c = 'C';
+        ptr = &c;
+        printf("Dia chi: %p, Gia tri: %c\n", ptr, *(char*)(ptr));
     }
 ```
 
@@ -119,8 +121,9 @@ int a = 10;
 int *ptr = &a;
 int **ptr = &ptr;
 ```
-**Lưu ý:** - Được sử dụng trong kiểu dữ liệu Json, cấu trúc dữ liệu list.
-
+**Lưu ý:** 
+- Được sử dụng trong kiểu dữ liệu Json, cấu trúc dữ liệu list.
+- ối với con trỏ cấp 2 là lưu địa chỉ của con trỏ cấp 1.             
 
 
 
