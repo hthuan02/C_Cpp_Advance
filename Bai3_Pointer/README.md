@@ -11,6 +11,7 @@
    int * ptr = &a;  
 ```
    `ptr` là một con trỏ, trỏ đến 1 biến kiểu dữ liệu `int`. Dấu `*` để chỉ `ptr` là 1 con trỏ.
+   
    `ptr` lưu địa chỉ của `a` và trỏ tới địa chỉ `a`.
    
 ### 1.3 Truy xuất giá trị con trỏ
