@@ -128,7 +128,7 @@
 ### 6. Constant Pointer(Hằng con trỏ)
 >Chỉ trỏ đến 1 địa chỉ duy nhất, khi đã trỏ đến 1 địa chỉ rồi thì không thể trỏ đến địa chỉ khác được nữa.
 >
->Tại địa chỉ trỏ đến có thể thay đổi luôn giá trị.
+>Tại 1 địa chỉ trỏ đến có thể thay đổi giá trị.
 
 ```
     int *const const_ptr = &value;
