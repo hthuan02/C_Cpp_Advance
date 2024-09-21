@@ -29,7 +29,7 @@ Cho 1 mảng:
 
 ```
     int arr[] = { 2, 3, 5, 7, 8 };
-    int * ptr = arr;
+    int * ptr = &arr;
 
     printf("Dia chi phan tu 1: %p\n", ptr) 
     printf("Dia chi phan tu 2: %p\n", ptr+1) 
@@ -46,15 +46,20 @@ Cho 1 mảng:
 ```
 void * ptr; //Khai bao con tro Void
 ```
-- _VD1: Xuất giá trị từ 1 mảng._
+- _VD1: Xuất giá trị ._
 
 ```
-    int arr[] = { 2, 3, 5, 7, 8 };
-    int * ptr = arr;
+#include <stdio.h>
 
-    printf("Gia tri phan tu 1: %d\n", *ptr) // 2
-    printf("Gia tri phan tu 2: %d\n", *(ptr+1) // 3
-    printf("Gia tri phan tu 3: %d\n", *(ptr+2) // 5   
+void Value(void*ptr) {
+   printf("A = %d\n", *(int*)(ptr)); //Ep kieu du lieu int
+}
+
+int main() {
+    int a = 10;
+    Value(&a);
+    return 0;
+}
 ```
 
 ### 2.2 Function Pointer
@@ -62,7 +67,7 @@ void * ptr; //Khai bao con tro Void
 >Đây là biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
    
 ```
-   void (*func_ptr)(int, int);  // Khai báo một con trỏ hàm
+   void (*func_ptr)(int, int);  // Khai bao con tro 
 ```
 
 - _VD2: Tổng, hiệu, tích, thương._
