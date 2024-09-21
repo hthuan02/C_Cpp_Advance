@@ -70,6 +70,7 @@
 
 ```
     #include<stdio.h>
+
     void tong(int a, int b){
         printf("%d + %d = %d\n",a ,b, a + b); 
     }
@@ -106,6 +107,7 @@ _VD3:_
 
 ```
     #include<stdio.h>
+
     int a = 10;
     int b = 3; //Khai bao ptr_const cua b duoc.
     const int *ptr_const = &a;
@@ -136,6 +138,7 @@ _VD4:_
 
 ```
     #include<stdio.h>
+
     int a = 10;
     int b = 3; // Khong khai bao duoc const_ptr cua b!!!
     int *const const_ptr = &a
