@@ -120,7 +120,8 @@ _VD3:_
         // *ptr_const = 5;
         // Dong nay sai, chi co the thay doi gia tri tai a.
         // VD: a = 15 -> *ptr_const =
-        a = 15
+
+        a = 15;
         printf("%p\n", ptr_const);
         printf("%d\n", *ptr_const); //ptr_const = 15
 ```
