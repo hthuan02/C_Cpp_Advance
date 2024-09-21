@@ -164,10 +164,11 @@
    
 ### 7. NULL Pointer
 >Con trỏ trống, không trỏ đến vùng nhớ nào.
+>
 >Khai báo nhưng chưa sử dụng liền.
 
-**Chú ý:** 
-- Khi khai báo con trỏ mà chưa sử dụng thì dùng con trỏ NULL(sẽ không bị **random** giá trị vào địa chỉ rác hoặc trùng lặp địa ).
+**Lưu ý:** 
+- Khi khai báo con trỏ mà chưa sử dụng thì dùng con trỏ NULL sẽ không bị **random** giá trị vào địa chỉ rác hoặc trùng lặp địa .
 - Khởi tạo và kết thúc phải gán NULL.
 
 ```
