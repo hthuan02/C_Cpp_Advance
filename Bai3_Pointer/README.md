@@ -1,4 +1,4 @@
-                               # BÀI 4: POINTER
+# BÀI 4: POINTER
 
 ## 1. Pointer(Con trỏ)
 
@@ -43,7 +43,8 @@ Cho 1 mảng:
    Đây là con trỏ có thể trỏ đến bất kỳ vị trí nào, không quan tâm đến kiểu dữ liệu (char, int double,...đều trỏ được).
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
 
-```void * ptr; //Khai bao con tro Void
+```
+void * ptr; //Khai bao con tro Void
 ```
 
 ### 2.2 Function Pointer
@@ -54,6 +55,7 @@ Cho 1 mảng:
 
 ```
 #include<stdio.h>
+
   void tong(int a, int b){
     printf("%d + %d = %d\n",a ,b, a + b); 
 }
