@@ -9,20 +9,22 @@
 ```
 int a = 10;
 int * ptr = &a;
-printf("Dia chi: %p\n", &a); 
-printf("Dia chi: %p\n", ptr);
+
+//Truy xuat con tro
+printf("Dia chi: %p\n", &a); // dia chi cua a
+printf("Dia chi: %p\n", ptr); // dia chi ma ptr tro den 
 printf("Gia tri tai dia chi: %d\n", *ptr); // a = 10
 ```
 
-### 1.4 Mảng với con trỏ
+### 1.4 Array Pointer(Con trỏ mảng)
 
 ```
     int arr[] = { 2, 3, 5, 7, 8 };
     int * ptr = arr;
 
-    printf("Dia chi phan tu 1: %p\n", ptr) 
-    printf("Dia chi phan tu 2: %p\n", ptr+1) 
-    printf("Dia chi phan tu 3: %p\n", ptr+2)
+    printf("Dia chi phan tu 1: %p\n", ptr) //2
+    printf("Dia chi phan tu 2: %p\n", ptr+1) //3
+    printf("Dia chi phan tu 3: %p\n", ptr+2) //5
 
     printf("Gia tri phan tu 1: %d\n", *ptr) 
     printf("Gia tri phan tu 2: %d\n", *(ptr+1)) 
