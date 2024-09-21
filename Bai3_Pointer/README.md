@@ -52,7 +52,8 @@ Cho 1 mảng:
 
 - Code VD1: Tổng, hiệu, tích, thương.
 
-```#include<stdio.h>
+```
+#include<stdio.h>
   void tong(int a, int b){
     printf("%d + %d = %d\n",a ,b, a + b); 
 }
