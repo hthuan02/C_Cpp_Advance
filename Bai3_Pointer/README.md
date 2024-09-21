@@ -94,8 +94,9 @@
 ```
    
 ### 5. Pointer to Constant(Con trỏ hằng)
->hỉ có thể đọc giá trị và **không thể** thay đổi giá trị tại địa chỉ nó trỏ đến.
+>Chỉ có thể đọc giá trị và **không thể** thay đổi giá trị tại địa chỉ nó trỏ đến.
 
+>Có thể trỏ đến nhiều địa chỉ khác nhau.
 ```
     int const *ptr_const;
     const int *ptr_const;
@@ -106,21 +107,56 @@ _VD3:_
 ```
     #include<stdio.h>
     int a = 10;
-    int b = 3;
+    int b = 3; //Khai bao ptr_const cua b duoc.
     const int *ptr_const = &a;
 
     int main(int argc, char const *argv[])
     {
         printf("%p\n", ptr_const);
-        printf("%d\n", *ptr_const);
-
+        printf("%d\n", *ptr_const); //ptr_const = 10
+    
         // *ptr_const = 5;
-        // Dong nay sai, chi co the thay doi gia tri tai a khai bao ban dau.
-        
+        // Dong nay sai, chi co the thay doi gia tri tai a.
+        // VD: a = 15 -> *ptr_const =
+        a = 15
+        printf("%p\n", ptr_const);
+        printf("%d\n", *ptr_const); //ptr_const = 15
 ```
-   
+
 ### 6. Constant Pointer(Hằng con trỏ)
-   Chỉ trỏ đến 1 địa chỉ duy nhất.
+>Chỉ trỏ đến 1 địa chỉ duy nhất. Khi khởi tạo đã trỏ 1 địa rồi thì trong quá trình thực thi không thể trỏ đến địa chỉ khác được nữa.
+
+>Tại địa chỉ trỏ đến có thể thay đổi luôn giá trị.
+
+```
+    int *const const_ptr = &value;
+```
+
+_VD4:_
+
+```
+    #include<stdio.h>
+    int a = 10;
+    int b = 3; // Khong khai bao duoc const_ptr cua b!!!
+    int *const const_ptr = &a
+
+    int main(int argc, char const *argv[])
+    {
+        printf("%p\n", const_ptr);
+        printf("%d\n", *const_ptr); //ptr_const = 10
+    
+        *const_ptr = 15 // hay doi gia tri tai con tro luon.
+        printf("%p\n", ptr_const);
+        printf("%d\n", *ptr_const); //ptr_const = 15
+```
+
+### Bảng so sánh Con Trỏ Hằng VS Hằng Con trỏ
+
+| Con trỏtrỏ | Con trỏ hằng | Hằng con trỏ |
+| :---: | --- | ---: |
+| 1 | Có thể trỏ đến nhiều địa chỉ khác | Chỉ trỏ đến 1 địa chỉ duy nhất |
+| 2 |  Chỉ có thể đọc, không thể thay đổi giá trị(Chỉ thay đổi giá trị tại biến)| Có thể thay đổi giá trị |
+
    
 ### 7. NULL Pointer
 >Con trỏ trống, không trỏ đến vùng nhớ nào.
