@@ -108,9 +108,11 @@ int main(int argc, char *argv[]) {
    
 ### 2.5 NULL Pointer
 >Con trỏ trống, không trỏ đến vùng nhớ nào.
->Khai báo nhưng chưa sử dụng liền
+>Khai báo nhưng chưa sử dụng liền.
 
-<u>Chú ý</u>
+**Chú ý:** 
+- Khi khai báo con trỏ mà chưa sử dụng thì dùng con trỏ NULL(sẽ không bị **random** giá trị).
+- Khởi tạo và kết thúc phải gán NULL.
 
  khi khởi tạo và kết thúc phải gán NULL
 ```
