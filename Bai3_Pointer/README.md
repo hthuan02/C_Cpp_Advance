@@ -109,7 +109,9 @@ int main(int argc, char *argv[]) {
 ### 2.5 NULL Pointer
 >Con trỏ trống, không trỏ đến vùng nhớ nào.
 >Khai báo nhưng chưa sử dụng liền
-**_**Chú ý:**_**
+
+<u>**Chú ý:**</u>
+
  khi khởi tạo và kết thúc phải gán NULL
 ```
 int *ptr = NULL;
