@@ -66,7 +66,7 @@
    void (*func_ptr)(int, int);  // Khai bao con tro
 ```
 
-- __VD2: Tổng, hiệu, tích, thương._
+- _VD2: Tổng, hiệu, tích, thương._
 
 ```
     #include<stdio.h>
