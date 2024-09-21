@@ -40,7 +40,7 @@ Cho 1 mảng:
 ## 2. Phân loại con trỏ
 
 ### 2.1 Void Pointer
-   Đây là con trỏ có thể trỏ đến bất kỳ vị trí nào, không quan tâm đến kiểu dữ liệu (char, int double,...đều trỏ được).
+   Có thể trỏ đến bất kỳ vị trí nào, không quan tâm đến kiểu dữ liệu (char, int double,...đều trỏ được).
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
 
 ```
@@ -48,6 +48,11 @@ void * ptr; //Khai bao con tro Void
 ```
 
 ### 2.2 Function Pointer
+   Đây là biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
+```
+   void (*func_ptr)(int, int);  // Khai báo một con trỏ hàm
+```
+
 
 **So sánh Void & Function Pointer**
 
