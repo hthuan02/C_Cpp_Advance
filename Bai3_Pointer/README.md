@@ -16,7 +16,7 @@
     printf("Gia tri tai dia chi: %d\n", *ptr); // a = 10
 ```
 
-### 1.4 Array Pointer(Con trỏ mảng)
+### 2. Array Pointer(Con trỏ mảng)
 
 ```
     int arr[] = { 2, 3, 5, 7, 8 };
@@ -32,7 +32,7 @@
 
 ```
 
-### 2.1 Void Pointer
+### 3. Void Pointer
    >Có thể trỏ đến bất kỳ kiểu dữ liệu nào (char, int, float, double,...), nhưng không thể được sử dụng trực tiếp để gọi hàm.
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
 
@@ -55,7 +55,7 @@
     }
 ```
 
-### 2.2 Function Pointer
+### 4. Function Pointer
 >Có thể trỏ đến các hàm có kiểu dữ liệu cụ thể, giúp gọi hàm thông qua con trỏ.
 >Đây là biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
    
@@ -92,13 +92,13 @@
 
 
    
-### 2.3 Pointer to Constant(Con trỏ hằng)
+### 5. Pointer to Constant(Con trỏ hằng)
    Trỏ tới hằng số, đây là số không đổi. Chỉ có thể đọc chứ **không đổi**  
    
-### 2.4 Constant Pointer(Hằng con trỏ)
+### 6. Constant Pointer(Hằng con trỏ)
    Chỉ trỏ đến 1 địa chỉ duy nhất.
    
-### 2.5 NULL Pointer
+### 7. NULL Pointer
 >Con trỏ trống, không trỏ đến vùng nhớ nào.
 >Khai báo nhưng chưa sử dụng liền.
 
