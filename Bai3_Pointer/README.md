@@ -3,7 +3,7 @@
 ## 1. Pointer(Con trỏ)
 
 ### 1.1 Khái niệm
-   Là 1 biến dùng để lưu địa chỉ của 1 biến, 1 hàm. Con trỏ không lưu giá trị mà nó lưu địa chỉ bộ nhớ nơi biến khác đang sử dụng.
+   >Là 1 biến dùng để lưu địa chỉ của 1 biến, 1 hàm. Con trỏ không lưu giá trị mà nó lưu địa chỉ bộ nhớ nơi biến khác đang sử dụng.
 
 ### 1.2 Khởi tạo con trỏ
 
@@ -59,6 +59,7 @@ void * ptr; //Khai bao con tro Void
 
 ### 2.2 Function Pointer
    >Có thể trỏ đến các hàm có kiểu dữ liệu cụ thể, giúp gọi hàm thông qua con trỏ.
+
    >Đây là biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
    
 ```
