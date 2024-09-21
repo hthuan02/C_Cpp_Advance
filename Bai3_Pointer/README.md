@@ -57,6 +57,7 @@
 
 ### 4. Function Pointer
 >Có thể trỏ đến các hàm có kiểu dữ liệu cụ thể, giúp gọi hàm thông qua con trỏ.
+
 >Đây là biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
    
 ```
@@ -110,9 +111,14 @@
     int *ptr = NULL;
 ```
    
-### 2.6 Pointer to Pointer
-   Con trỏ trong con trỏ( con trỏ cấp 2, 3, 4,...).
+### 2.6 Pointer to Pointer(Con trỏ đến con trỏ)
+>Là con trỏ mà có thể trỏ đến địa chỉ của các con trỏ khác, có nhiều cấp độ con trỏ (con trỏ cấp 2, 3,...).
 
+`
+int a = 10;
+int *ptr = &a;
+int **ptr = &ptr;
+`
 
 
 
