@@ -96,7 +96,12 @@
 
    
 ### 5. Pointer to Constant(Con trỏ hằng)
-   Trỏ tới hằng số, đây là số không đổi. Chỉ có thể đọc chứ **không đổi**  
+>Trỏ tới hằng số, chỉ có thể đọc giá trị và **không thể** thay đổi giá trị.
+
+```
+    int const *ptr;
+    const int *ptr;
+```
    
 ### 6. Constant Pointer(Hằng con trỏ)
    Chỉ trỏ đến 1 địa chỉ duy nhất.
@@ -117,9 +122,9 @@
 >Là con trỏ mà có thể trỏ đến địa chỉ của các con trỏ khác, có nhiều cấp độ con trỏ (con trỏ cấp 2, 3,...).
 
 ```
-int a = 10;
-int *ptr = &a;
-int **ptr = &ptr;
+    int a = 10;
+    int *ptr = &a;
+    int **ptr = &ptr;
 ```
 **Lưu ý:** 
 - Được sử dụng trong kiểu dữ liệu Json, cấu trúc dữ liệu list.
