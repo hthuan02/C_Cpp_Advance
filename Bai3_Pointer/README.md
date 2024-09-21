@@ -1,6 +1,6 @@
 # BÀI 4: POINTER
 
-- Con trỏ là 1 biến thay vì lưu giá trị thì dùng để lưu địa chỉ của 1 đối(biến, hàm, mảng,...). 
+- Con trỏ là 1 biến, thay vì lưu giá trị thì dùng để lưu địa chỉ của 1 đối tượng(biến, hàm, mảng,...). 
 - Con trỏ không lưu giá trị mà nó lưu địa chỉ bộ nhớ nơi biến khác đang sử dụng.
 
 ## I. Các loại con trỏ
