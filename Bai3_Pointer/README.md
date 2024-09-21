@@ -56,7 +56,7 @@ void * ptr; //Khai bao con tro Void
 
 **So sánh Void & Function Pointer**
 
-- Code VD1: Tổng, hiệu, tích, thương.
+- _Code VD1: Tổng, hiệu, tích, thương._
 
 ```
 #include<stdio.h>
