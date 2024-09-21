@@ -44,10 +44,67 @@
 ```
     #include <stdio.h>
 
+    int main{int argc, char const *argv[]){
+        void *ptr;
+
+        int a = 10;
+        ptr = &a;
+        printf("Dia chi: %p, Gia tri: %d\n", ptr, *(int*)(ptr));
+ 
+        char c = 'C';
+        ptr = &c;
+        printf("Dia chi: %p, Gia tri: %c\n", ptr, *(char*)(ptr));
+    }
+```
+
+### 4. Function Pointer
+>Có thể trỏ đến các hàm có kiểu dữ liệu cụ thể, giúp gọi hàm thông qua con trỏ.
+>
+>Đây là biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
+
+```
+   void (*func_ptr)(int, int);  // Khai bao con tro
+```
+
+- __VD2: Tổng, hiệu, tích, thương._
+
+```
+    #include<stdio.h>
+
+    void tong(int a, int b){
+        printf("%d + %d = %d\n",a ,b, a + b); 
+    }
+    void hieu(int a, int b){
+        printf("%d - %d = %d\n",a ,b, a - b); 
+    }
+    void tich(int a, int b){
+        printf("%d * %d = %d\n",a ,b, a * b); 
+    }
+    void thuong(int a, int b){
+        printf("%d / %d = %d\n",a ,b, a / b);
+    }
+
+    int main(int argc, char *argv[]) {
+    int a = 10, b = 5;
+
+    //Khai bao mang con tro Ham
+    void (*cal[])(int, int) = {tong, hieu, tich, thuong};
+    for (int i = 0; i < 4; i++) {
+       cal[i](a, b);
+    }
+
+### 5. Pointer to Constant(Con trỏ hằng)
+
+```
+
+```
+    #include <stdio.h>
+
     int main{int argc, char const *argv[]Thay doi gia tri tai con tro luon.
         printf("%p\n", ptr_const);
         printf("%d\n", *ptr_const); //ptr_const = 15
 ```
+
 
 ### Bảng so sánh Con Trỏ Hằng VS Hằng Con trỏ
 
