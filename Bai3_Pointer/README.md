@@ -141,14 +141,14 @@
 
     int a = 10;
     int b = 3; // Khong khai bao duoc const_ptr cua b!!!
-    int *const const_ptr = &a
+    int *const const_ptr = &a;
 
     int main(int argc, char const *argv[])
     {
         printf("%p\n", const_ptr);
         printf("%d\n", *const_ptr); //ptr_const = 10
     
-        *const_ptr = 15 // hay doi gia tri tai con tro luon.
+        *const_ptr = 15; // hay doi gia tri tai con tro luon.
         printf("%p\n", ptr_const);
         printf("%d\n", *ptr_const); //ptr_const = 15
 ```
