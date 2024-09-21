@@ -92,15 +92,31 @@
        cal[i](a, b);
     }     
 ```
-
-
    
 ### 5. Pointer to Constant(Con trỏ hằng)
->Trỏ tới hằng số, chỉ có thể đọc giá trị và **không thể** thay đổi giá trị.
+>hỉ có thể đọc giá trị và **không thể** thay đổi giá trị tại địa chỉ nó trỏ đến.
 
 ```
-    int const *ptr;
-    const int *ptr;
+    int const *ptr_const;
+    const int *ptr_const;
+```
+
+_VD3:_
+
+```
+    #include<stdio.h>
+    int a = 10;
+    int b = 3;
+    const int *ptr_const = &a;
+
+    int main(int argc, char const *argv[])
+    {
+        printf("%p\n", ptr_const);
+        printf("%d\n", *ptr_const);
+
+        // *ptr_const = 5;
+        // Dong nay sai, chi co the thay doi gia tri tai a khai bao ban dau.
+        
 ```
    
 ### 6. Constant Pointer(Hằng con trỏ)
