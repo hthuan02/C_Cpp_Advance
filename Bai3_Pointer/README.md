@@ -69,7 +69,7 @@
     int *ptr = NULL;
 ```
    
-### 2.6 Pointer to Pointer(Con trỏ đến con trỏ)
+### 8. Pointer to Pointer(Con trỏ đến con trỏ)
 >Là con trỏ mà có thể trỏ đến địa chỉ của các con trỏ khác, có nhiều cấp độ con trỏ (con trỏ cấp 2, 3,...).
 
 ```
