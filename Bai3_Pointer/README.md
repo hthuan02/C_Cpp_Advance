@@ -156,10 +156,10 @@ _VD4:_
 
 ### Bảng so sánh Con Trỏ Hằng VS Hằng Con trỏ
 
-| Khác nhau | Con trỏ hằng |Hằng con trỏ|
+| Khác nhau | Con trỏ hằng | Hằng con trỏ |
 | :---: | --- | ---: |
-| 1 |Có thể trỏ đến nhiều địa chỉ khác |Chỉ trỏ đến 1 địa chỉ duy nhất |
-| 2 |Chỉ có thể đọc, không thể thay đổi giá trị(giá trị chỉ được thay đổi tại biến)|Có thể thay đổi giá trị |
+| 1 |Có thể trỏ đến nhiều địa chỉ khác | Chỉ trỏ đến 1 địa chỉ duy nhất |
+| 2 |Chỉ có thể đọc, không thể thay đổi giá trị(giá trị chỉ được thay đổi tại biến)| Có thể thay đổi giá trị |
 
    
 ### 7. NULL Pointer
@@ -184,7 +184,7 @@ _VD4:_
 ```
 **Lưu ý:** 
 - Được sử dụng trong kiểu dữ liệu Json, cấu trúc dữ liệu list.
-- ối với con trỏ cấp 2 là lưu địa chỉ của con trỏ cấp 1.             
+- Đối với con trỏ cấp 2 là lưu địa chỉ của con trỏ cấp 1.             
 
 
 
