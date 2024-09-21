@@ -26,12 +26,13 @@
 ### 1.4 Mảng với con trỏ
 
 Cho 1 mảng:
+
 ``` int arr[] = { 2, 3, 5, 7, 8 };
     int * ptr = arr;
+
     printf("Dia chi phan tu 1: %p\n", ptr) 
     printf("Dia chi phan tu 2: %p\n", ptr+1) 
     printf("Dia chi phan tu 3: %p\n", ptr+2) 
- 
 ```
 ### 1.5 Kích thước con trỏ
 
@@ -46,7 +47,8 @@ void * ptr; //Khai bao con tro Void
 ```
 - _VD1: Xuất giá trị từ 1 mảng._
 
-``` int arr[] = { 2, 3, 5, 7, 8 };
+```
+    int arr[] = { 2, 3, 5, 7, 8 };
     int * ptr = arr;
 
     printf("Gia tri phan tu 1: %d\n", *ptr) // 2
