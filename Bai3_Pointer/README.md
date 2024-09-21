@@ -110,7 +110,7 @@ int main(int argc, char *argv[]) {
 >Con trỏ trống, không trỏ đến vùng nhớ nào.
 >Khai báo nhưng chưa sử dụng liền
 
-<u>**Chú ý**:</u>
+<u>Chú ý</u>
 
  khi khởi tạo và kết thúc phải gán NULL
 ```
