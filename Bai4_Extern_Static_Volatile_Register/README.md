@@ -12,10 +12,9 @@
 
 **Ưu điểm quan trọng:** Tiết kiệm được bộ nhớ.
 
-    - Muốn sử dụng lại các biến đã khai báo trong file trước đó. Theo thông thường ta phải khai báo `#include"file.h"` hoặc `#define_FILE1_H`, đối với xử lý nhiều file thì việc khai báo cho file main.c sẽ tốn rất nhiều bộ nhớ.
-    -  Vì vậy, để chia sẻ tài nguyên các biến các hàm trong nhiều file cùng 1 folder, chúng ta có thể dùng extern.
-    
-_Ví dụ:_ 
+- Muốn sử dụng lại các biến đã khai báo trong file trước đó. Theo thông thường ta phải khai báo `#include"file.h"` hoặc `#define_FILE1_H`, đối với xử lý nhiều file thì việc khai báo cho file main.c sẽ tốn rất nhiều bộ nhớ.
+-  Vì vậy, để chia sẻ tài nguyên các biến các hàm trong nhiều file cùng 1 folder, chúng ta có thể dùng extern.
+     
 file1.c 
 file2.c //2
 main.c //3
