@@ -24,3 +24,7 @@ _VD1:_ Ta có 3 file
           main.c 
 
 ➡️ Để sử dụng các biến của 1 và 2, ta khai báo `extern int a;` hoặc `extern int b;`.
+
+## 2. STATIC
+
+### 2.1 STATIC - BIẾN CỤC BỘ
