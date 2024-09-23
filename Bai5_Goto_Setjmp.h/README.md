@@ -56,7 +56,7 @@
 <details>
   giải thích
   
-  </p>
+  
   
 
 
