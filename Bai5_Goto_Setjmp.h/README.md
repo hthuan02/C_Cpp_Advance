@@ -117,7 +117,7 @@ _- VD2:_
 ## II. THƯ VIỆN <setjmp.h>
 > Cho phép chương trình có thể nhảy từ nhãn đặt trong hàm này sang nhãn đặt trong hàm khác thông qua setjmp và longjmp.
 >
-> Thư viện setjmp.h bao gồm 2 hàm setjmp và longjmp
+> Thư viện setjmp.h bao gồm 2 hàm setjmp và longjmp.
 
 ### 1. Hàm setjmp
 ```
@@ -131,10 +131,7 @@ _- VD2:_
    longjmp(jmp_buf, int value);
 ```
 
-- Khi gọi `longjmp` thì luồng của chương trình sẽ nhảy về `setjmp`. Sau đó tiếp tục chương trình trả giá trị khác 0 (giá trị `int value`).
-
-
-
+- Khi gọi `longjmp` thì luồng của chương trình sẽ nhảy về `setjmp`. Sau đó, gán giá trị của `int value` vào giá trị mới của `setjmp`
 
 
 
