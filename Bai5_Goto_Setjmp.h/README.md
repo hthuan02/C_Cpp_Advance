@@ -1,7 +1,6 @@
 # Bài 5: Goto - Setjmp.h
 
 >Cho phép đoạn code nhảy đến label(nhãn) mà mình chỉ , label có để đặt bất cứ vị trí nào trong cùng 1 hàm.
-
    
 ```
   #include<stdio.h>
@@ -53,7 +52,7 @@
     return 0;
   }
 
-
+ <summary>Mở rộng</summary>
 
 
 
