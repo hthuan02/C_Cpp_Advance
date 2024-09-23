@@ -53,7 +53,7 @@
   }
 ```
 
-<details>
+
   <summary>Mở rộng</summary>
   
   </p>
