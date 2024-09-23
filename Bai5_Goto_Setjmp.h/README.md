@@ -1,6 +1,6 @@
 # BÀI 5: GOTO - SETJMP.H
 
-## I. GOTO
+## I. Goto
 >Cho phép đoạn code nhảy đến label(nhãn) mà mình chỉ , label có để đặt bất cứ vị trí nào trong cùng 1 hàm.
 
 - _VD1: Tạo Menu sử dụng lệnh Goto_
@@ -114,7 +114,7 @@ _- VD2:_
 ### ỨNG DỤNG
  Dùng trong Led ma trận, kết hợp với thuật toán quét led.
 
-## II. THƯ VIỆN <setjmp.h>
+## II. Thư viện <setjmp.h>
 > Cho phép chương trình có thể nhảy từ nhãn đặt trong hàm này sang nhãn đặt trong hàm khác thông qua setjmp và longjmp.
 >
 > Thư viện setjmp.h bao gồm 2 hàm setjmp và longjmp.
