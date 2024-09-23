@@ -67,7 +67,11 @@
 ## Ưu điểm:
 
 ### 1. Thoát khỏi nhiều cấp độ vòng lặp
+   
+>Đối chương trình nhiều cấp độ vòng lặp, mình muốn thoát ra thì phải xét điều kiện và break để thoát chương trình, sẽ phức tạp.
 
+_- VD2:_
+   
 ```
    int i,j;
 
@@ -83,14 +87,30 @@
                break; //Thoat duoc For cua i 
             }
          }
+      }
       if (i == 2 && j == 3){
          printf("break while \n");
          break; //Thoat duoc For cua while       
       }
    } 
 ```
+- Sử dụng `goto` để thoát chương trình nhanh hơn.
 
+```
+   int i,j;
 
+   while(1){
+      for(i=1; i<5; i++ ){
+         for(j=1; j<5; j++ ){
+               if (i == 2 && j == 3){
+               printf("Thoat chuong trinh\n");
+               goto thoat; //1 lenh goto, thoat duoc 3 vong lap
+         }
+      }
+   thoat: 
+   return 0;
+   }
+```
 
 
 
