@@ -1,6 +1,6 @@
 # BÀI 5: GOTO - SETJMP.H
 
-## 1. GOTO
+## I. GOTO
 >Cho phép đoạn code nhảy đến label(nhãn) mà mình chỉ , label có để đặt bất cứ vị trí nào trong cùng 1 hàm.
 
 - _VD1: Tạo Menu sử dụng lệnh Goto_
@@ -111,9 +111,8 @@ _- VD2:_
    return 0;
    }
 ```
-
-
-
+### ỨNG DỤNG
+ Dùng trong Led ma trận, kết hợp với thuật toán quét led.
 
 
 
