@@ -53,8 +53,8 @@
   }
 ```
 
-
-  <summary>Mở rộng</summary>
+<details>
+  giải thích
   
   </p>
   
