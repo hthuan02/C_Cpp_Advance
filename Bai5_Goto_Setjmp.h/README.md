@@ -137,40 +137,8 @@ _- VD2:_
 
 _- VD3:_
 
-```
-   #include <stdio.h>
-   #include <setjmp.h>
 
-   jmp_buf buffer;
-
-   int exception;
-
-   double divide(int a, int b){
-      if(b==0){
-         longjmp(buffer,1);
-      }
-      else if(a== 0 && b== 0){
-         printf("khong xac dinh")
-      }
-      return(double)a/b;
-   }
-   int main(int argc, char const *argv[])
-   {
-      exception = setjmp(buffer);
-
-      if (exception == 0){
-         printf("kq = %d\n", devide(7,2));
-      }
-      else if (exception == 5){
-         printf("exception = %d\n",exception);
-      }
-      //longjmp(buffer, 5);
-   }
-```
-
-
-
-
+### 3. Xử lý ngoại lệ(TRY, CATCH, THROW)
 
 
 
