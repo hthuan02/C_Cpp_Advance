@@ -16,7 +16,7 @@
     -  Vì vậy, để chia sẻ tài nguyên các biến các hàm trong nhiều file cùng 1 folder, chúng ta có thể dùng extern.
     
 _Ví dụ:_ 
- Ta có:  file1.c //1
-         file2.c //2
-         main.c //3
-      ➡️ Để sử dụng các biến của 1 và 2, ta khai báo `extern int a;` hoặc `extern int b;`
+file1.c 
+file2.c //2
+main.c //3
+➡️ Để sử dụng các biến của 1 và 2, ta khai báo `extern int a;` hoặc `extern int b;`
