@@ -114,21 +114,24 @@ _- VD2:_
 ### ỨNG DỤNG
  Dùng trong Led ma trận, kết hợp với thuật toán quét led.
 
-## II. THƯ VIỆN SETJMP.H
+## II. THƯ VIỆN <setjmp.h>
 > Cho phép chương trình có thể nhảy từ nhãn đặt trong hàm này sang nhãn đặt trong hàm khác thông qua setjmp và longjmp.
 >
-> Thư viện setjmp.h bao gồm lệnh setjmp và longjmp  
-- Khi gọi `longjmp` thì luồng của chương trình sẽ nhảy về `setjmp`.
+> Thư viện setjmp.h bao gồm 2 hàm setjmp và longjmp
 
+### 1. Hàm setjmp
 ```
-   #include<setjmp.h>
-   jmp_buf buf; //Khai báo biến buf kiểu jmp_buf, chi khai bao khong dat gia tri
+   int setjmp(jmp_buf);
 ```
 
+- Khi gọi `setjmp` lần đầu, thì mặc định trả về 0.
 
-_- VD3:_
+### 2. Hàm longjmp
+```
+   longjmp(jmp_buf, int value);
+```
 
-
+- Khi gọi `longjmp` thì luồng của chương trình sẽ nhảy về `setjmp`. Sau đó tiếp tục chương trình trả giá trị khác 0 (giá trị `int value`).
 
 
 
