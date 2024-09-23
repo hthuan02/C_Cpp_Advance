@@ -114,7 +114,28 @@ _- VD2:_
 ### ỨNG DỤNG
  Dùng trong Led ma trận, kết hợp với thuật toán quét led.
 
-# II. THƯ VIỆN SETJMP.H
+## II. THƯ VIỆN SETJMP.H
+> Cho phép chương trình có thể nhảy từ nhãn đặt trong hàm này sang nhãn đặt trong hàm khác thông qua setjmp và longjmp.
+
+```
+   #include<setjmp.h>
+   jmp_buf buf; //Khai báo biến buf kiểu jmp_buf
+```
+
+_- VD3:_
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
