@@ -54,7 +54,7 @@
 ```
 
 <details>
-  giải thích
+  <summary>Giải thích</summary>
   
   
   
