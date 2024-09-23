@@ -116,11 +116,15 @@ _- VD2:_
 
 ## II. THƯ VIỆN SETJMP.H
 > Cho phép chương trình có thể nhảy từ nhãn đặt trong hàm này sang nhãn đặt trong hàm khác thông qua setjmp và longjmp.
+>
+> Thư viện setjmp.h bao gồm lệnh setjmp và longjmp  
+- Khi gọi `longjmp` thì luồng của chương trình sẽ nhảy về `setjmp`.
 
 ```
    #include<setjmp.h>
-   jmp_buf buf; //Khai báo biến buf kiểu jmp_buf
+   jmp_buf buf; //Khai báo biến buf kiểu jmp_buf, chi khai bao khong dat gia tri
 ```
+
 
 _- VD3:_
 
