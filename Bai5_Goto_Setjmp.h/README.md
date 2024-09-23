@@ -53,7 +53,15 @@
   }
 ```
 
- <summary>Mở rộng</summary>
-
+<details>
+  <summary>Mở rộng</summary>
+  
+    [![Meme](https://thosuaxe.info/wp-content/uploads/2021/03/M%E1%BB%99t-trong-nh%E1%BB%AFng-Memes-kinh-%C4%91i%E1%BB%83n-nh%E1%BA%A5t-tr%C3%AAn-internet.jpg)](https://www.facebook.com/)
+  
+  <p align="center">
+    <img src="https://thosuaxe.info/wp-content/uploads/2021/03/M%E1%BB%99t-trong-nh%E1%BB%AFng-Memes-kinh-%C4%91i%E1%BB%83n-nh%E1%BA%A5t-tr%C3%AAn-internet.jpg" 
+         width="100px"/>
+  </p>
+  
 
 
