@@ -2,7 +2,7 @@
 
 >Cho phép đoạn code nhảy đến label(nhãn) mà mình chỉ , label có để đặt bất cứ vị trí nào trong cùng 1 hàm.
 
--_VD1: Tạo Menu sử dụng lệnh Goto_
+- _VD1: Tạo Menu sử dụng lệnh Goto_
    
 ```
   #include<stdio.h>
