@@ -59,7 +59,14 @@
       - `case 0:`: Dùng lệnh `goto menu1;` và đặt lệnh `menu1:` ở đầu Menu1, chương trình sẽ trở về Menu1.
       - `case 1`: Lệnh `goto thoatchuongtrinh;` và đặt lệnh `thoatchuongtrinh:` ở cuối, chỉ định chương trình thoát ra khỏi switch để kết thúc chương trình.
   
-  
+## Nhược điểm của Goto:
+-  Vì chương trình không chạy tuần tự, nên code khó đọc, khó quản lý và bảo trì.
+-  Khó debug, vì khó xác định được vị trí gây lỗi.
+
+## Ưu điểm:
+
+## 1. Thoát khỏi nhiều cấp độ vòng lặp
+
   
 
 
