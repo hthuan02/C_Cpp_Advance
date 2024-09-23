@@ -55,9 +55,6 @@
   }
 ```
 
-<details>
-  <summary>Giải thích:</summary>
-</details>
 -  Chương trình chạy tuần tự từ Menu1 đến Menu2. Nhưng ở Menu2 có `2 Option`
   - Trường hợp nhập `case 0:`, dùng lệnh `goto menu1;` và chỉ định chương trình sẽ quay về Menu1 `menu1:`. Chương trình sẽ trở về Menu1 khi nhập 0
   - Ở `case 1`, thì lệnh `goto thoatchuongtrinh;` và đặt lệnh `thoatchuongtrinh:` ở cuối, chỉ định chương trình thoát ra khỏi switch để kết thúc chương trình`
