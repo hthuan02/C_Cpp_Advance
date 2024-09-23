@@ -118,6 +118,8 @@ _- VD2:_
 > Cho phép chương trình có thể nhảy từ nhãn đặt trong hàm này sang nhãn đặt trong hàm khác thông qua setjmp và longjmp.
 >
 > Thư viện setjmp.h bao gồm 2 hàm setjmp và longjmp.
+>
+> Xử lý ngoại lệ 
 
 ### 1. Hàm setjmp
 ```
@@ -133,8 +135,38 @@ _- VD2:_
 
 - Khi gọi `longjmp` thì luồng của chương trình sẽ nhảy về `setjmp`. Sau đó, gán giá trị của `int value` vào giá trị mới của `setjmp`
 
+_- VD3:_
 
+```
+   #include <stdio.h>
+   #include <setjmp.h>
 
+   jmp_buf buffer;
+
+   int exception;
+
+   double divide(int a, int b){
+      if(b==0){
+         longjmp(buffer,1);
+      }
+      else if(a== 0 && b== 0){
+         printf("khong xac dinh")
+      }
+      return(double)a/b;
+   }
+   int main(int argc, char const *argv[])
+   {
+      exception = setjmp(buffer);
+
+      if (exception == 0){
+         printf("kq = %d\n", devide(7,2));
+      }
+      else if (exception == 5){
+         printf("exception = %d\n",exception);
+      }
+      //longjmp(buffer, 5);
+   }
+```
 
 
 
