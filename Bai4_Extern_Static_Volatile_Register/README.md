@@ -54,7 +54,7 @@ _VD2: Static biến cục bộ_
 ```
 - Hàm `count` dù được gọi bao nhiêu lần vẫn in ra giá trị là 6. Vì biến `a` được khai báo là 1 biến cục bộ trong hàm `count()`
 - Sau khi hàm `count` đầu tiền hoàn thành, `a` sẽ bị hủy giá trị (cấp thoát địa chỉ), 
-
+- 
 
 
 
