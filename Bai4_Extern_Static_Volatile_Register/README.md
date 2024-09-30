@@ -27,13 +27,14 @@ _VD1:_ Ta có 3 file
 
 ## 2. Static
 
-### 2.1 Satic - BIẾN CỤC BỘ
+### 2.1 Satic - local variables
 
 > Giới hạn đối tượng trong phạm vi hàm sử dụng.
 >
 > Cấp thoát địa chỉ tồn tại xuyên suốt chương trình.
 >
-> Giữ lại giá trị.
+>
+> Static cục bộ không thể thay đổi giá trị bên ngoài, nếu muốn thay đổi thì sử dụng con trỏ.
 
 _VD2: Static biến cục bộ_
 
@@ -75,6 +76,52 @@ _VD2: Static biến cục bộ_
           count(); //100
      }
 ```
+
+### 2.2 Satic - global variables
+>
+> Giới hạn phạm vị sử dụng trong 1 file (tránh việc khai báo trùng tên biến và hàm giữa các file). 
+>
+> Những biến nào được khai báo static toàn cục thì chỉ được sử dụng trong đúng file đó, không thể liên kết file.
+>
+> Không thể dùng con trỏ để thay đổi giá trị.
+
+**- Ưu điểm:** Sử dụng static toàn cục để ẩn ở quá trình trung gian tính ra kết quả. Như tính delta trong phương trình bậc 2.
+
+### 2.3 Satic - class (hướng đối tượng trong C++), học sau
+
+## 3. Volatile
+
+**Biên volatile là gì?** Nếu khai báo biến mà biến này không sử dụng, thì biến này mặc dù vẫn còn ở chương trình nhưng nó đã bị xóa khỏi bộ nhớ chương trình nhằm để làm giảm bộ nhớ.
+
+➡️ Biến volatile giúp khắc phục tình trạng đó.
+
+>
+> Dùng trong code cho MCU, ép buộc 1 biến truy cập đến địa chỉ và nó không bị xóa khỏi bộ nhớ khi biến đó k được sử dụng.
+>
+
+```
+     // Dùng trong code VDK
+
+     #include "stm32f4xx.h"
+     volatile unit8_t var = 0;
+
+```
+
+**Ứng dụng:** Đọc giá trị cảm biến nhiệt độ nhiệt độ, ví dụ có 10 giá trị 30 độ C giống nhau, thì có nguy cơ biến CB nhiệt độ bị xóa khỏi bộ nhớ. Vì vậy, sử dụng biến Volatile đảm bảo cảm biến nhận đúng giá trị không bị cấp thoát, hạn chế sai số.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
