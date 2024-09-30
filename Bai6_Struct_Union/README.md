@@ -81,9 +81,11 @@ _VD1:_
       uint16_t var3; //2byte
     } data;
 ```
-**- Giải thích**: Ưu tiên kich thước dữ liệu lớn nhất làm chuẩn (4byte).
+- Giải thích: Ưu tiên kich thước dữ liệu lớn nhất làm chuẩn (4byte).
     - var1 (4byte)
+
     - var2 (1byte) + var3 (2byte) = 3 byte (dư 1 byte) -> 1 padding
+
     - Tổng = 8
 
 **_VD3: Tìm kích thước dữ liệu_**
@@ -106,7 +108,7 @@ _VD1:_
 
 ```
 
-**Giải  thích:** 
+- Giải thích:
     - Kích thước lớn nhất là 8 byte.
     
     - var1: 8byte(làm chuẩn) + (1byte lẻ + 7padding) = 16  
@@ -120,9 +122,10 @@ _VD1:_
     - Tổng kích thước = 72 byte
 
 ### Ứng dụng của Struct: 
-    - Json
-    - Cấu trúc dữ liệu list
-    - Giao thức trong MCU, mỗi thông số đều có cấu hình khác nhau -> Dùng Struct để gom các thông số về.
+    
+- Json
+- Cấu trúc dữ liệu list
+- Giao thức trong MCU, mỗi thông số đều có cấu hình khác nhau -> Dùng Struct để gom các thông số về.
 
 
 
