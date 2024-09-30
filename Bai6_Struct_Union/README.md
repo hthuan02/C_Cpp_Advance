@@ -83,7 +83,9 @@ _VD1:_
 ```
 **Giải thích:** Ưu tiên kich thước dữ liệu lớn nhất làm chuẩn (4byte).
     - var1 (4byte)
+    
     - var2 (1byte) + var3 (2byte) = 3 byte (dư 1 byte) -> 1 padding
+    
     - Tổng = 8
 
 **_VD3: Tìm kích thước dữ liệu_**
@@ -108,17 +110,16 @@ _VD1:_
 
 **Giải  thích:** 
     - Kích thước lớn nhất là 8 byte.
+    
     - var1: 8byte(làm chuẩn) + (1byte lẻ + 7padding) = 16  
+    
     - var2: 8byte *3 = 24
+    
     - var3: 8byte *2 + (4byte lẻ + 4padding) = 24
+    
     - var4: 8byte
+    
     - Tổng kích thước = 72 byte
-
-
-
-
-
-
 
 ### Ứng dụng của Struct: 
     - Json
