@@ -45,7 +45,7 @@ _VD2: Static biến cục bộ_
           printf("Gia tri: %d\n",a);
      }
 
-     int main(int argc, char const, argv[]){
+     int main(int argc, char const *argv[]){
           count(); //6
           count(); //6
           count(); //6
@@ -55,9 +55,26 @@ _VD2: Static biến cục bộ_
 - Hàm `count` dù được gọi bao nhiêu lần vẫn in ra giá trị là 6. Vì biến `a` được khai báo là 1 biến cục bộ trong hàm `count()`
 - Sau khi hàm `count` đầu tiền hoàn thành, `a` sẽ bị hủy giá trị (cấp thoát địa chỉ) và các giá trị tiếp theo vẫn = 6. 
 - Nếu ở thêm biến `static` cục bộ vào `int a=5;` là `static int a=5;` thì giá trị `a` mới có thể tăng dần lên 7, 8,... theo số lần gọi hàm `count`.
+- Có thể dùng con trỏ để thay đổi giá trị 
+```
+     #include<stdio.h>
 
-__
+     int *ptr = NULL;
+     void count(){
+          static int a=5;
+          ptr = &a;
+          a++;
+          printf("Gia tri: %d\n",a);
+     }
 
+     int main(int argc, char const *argv[]){
+          count(); //6
+          count(); //7
+          count(); //8
+          *ptr = 99;
+          count(); //100
+     }
+```
 
 
 
