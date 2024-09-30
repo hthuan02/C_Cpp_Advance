@@ -35,20 +35,6 @@ hoặc:
 - Trong hàm `main.c` thì `data.a = 0;`
 - Đối với con trỏ `*ptr` thì `data ->a = 0;`
 
-# Data alignment & padđing
-
-- Data alignment: Là việc canh chỉnh, sắp xếp dữ liệu được sắp xếp dữ liệu vào đúng kích thước của CPU (gồm 2 byte, 4 byte, 8 byte,..). Đảm bảo hiệu suất hoạt động của bộ nhớ, dễ dàng truy cập và xử lý nhanh hơn.
-
-- Paddinng(đệm vào): Khi canh chỉnh, sắp xếp bộ nhớ còn dư ra 1 vài byte trên tổng số ổ đĩa thì đó là padding.
-
-```
-    //double(8byte): Chia het 8, 0x00 0x08 0x10 0x18,..
-    //int, int32_t, uint32_t(4byte): 0x00 0x04 0x08 0x0C...
-    //float, init16_t, uint16_t(2byte): 0x00 0x02 0x04 0x06...
-    //padding
-```
-➡️ Kích thước của Struct = tổng các kiểu dữ liệu + padding
-
 _VD1:_
 
 ```
@@ -72,10 +58,32 @@ _VD1:_
       return 0;
     }
 ```
+# Data alignment & padđing
 
+- Data alignment: Là việc canh chỉnh, sắp xếp dữ liệu được sắp xếp dữ liệu vào đúng kích thước của CPU (gồm 2 byte, 4 byte, 8 byte,..). Đảm bảo hiệu suất hoạt động của bộ nhớ, dễ dàng truy cập và xử lý nhanh hơn.
+
+- Padding(đệm vào): Khi canh chỉnh, sắp xếp bộ nhớ còn dư ra 1 vài byte trên tổng số ổ đĩa thì đó là padding.
+
+```
+    //double(8byte): Chia het 8, 0x00 0x08 0x10 0x18,..
+    //int, int32_t, uint32_t(4byte): 0x00 0x04 0x08 0x0C...
+    //float, init16_t, uint16_t(2byte): 0x00 0x02 0x04 0x06...
+    //padding
+```
+➡️ Kích thước của Struct = tổng các kiểu dữ liệu + padding
   
+_VD2: Tìm kích thước dữ liệu VD1_
 
-
+```
+      typedef struct {
+      uint32_t var1; //Chia hết cho 8 (4byte) 
+      uint8_t var2; //1byte
+      uint16_t var3; //2byte
+    } data;
+```
+**Giải thích:** Ưu tiên kich thước dữ liệu lớn nhất làm chuẩn (4byte).
+    - var1 (4byte)
+    - var2 (1byte) + var3 (2byte) = 3 byte (dư 1 byte) -> 1 padding
 
 
 
