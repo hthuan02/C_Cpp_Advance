@@ -113,14 +113,7 @@ _VD2: Static biến cục bộ_
 
 
 
-![](https://1drv.ms/i/s!ArJXeginURj_zwyOjB4mX8cSy4SG?e=6S4BAO)
-
-
-
-
-
-
-
+![Mô tả ảnh](./Bai4_Extern_Static_Volatile_Register/register.png)
 
 
 
