@@ -81,7 +81,7 @@ _VD1:_
       uint16_t var3; //2byte
     } data;
 ```
-- Giải thích: Ưu tiên kich thước dữ liệu lớn nhất làm chuẩn (4byte).
+- Giải thích: Ưu tiên kích thước dữ liệu lớn nhất làm chuẩn (4byte).
     - var1 (4byte)
 
     - var2 (1byte) + var3 (2byte) = 3 byte (dư 1 byte) -> 1 padding
@@ -89,16 +89,6 @@ _VD1:_
     - Tổng = 8
 
 **_VD3: Tìm kích thước_**
-
-```
-      uint8_t var1; //1byte, 3padding 
-      uint32_t var2; //4byte
-      uint16_t var3; //2byte, 2padding
-
-      //Tong kich thuoc = 12
-```
-
-**_VD4: Tìm kích thước_**
 
 ```
       uint8_t var1[9]; //1byte 
@@ -127,8 +117,36 @@ _VD1:_
 - Cấu trúc dữ liệu list
 - Giao thức trong MCU, mỗi thông số đều có cấu hình khác nhau -> Dùng Struct để gom các thông số về.
 
+## 2. Union
 
+>
+> Giống với struct, đây là kiểu dữ liệu người dùng tự định nghĩa bằng cách nhóm các kiểu dữ liệu lại.
+>
+> Union sử dụng chung vùng nhớ -> Giá trị này thay đổi thì những giá trị khác sẽ thay đổi.
+>
 
+**_VD4: Kiểm tra kích thước của Union_**
+```    
+    #include <stdio.h>
+    #include <stdint.h>
+
+    typedef union Ex1
+    {
+        uint8_t var1;  // 1 byte + 3padding
+        uint32_t var2; // 4 byte
+        uint16_t var3; // 2 byte + 2padding
+    } frame;
+
+    int main(int argc, char const *argv[])
+    {
+        printf(" Size of data: %d\n");
+        frame data;
+
+        printf("Size = %d\n", sizeof(frame));
+
+        return 0;
+    }
+```
 
 
 
