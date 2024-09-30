@@ -72,7 +72,7 @@ _VD1:_
 ```
 ➡️ Kích thước của Struct = tổng các kiểu dữ liệu + padding
   
-**_VD2:** Tìm kích thước dữ liệu VD1_
+**_VD2: Tìm kích thước dữ liệu VD1_**
 
 ```
       typedef struct {
@@ -84,6 +84,35 @@ _VD1:_
 **Giải thích:** Ưu tiên kich thước dữ liệu lớn nhất làm chuẩn (4byte).
     - var1 (4byte)
     - var2 (1byte) + var3 (2byte) = 3 byte (dư 1 byte) -> 1 padding
+    - Tổng = 8
+
+**_VD3: Tìm kích thước dữ liệu_**
+
+```
+      uint8_t var1; //1byte, 3padding 
+      uint32_t var2; //4byte
+      uint16_t var3; //2byte, 2padding
+
+      //Tong kich thuoc = 12
+```
+
+**_VD4: Tìm kích thước dữ liệu_**
+
+```
+      uint8_t var1[9]; //1byte 
+      uint64_t var2[3]; //8byte
+      uint16_t var3[10]; //2byte
+      uint32_t var4[2]; //4byte
+
+```
+
+**Giải  thích:** 
+    - Kích thước lớn nhất là 8 byte.
+    - var1: 8byte(làm chuẩn) + (1byte lẻ + 7padding) = 16  
+    - var2: 8byte *3 = 24
+    - var3: 8byte *2 + (4byte lẻ + 4padding) = 24
+    - var4: 8byte
+    - Tổng kích thước = 72 byte
 
 
 
@@ -91,10 +120,10 @@ _VD1:_
 
 
 
-
-
-
-
+### Ứng dụng của Struct: 
+    - Json
+    - Cấu trúc dữ liệu list
+    - Giao thức trong MCU, mỗi thông số đều có cấu hình khác nhau -> Dùng Struct để gom các thông số về.
 
 
 
