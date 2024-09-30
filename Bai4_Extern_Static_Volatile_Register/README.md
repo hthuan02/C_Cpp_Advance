@@ -111,11 +111,7 @@ _VD2: Static biến cục bộ_
 
 ## 4. Register
 
-
-
-![Mô tả ảnh](https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai4_Extern_Static_Volatile_Register/register.png)
-
-
+![](https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai4_Extern_Static_Volatile_Register/register.png)
 
 
 
