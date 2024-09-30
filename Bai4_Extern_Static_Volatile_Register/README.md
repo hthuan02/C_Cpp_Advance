@@ -111,6 +111,8 @@ _VD2: Static biến cục bộ_
 
 ## 4. Register
 
+
+
 ![](https://1drv.ms/i/s!ArJXeginURj_zwyOjB4mX8cSy4SG?e=6S4BAO)
 
 
