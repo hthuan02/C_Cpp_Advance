@@ -81,7 +81,7 @@ _VD1:_
       uint16_t var3; //2byte
     } data;
 ```
-**Giải thích:** Ưu tiên kich thước dữ liệu lớn nhất làm chuẩn (4byte).
+- Giải thích: Ưu tiên kich thước dữ liệu lớn nhất làm chuẩn (4byte).
     - var1 (4byte)
     
     - var2 (1byte) + var3 (2byte) = 3 byte (dư 1 byte) -> 1 padding
