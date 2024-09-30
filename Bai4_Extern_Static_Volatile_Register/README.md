@@ -113,7 +113,17 @@ _VD2: Static biến cục bộ_
 
 ![](https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai4_Extern_Static_Volatile_Register/register.png)
 
+Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 
+**(1):** Lưu trữ từ trong bộ nhớ RAM, thực hiện tính toán.
+**(2):** Thao tác tính toán các giá trị.
+**(3):** Tính xong thì lưu giá trị trong thanh ghi.
+**(4):** Lấy giá trị trong thanh ghi trả về biến trong RAM, kết quả = 6.
+
+
+**- Ứng dụng của biến register:** (ít ứng dụng)
+     - Khai báo biến register, bỏ qua 2 giai đoạn (1) và (4). Giúp giảm thời gian chạy và tăng hiệu suất làm việt của chương trình (Lấy giá trị từ thanh ghi và trả kết quả về thanh ghi).
+     - Chỉ sử dụng cho biến cục bộ.
 
 
 
