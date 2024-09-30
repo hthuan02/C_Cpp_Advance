@@ -116,8 +116,11 @@ _VD2: Static biến cục bộ_
 Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 
 **(1):** Lưu trữ từ trong bộ nhớ RAM, thực hiện tính toán.
+
 **(2):** Thao tác tính toán các giá trị.
+
 **(3):** Tính xong thì lưu giá trị trong thanh ghi.
+
 **(4):** Lấy giá trị trong thanh ghi trả về biến trong RAM, kết quả = 6.
 
 
