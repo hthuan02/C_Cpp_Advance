@@ -72,10 +72,10 @@ _VD1:_
 ```
 ➡️ Kích thước của Struct = tổng các kiểu dữ liệu + padding
   
-**_VD2: Tìm kích thước dữ liệu VD1_**
+**_VD2: Tìm kích thước struct VD1_**
 
 ```
-      typedef struct {
+    typedef struct {
       uint32_t var1; //Chia hết cho 8 (4byte) 
       uint8_t var2; //1byte
       uint16_t var3; //2byte
@@ -88,7 +88,7 @@ _VD1:_
 
     - Tổng = 8
 
-**_VD3: Tìm kích thước dữ liệu_**
+**_VD3: Tìm kích thước_**
 
 ```
       uint8_t var1; //1byte, 3padding 
@@ -98,7 +98,7 @@ _VD1:_
       //Tong kich thuoc = 12
 ```
 
-**_VD4: Tìm kích thước dữ liệu_**
+**_VD4: Tìm kích thước_**
 
 ```
       uint8_t var1[9]; //1byte 
