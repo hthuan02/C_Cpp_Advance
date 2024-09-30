@@ -58,7 +58,7 @@ _VD1:_
       return 0;
     }
 ```
-## Data alignment & padđing
+## Data alignment & padding
 
 - Data alignment: Là việc canh chỉnh, sắp xếp dữ liệu được sắp xếp dữ liệu vào đúng kích thước của CPU (gồm 2 byte, 4 byte, 8 byte,..). Đảm bảo hiệu suất hoạt động của bộ nhớ, dễ dàng truy cập và xử lý nhanh hơn.
 
