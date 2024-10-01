@@ -1,4 +1,4 @@
-# BÀI 6: STRUCT & UNION
+# BÀI 7: STRUCT & UNION
 
 ## 1. Struct
 
