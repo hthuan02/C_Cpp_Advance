@@ -134,9 +134,9 @@ _VD1:_
 
 typedef union
 {
-    uint8_t var1;
-    uint32_t var2;
-    uint16_t var3;
+    uint8_t var1; // 1byte
+    uint32_t var2; // 4 byte
+    uint16_t var3; // 2 byte
 
     // Union sẽ lấy kiểu dữ liệu có kích thước lớn nhất 24 byte
 } frame;
@@ -159,7 +159,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-**Trường hợp tràn số:**
+**Trường hợp đặc biệt của VD4:**
 
 ```
     int main(int argc, char const *argv[])
@@ -177,13 +177,20 @@ int main(int argc, char const *argv[])
     }
 ```
 
-- Vì `data.var2 = 4294967294;` chuyển sang binary = 11111111 11111111 11111111 11111110
+**- Giải thích:**
+    - Vì `data.var2 = 4294967294;` chuyển sang binary = 11111111 11111111 11111111 11111110
+    - Địa chỉ bắt đầu, 0x01 lưu byte thấp nhất.
+  
+        | 0x01 | 0x02 | 0x03|0x04|
+        | :---: | --- | ---: | ---: |
+        | 11111110 | 11111111 | 11111111 | 11111111 |
+        | 254 | 65535 | 65535 | 65535 |
 
-    | 0x01 | 0x02 | 0x03 | 0x04 |
-    | :---: | --- | ---: | ---: |
-    | 11111111 | 11111111 | 11111111 | 11111110 |
-    | 65535 | 65535 | 65535 | 254 |
+    -  var1: 1byte = 254 (0x01)
+  
+    -  var2: 4byte = 4294967294 (4 ô địa chỉ)
 
+    -  var3: 2byte = 65534 (0x01+0x02)
 
 
 
