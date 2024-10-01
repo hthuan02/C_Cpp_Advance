@@ -4,5 +4,8 @@
 
 - Gồm có 5 phân vùng bộ nhớ, theo thứ tự từ trên xuống:
 
-    
-  
+    | Stack |
+    | Heap |
+    | Bss |
+    | Data |
+    | Text |
