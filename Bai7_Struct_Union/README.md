@@ -4,6 +4,7 @@
 
 > Struct là 1 dạng kiểu dữ liệu, cho phép người dùng tự định nghĩa. Nhóm các kiểu dữ liệu như: int, char, double,... lại thành kiểu dữ liệu mới. 
 >
+> Kích thước của Struct = Tổng các kích thước dữ liệu + padding 
 
 
 ```
@@ -124,33 +125,39 @@ _VD1:_
 >
 > Union sử dụng chung vùng nhớ, các thành phần đều chung địa chỉ -> Giá trị này thay đổi thì những giá trị khác sẽ thay đổi.
 >
+> Kích thước Union sẽ lấy kiểu dữ liệu có kích thước lớn nhất.
 
 **_VD4: Kiểm tra kích thước của Union_**
 ```    
-    #include <stdio.h>
-    #include <stdint.h>
+#include <stdio.h>
+#include <stdint.h>
 
-    typedef union Ex1
-    {
-        uint8_t var1;  // 1 byte + 3padding
-        uint32_t var2; // 4 byte
-        uint16_t var3; // 2 byte + 2padding
-    } frame;
+typedef union
+{
+    uint8_t var1;
+    uint32_t var2;
+    uint16_t var3;
 
-    int main(int argc, char const *argv[])
-    {
-        printf(" Size of data: %d\n");
-        frame data;
+    // Union sẽ lấy kiểu dữ liệu có kích thước lớn nhất 24 byte
+} frame;
 
-        printf("Size = %d\n", sizeof(frame));
+int main(int argc, char const *argv[])
+{
 
-        return 0;
-    }
+    printf("Size = %d\n", sizeof(frame));
+    frame data;
+    data.var1 = 5;
+    data.var2 = 6;
+    data.var3 = 7;
+
+    //Vì dữ liệu kiểu Union-> SD chung vùng nhớ
+    //Lấy data lớn nhất
+    printf("Var1 = %d\n", data.var1);
+    printf("Var2 = %d\n", data.var2);
+    printf("Var3 = %d\n", data.var3);
+    return 0;
+}
 ```
-
-
-
-
 
 
 
