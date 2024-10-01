@@ -177,8 +177,9 @@ int main(int argc, char const *argv[])
     }
 ```
 
-**- Giải thích:**
+- Giải thích:
     - Vì `data.var2 = 4294967294;` chuyển sang binary = 11111111 11111111 11111111 11111110
+    
     - Địa chỉ bắt đầu, 0x01 lưu byte thấp nhất.
   
         | 0x01 | 0x02 | 0x03|0x04|
