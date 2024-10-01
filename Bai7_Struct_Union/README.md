@@ -144,20 +144,50 @@ typedef union
 int main(int argc, char const *argv[])
 {
 
-    printf("Size = %d\n", sizeof(frame));
+    printf("Size = %d\n", sizeof(frame)); //Kích thước lớn nhất 4byte
     frame data;
+
     data.var1 = 5;
     data.var2 = 6;
     data.var3 = 7;
-
     //Vì dữ liệu kiểu Union-> SD chung vùng nhớ
-    //Lấy data lớn nhất
-    printf("Var1 = %d\n", data.var1);
-    printf("Var2 = %d\n", data.var2);
-    printf("Var3 = %d\n", data.var3);
+    //Lấy data sau cùng
+    printf("Var1 = %d\n", data.var1);   //7
+    printf("Var2 = %d\n", data.var2);   //7
+    printf("Var3 = %d\n", data.var3);   //7
     return 0;
 }
 ```
+
+**Trường hợp tràn số:**
+
+```
+    int main(int argc, char const *argv[])
+    {
+    
+        printf("Size = %d\n", sizeof(frame));
+        frame data;
+
+        data.var2 = 4294967294;
+
+        printf("Var1 = %d\n", data.var1); //254   
+        printf("Var2 = %u\n", data.var2); //4294967294
+        printf("Var3 = %d\n", data.var3); //65534
+        return 0;
+    }
+```
+
+- Vì `data.var2 = 4294967294;` chuyển sang binary = 11111111 11111111 11111111 11111110
+
+    | 0x01 | 0x02 | 0x03 | 0x04 |
+    | :---: | --- | ---: | ---: |
+    | 11111111 | 11111111 | 11111111 | 11111110 |
+    | 65535 | 65535 | 65535 | 254 |
+
+
+
+
+
 
 
 
