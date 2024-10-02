@@ -78,11 +78,84 @@ _VD2:_
 
 _VD3:_
 
+```
+    #include <stdio.h>
 
+    typedef struct
+    {
+        int x;
+        int y;
+    } Point_data;
 
+    Point_data p1 = {5, 7}; // data
+    Point_data p2;          // bss
 
+    int a = 0; // bss
+    int b = 5; // data
 
+    static int m = 0; // bss
+    static int n;     // bss
 
+    void test()
+    {
+        static int c = 0; // bss
+        static int d;     // bss
+    }
+
+    int main(int argc, char const *ptr[])
+    {
+        /*code*/
+        return 0;
+    }
+```
+## 3. Stack segment
+
+> Chứa biến cục bộ (trừ static cục bộ).
+>
+> Có thể đọc và ghi.
+>
+> Sau khi kết thúc 1 lần gọi hàm  địa chỉ của biến cục bộ bị thu hồi LIFO(Last In - First Out) 
+
+_VD4:_
+
+```
+    #include <stdio.h>
+
+    int total(int a, int b)
+    {
+        int c; //stack
+        c = a + b;
+        return c;
+    }
+    
+    int main(int argc, char const *argv[])
+    {
+        printf("a+b = %d\n", total(5, 6));
+        return 0;
+    }
+```
+➡️➡️➡️ Để đọc và ghi dữ liệu ở biến cục bộ, phân vùng stack thì dùng *ptr.
+
+_VD5:_
+
+```
+    #include <stdio.h>
+
+    int *ptr = NULL;
+    void test()
+    {
+        const int a = 10; // stack -> cục bộ
+        ptr = &a;
+    }
+
+    int main(int argc, char const *argv[])
+    {
+        test();
+        *ptr = 20;
+        printf("a= %d\n", *ptr); // a=20, thay đổi được giá trị nhưng WARNING!!
+        return 0;
+    }
+```
 
 
 
