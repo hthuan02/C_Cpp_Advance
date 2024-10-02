@@ -162,6 +162,8 @@ _VD5:_
 > Dùng để cấp phát động bộ nhớ.
 >
 > Đi kèm với các hàm như: malloc(), calloc(), realloc(), free().
+>
+> Khai báo thư viện `#include<stdlib.h>`.
 
 **Cấp phát động là gì?**
 - Ví dụ khai báo 1 mảng có 12 kí tự `char array[12]`, nhập tên từ bàn phím vào mảng này
@@ -169,8 +171,11 @@ _VD5:_
 
     - Nếu kí tự nhập vào < 12: xảy ra hiện tượng lãng phí bộ nhớ.
 
-**-->** Trong ngôn ngữ C, sinh ra khái niệm cấp phát động để tối ưu bộ nhớ.
-  
+--> Trong ngôn ngữ C, sinh ra khái niệm cấp phát động để tối ưu bộ nhớ.
+
+_VD6:_
+
+
 
 
 
