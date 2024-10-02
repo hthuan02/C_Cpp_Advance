@@ -163,7 +163,14 @@ _VD5:_
 >
 > Đi kèm với các hàm như: malloc(), calloc(), realloc(), free().
 
- 
+**Cấp phát động là gì?**
+- Ví dụ khai báo 1 mảng có 12 kí tự `char array[12]`, nhập tên từ bàn phím vào mảng này
+    - Nếu kí tự nhập vào > 12: xảy ra hiện tượng tràn bộ nhớ.
+
+    - Nếu kí tự nhập vào < 12: xảy ra hiện tượng lãng phí bộ nhớ.
+
+**-->** Trong ngôn ngữ C, sinh ra khái niệm cấp phát động để tối ưu bộ nhớ.
+  
 
 
 
