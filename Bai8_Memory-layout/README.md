@@ -108,7 +108,7 @@ _VD3:_
         return 0;
     }
 ```
-## 3. Stack segment
+## 4. Stack segment
 
 > Chứa biến cục bộ (trừ static cục bộ).
 >
@@ -134,7 +134,7 @@ _VD4:_
         return 0;
     }
 ```
-➡️➡️➡️ Để đọc và ghi dữ liệu ở biến cục bộ, phân vùng stack thì dùng *ptr.
+➡️➡️➡️ Để đọc và ghi dữ liệu ở biến cục bộ, phân vùng stack thì dùng `*ptr`.
 
 _VD5:_
 
@@ -157,8 +157,13 @@ _VD5:_
     }
 ```
 
+## 5. Heap segment
 
+> Dùng để cấp phát động bộ nhớ.
+>
+> Đi kèm với các hàm như: malloc(), calloc(), realloc(), free().
 
+ 
 
 
 
