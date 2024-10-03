@@ -4,7 +4,7 @@
 
 - Gồm có 5 phân vùng bộ nhớ, theo thứ tự từ trên xuống:
 
-<img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai8_Memory-layout/memorylayout.png" alt="Memory Layout" width="500"/>
+<img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai8_Memory-layout/images/memorylayout.png" alt="Memory Layout" width="500"/>
 
 ## 1. Text segment
 
