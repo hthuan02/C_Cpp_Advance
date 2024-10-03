@@ -178,7 +178,7 @@ _VD4:_
 | Đặc điểm               | `malloc`                                       | `calloc`                                         | `realloc`                                      |
 |-----------------------|------------------------------------------------|-------------------------------------------------|------------------------------------------------|
 | **Công dụng**         | Cấp phát bộ nhớ động, không khởi tạo giá trị                           | Cấp phát bộ nhớ động và khởi tạo về 0          | Thay đổi kích thước vùng nhớ đã được cấp phát |
-| **Cú pháp**           | `void* malloc(byte_size);`                  | `void* calloc(n, element_size);`      | `void* realloc(void *ptr, new_size);`     |
+| **Cú pháp**           | `void* malloc(byte_size);`                  | `void* calloc(n, element_size);`     | `void* realloc(void *ptr, new_size);`     |
 | **Tham số**           | Một tham số (kích thước bộ nhớ cần cấp phát)  | Hai tham số (số phần tử và kích thước mỗi phần tử) | Hai tham số (con trỏ đến vùng nhớ cũ và kích thước mới) |
 | **Giá trị khởi tạo**  | Không khởi tạo, dữ liệu là rác                 | Khởi tạo tất cả phần tử về 0                     | Không khởi tạo, dữ liệu giữ nguyên (có thể mất dữ liệu mới nếu mở rộng) |
 | **Kích thước**        | Cấp phát bộ nhớ theo kích thước được chỉ định  | Cấp phát bộ nhớ cho số phần tử × kích thước phần tử | Cấp phát hoặc thu nhỏ bộ nhớ theo kích thước mới |
