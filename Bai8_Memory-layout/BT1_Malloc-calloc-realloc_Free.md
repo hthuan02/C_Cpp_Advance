@@ -11,14 +11,16 @@
 > `malloc`: Cấp phát bộ nhớ động vùng nhớ với kích thước, không khởi tạo giá trị.
 >
 > Giá trị của hàm trả về là 1 `*void`, cần ép kiểu dữ liệu.
+>
+> Giá trị trong ô nhớ được cấp phát là 1 giá trị random(giá trị rác).
 
 ```
    ptr = (cast_type*)malloc(byte_size);
 ```
 
-    - `ptr`: Con trở lưu trữ ô nhớ đầu tiên của vùng nhớ cấp phát.
-    - `cast_type`: Kiểu con trỏ muốn ép kiểu sang.
-    - `byte_size`: Kích thước byte cần cấp phát.
+- `ptr`: Con trở lưu trữ ô nhớ đầu tiên của vùng nhớ cấp phát.
+- `cast_type`: Kiểu con trỏ muốn ép kiểu sang.
+- `byte_size`: Kích thước byte cần cấp phát.
 
 _VD1:_
 
@@ -63,7 +65,7 @@ _VD2:_
             }
             for (i = 0; i < n; i++)
             {
-                printf("%d ", a[i]); // 27 28 29 ... 37
+                printf("%d ", a[i]); // 28 29 ... 37
             }
             free(a);
         }
@@ -89,8 +91,57 @@ ban đầu  int = 0
 
 ### 2. Hàm Calloc()
 
-### 3. Hàm Realloc()
+>  Giá trị của các vùng nhớ được cấp phát sẽ có giá trị `mặc định là 0` thay vì giá trị rác như hàm malloc().
+>
+```
+    ptr = (cast_type*) calloc(n, element_size)
+```
+- `ptr`: Con trỏ đầu tiên của vùng nhớ được cấp phát.
 
-## II. Hàm thu hồi Free()
+- `cast_type*`: Kiểu con trỏ muốn ép kiểu.
+
+- `n`: Số lượng phần tử muốn cấp phát.
+- `element_size`: Kích thước 1 phần tử(byte).
+
+_VD3:_
+```
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    int main()
+    {
+        int n = 10;
+        int *a = (int *)calloc(n, sizeof(int));
+        if (a == NULL)
+        {
+            printf("Cap phat khong thanh cong !\n");
+        }
+        else
+        {
+            int i = 0;
+            printf("Cap phat thanh cong !\n");
+            printf("Mang ban dau : ");
+
+            for (i = 0; i < n; i++)
+            {
+                printf("%d ", a[i]);
+            }
+            for (i = 0; i < n; i++)
+            {
+                a[i] = 28 + i; // *(a + i) = 28 cũng được
+            }
+            printf("\nMang sau khi thay doi : ");
+            for (i = 0; i < n; i++)
+            {
+                printf("%d ", a[i]);
+            }
+            free(a);
+        }
+        return 0;
+    } 
+```
+
+
+### 3. Hàm Realloc()
 
 ## III. So sánh malloc, calloc và realloc
