@@ -83,6 +83,7 @@ ban đầu  int = 0
 40 (byte cấp phát malloc) - 10 byte(sử dụng) = (dư) 30 byte 
 
 --> Nhưng vì sử dụng hàm malloc(Cấp phát động).
+
 --> Nên không xảy ra hiện tượng lãng phí bộ nhớ khi dư 30 byte.
 */
 
