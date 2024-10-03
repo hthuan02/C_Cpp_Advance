@@ -72,6 +72,7 @@ _VD2:_
 
 ```
 - Giải thích:
+
 /*
 ban đầu  int = 0
 
