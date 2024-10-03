@@ -6,6 +6,12 @@
 
 ### 1. Hàm Malloc()
 
+- `malloc`: Cấp phát bộ nhớ động với kích thước, không khởi tạo giá trị
+
+```
+    void *malloc(size_t size);
+```
+
 ### 2. Hàm Calloc()
 
 ### 3. Hàm Realloc()
