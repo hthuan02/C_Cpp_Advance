@@ -2,12 +2,14 @@
 
 `#include<stdlib.h>`
 
-## 1. Hàm Malloc()
+## I. Các hàm cấp phát động
 
-## 2. Hàm Calloc()
+### 1. Hàm Malloc()
 
-## 3. Hàm Realloc()
+### 2. Hàm Calloc()
 
-## 4. Hàm Free()
+### 3. Hàm Realloc()
 
-## 5. So sánh malloc, calloc và realloc
+## II. Hàm thu hồi Free()
+
+## III. So sánh malloc, calloc và realloc
