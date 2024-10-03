@@ -18,8 +18,7 @@
 
 | **Tiêu chí**              | **Stack**                                                                 | **Heap**                                                          |
 |---------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------------|
-| **Mục đích**              | Lưu biến cục bộ, tham số hàm.                                              | Lưu trữ vùng nhớ cấp phát động như: malloc(), calloc(), realloc().                                   |
-| **Quản lý**               | Tự động (hệ điều hành).                                                   | Thủ công (lập trình viên).                                        |
+| **Lưu trữ**              | Lưu biến cục bộ, tham số hàm.                                              | Lưu trữ vùng nhớ cấp phát động như: malloc(), calloc(), realloc().                                   |                                      |
 | **Tốc độ**                | Nhanh.                                                                    | Chậm hơn Stack.                                                   |
 | **Giải phóng**            | Tự động khi hàm kết thúc.                                                 | Sử dụng hàm `free()` hoặc `delete`.                                 |
 | **Tràn bộ nhớ**           | Stack overflow khi dùng quá nhiều bộ nhớ.                                 | Heap overflow khi không giải phóng hoặc cấp phát quá lớn.         |
