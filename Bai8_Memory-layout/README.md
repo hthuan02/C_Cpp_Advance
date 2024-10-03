@@ -102,7 +102,7 @@ _VD3:_
         static int d;     // bss
     }
 
-    int main(int argc, char const *ptr[])
+    int main(int argc, char const *argv[])
     {
         /*code*/
         return 0;
