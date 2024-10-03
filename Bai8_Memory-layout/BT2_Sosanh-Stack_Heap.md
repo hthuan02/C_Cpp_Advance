@@ -4,7 +4,7 @@
 
 ## So sánh giống và khác nhau:
 
-### Giống nhau:
+### 1. Giống nhau:
 
 1. **Lưu trữ dữ liệu**: Đều dùng để lưu trữ dữ liệu.
 2. **Nhiều kiểu dữ liệu**: Có thể lưu trữ nhiều kiểu dữ liệu.
@@ -12,7 +12,7 @@
 4. **Ảnh hưởng đến hiệu suất**: Cách quản lý bộ nhớ trong cả Stack và Heap có thể ảnh hưởng đến hiệu suất chương trình.
 5. **Có thể bị tràn bộ nhớ**: Stack overflow và Heap overflow đều có thể xảy ra nếu không quản lý đúng cách.
 
-### Khác nhau:
+### 2. Khác nhau:
 
 - Lập bảng so sánh
 
@@ -27,7 +27,7 @@
 | **Thời điểm cấp phát**    | Lúc biên dịch.                                                            | Lúc chạy chương trình.                                            |
 | **Rò rỉ bộ nhớ**          | Không xảy ra.                                                             | Có thể xảy ra nếu không giải phóng.                               |
 
-### Stack overflow & Heap overflow
+### 3. Stack overflow & Heap overflow
 
 - **Stack overflow**: Do bộ nhớ Stack cố định, nếu sử dụng quá nhiều sẽ gây tràn bộ nhớ (Stack overflow), ví dụ như khởi tạo quá nhiều biến cục bộ hoặc đệ quy vô hạn.
 
