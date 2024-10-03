@@ -171,7 +171,7 @@ _VD5:_
 
     - Nếu kí tự nhập vào < 12: xảy ra hiện tượng lãng phí bộ nhớ.
 
---> Trong ngôn ngữ C, sinh ra khái niệm cấp phát động để tối ưu bộ nhớ.
+--> Trong ngôn ngữ C, sinh ra khái niệm cấp phát động để tối ưu bộ nhớ. Tránh việc tràn hoặc lãng phí bộ nhớ.
 
 _VD6:_
 
