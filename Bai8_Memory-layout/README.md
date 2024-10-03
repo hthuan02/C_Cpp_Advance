@@ -173,7 +173,13 @@ _VD5:_
 
 --> Trong ngôn ngữ C, sinh ra khái niệm cấp phát động để tối ưu bộ nhớ. Tránh việc tràn hoặc lãng phí bộ nhớ.
 
-_VD6:_
+Nội dung tiếp theo là:
+
+- Tìm hiểu về malloc(), calloc(), realloc() và so sánh 3 hàm này.(1)
+
+- So sánh stack & heap segment.(2)
+
+
 
 
 
