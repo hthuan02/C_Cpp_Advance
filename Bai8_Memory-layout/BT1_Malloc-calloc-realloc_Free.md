@@ -77,6 +77,7 @@ _VD2:_
 ban đầu  int = 0
 
 0  1  2  3....9
+
 28 29 30 31...37
 
 40 (byte cấp phát malloc) - 10 byte(sử dụng) = (dư) 30 byte 
