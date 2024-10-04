@@ -21,11 +21,11 @@
     //Không có hàm kiểm tra đầy, vì nó k quan tâm đến số lượng
 ```
 
-_VD0:_
+_VD0:_ Cho mảng `int array[] = {2,7,4,5,3};`
 
 - Dùng Malloc:
   
-    int array[] = {2,7,4,5,3}; // Lưu trữ 5 phần tử * sizeof(int)= (20byte)
+     // Lưu trữ 5 phần tử * sizeof(int)= (20byte)
 
 - Liked list: Tạo 5 node
 
