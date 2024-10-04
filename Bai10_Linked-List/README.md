@@ -1,7 +1,7 @@
 # BÀI 10: LIKED LIST
 
-- Liked list (danh sách liên kết): Là cấu trúc dữ liệu gồm chuổi các node(nút) liên kết với nhau.
-    - Mỗi node gồm 2 thành phần: Address(Data) và con trỏ (*Next).
+- Liked list (danh sách liên kết): Là cấu trúc dữ liệu gồm chuổi các node(nút) liên kết với nhau, mỗi node gồm 2 thành phần: Data và con trỏ (*Next).
+
 - Các hàm sử dụng của danh sách dữ liệu LIST:
 
 ```
@@ -21,3 +21,31 @@
     //Không có hàm kiểm tra đầy, vì nó k quan tâm đến số lượng
 ```
 
+_VD0:_
+
+- Dùng Malloc:
+  
+    int array[] = {2,7,4,5,3}; // Lưu trữ 5 phần tử * sizeof(int)= (20byte)
+
+- Liked list: Tạo 5 node
+
+    <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai10_Linked-List/liked_list.png" alt="Memory Layout" width="500"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
