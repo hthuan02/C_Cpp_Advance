@@ -40,6 +40,7 @@ _VD0:_ Cho mảng `int array[] = {2,7,4,5,3};`
         //Không có hàm kiểm tra đầy, vì nó k quan tâm đến số lượng
     ```
 
+**Ứng dụng**: LIKED LIST GIÚP QUẢN LÝ DANH SÁCH TỐT HƠN MẢNG.
 
 
 
