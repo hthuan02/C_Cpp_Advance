@@ -2,7 +2,7 @@
 
 - Liked list (danh sách liên kết): Là cấu trúc dữ liệu gồm chuổi các node(nút) liên kết với nhau, mỗi node gồm 2 thành phần: Data và con trỏ (*Next).
 
-_VD0:_ Cho mảng `int array[] = {2,7,4,5,3};`
+  _VD0:_ Cho mảng `int array[] = {2,7,4,5,3};`
 
 - Dùng Malloc:
   
@@ -12,7 +12,7 @@ _VD0:_ Cho mảng `int array[] = {2,7,4,5,3};`
 
         // Free()
 
-➡️➡️➡️➡️➡️
+  ➡️➡️➡️➡️➡️
 - Liked list: Tạo 5 node
 
     <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai10_Linked-List/liked_list.png" alt="Memory Layout" width="800"/>
