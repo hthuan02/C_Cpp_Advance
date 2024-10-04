@@ -29,7 +29,7 @@ _VD0:_
 
 - Liked list: Tạo 5 node
 
-    <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai10_Linked-List/liked_list.png" alt="Memory Layout" width="500"/>
+    <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai10_Linked-List/liked_list.png" alt="Memory Layout" width="700"/>
 
 
 
