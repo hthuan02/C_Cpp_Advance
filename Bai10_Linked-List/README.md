@@ -6,11 +6,11 @@
 
 - Dùng Malloc:
   
-        // Lưu trữ 5 phần tử * sizeof(int)= (20byte)
+        // Malloc(); //Lưu trữ 5 phần tử * sizeof(int)= (20byte)
+
+        // Free():
 
         // Thêm - Thu hồi phần tử bằng cách thủ công, nhưng đối với array[10000] thì không thể làm thủ công được.
-
-        // Free()
 
   ➡️➡️➡️➡️➡️
 - Liked list: Tạo 5 node
