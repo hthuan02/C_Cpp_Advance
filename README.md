@@ -7,7 +7,7 @@
 ## I. Các loại con trỏ
 
 ### 1. Regular Pointer(Con trỏ với biến)
-```cpp
+```c
     int a = 10;
     int * ptr = &a;
 
@@ -19,7 +19,7 @@
 
 ### 2. Array Pointer(Con trỏ mảng)
 
-```cpp
+```c
     int arr[] = { 2, 3, 5, 7, 8 };
     int * ptr = arr;
 
