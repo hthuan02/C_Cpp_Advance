@@ -1,11 +1,9 @@
-# <span style="color: blue;"BÀI 3: POINTER</span>
+# BÀI 3: POINTER
 
 - Con trỏ là 1 biến, thay vì lưu giá trị thì dùng để lưu địa chỉ của 1 đối tượng(biến, hàm, mảng,...). 
 - Con trỏ không lưu giá trị mà nó lưu địa chỉ bộ nhớ nơi biến khác đang sử dụng.
 
-## I. Các loại con trỏ
-
-### 1. Regular Pointer(Con trỏ với biến)
+## 1. Regular Pointer(Con trỏ với biến)
 ```c
     int a = 10;
     int * ptr = &a;
@@ -16,7 +14,7 @@
     printf("Gia tri tai dia chi: %d\n", *ptr); // a = 10
 ```
 
-### 2. Array Pointer(Con trỏ mảng)
+## 2. Array Pointer(Con trỏ mảng)
 
 ```c
     int arr[] = { 2, 3, 5, 7, 8 };
@@ -32,7 +30,7 @@
 
 ```
 
-### 3. Void Pointer
+## 3. Void Pointer
    >Có thể trỏ đến bất kỳ kiểu dữ liệu nào (char, int, float, double,...), nhưng không thể được sử dụng trực tiếp để gọi hàm.
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
 
@@ -57,7 +55,7 @@
     }
 ```
 
-### 4. Function Pointer
+## 4. Function Pointer
 >Có thể trỏ đến các hàm có kiểu dữ liệu cụ thể, giúp gọi hàm thông qua con trỏ.
 >
 >Đây là biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
@@ -94,7 +92,7 @@
     }
 ```
 
-### 5. Pointer to Constant(Con trỏ hằng)
+## 5. Pointer to Constant(Con trỏ hằng)
 >Chỉ có thể đọc giá trị và không thể thay đổi giá trị tại địa chỉ nó trỏ đến.
 >
 >Có thể trỏ đến nhiều địa chỉ khác nhau.
@@ -125,7 +123,7 @@
         printf("%p\n", ptr_const);
         printf("%d\n", *ptr_const); //ptr_const = 15
 ```
-### 6. Constant Pointer(Hằng con trỏ)
+## 6. Constant Pointer(Hằng con trỏ)
 >Chỉ trỏ đến 1 địa chỉ duy nhất, khi đã trỏ đến 1 địa chỉ rồi thì không thể trỏ đến địa chỉ khác được nữa.
 >
 >Tại 1 địa chỉ trỏ đến có thể thay đổi giá trị.
@@ -162,7 +160,7 @@
 | 2 |Chỉ có thể đọc, không thể thay đổi giá trị(giá trị chỉ được thay đổi tại biến)| Có thể thay đổi giá trị |
 
    
-### 7. NULL Pointer
+## 7. NULL Pointer
 >Con trỏ trống, không trỏ đến vùng nhớ nào.
 >
 >Khai báo nhưng chưa sử dụng liền.
@@ -175,7 +173,7 @@
     int *ptr = NULL;
 ```
    
-### 8. Pointer to Pointer(Con trỏ đến con trỏ)
+## 8. Pointer to Pointer(Con trỏ đến con trỏ)
 >Là con trỏ mà có thể trỏ đến địa chỉ của các con trỏ khác, có nhiều cấp độ con trỏ (con trỏ cấp 2, 3,...).
 
 ```c
@@ -796,7 +794,7 @@ _VD4:_
 
 _VD5:_
 
-```
+```c
     #include <stdio.h>
 
     int *ptr = NULL;
@@ -857,7 +855,7 @@ _VD5:_
 
 _VD1:_
 
-```
+```c
     #include <stdio.h>
     #include <stdlib.h>
 
@@ -876,7 +874,7 @@ _VD1:_
 - Trường hợp không cấp phát đủ vùng nhớ, thì `malloc()` sẽ trả về con trỏ NULL.
 
 _VD2:_
-```
+```c
     #include <stdio.h>
     #include <stdlib.h>
 
@@ -927,7 +925,7 @@ ban đầu  int = 0
 
 > Hàm cấp phát bộ nhớ động tương tự `malloc`, `calloc` có khởi tạo tất cả vùng bộ nhớ về giá trị 0.
 >
-```
+```c
     ptr = (cast_type*) calloc(n, element_size)
 ```
 - `ptr`: Con trỏ đầu tiên của vùng nhớ được cấp phát.
@@ -938,7 +936,7 @@ ban đầu  int = 0
 - `element_size`: Kích thước 1 phần tử(byte).
 
 _VD3:_
-```
+```c
     #include <stdio.h>
     #include <stdlib.h>
 
@@ -986,7 +984,7 @@ của mảng là 0:  0  0  0  0  0  0  0  0  0  0  0
 
 > Là hàm cấp phát lại, có thay đổi kích thước của vùng nhớ đã cấp phát trước đó.
 
-```
+```c
     ptr = (cast_type*)realloc(ptr,new_size)
 ```
 
@@ -996,7 +994,7 @@ của mảng là 0:  0  0  0  0  0  0  0  0  0  0  0
 
 _VD4:_
 
-```
+```c
     //Cấp phát mảng 10 phần tử, kích thước 40byte 
     int *array = (int *) malloc(10 * sizeof(int));
 
@@ -1054,7 +1052,7 @@ _VD4:_
 
 _VD1: Gọi hàm mà không có điều kiện dừng_
 
-```
+```c
     int foo(int x){
     printf("De quy khong gioi han\n");
     return foo(x);
@@ -1067,7 +1065,7 @@ _VD1: Gọi hàm mà không có điều kiện dừng_
 
 _VD2: Khởi tạo vùng nhớ quá lớn_
 
-```
+```c
     int *A = (int *)malloc(18446744073709551615);
 ```
   
@@ -1119,7 +1117,7 @@ _VD2: Khởi tạo vùng nhớ quá lớn_
 # Các hàm thường sử dụng trong danh sách liên kết(Liked List)
 
 ## 1. Hàm thêm 1 node ở cuối LIST
-```
+```c
 void push_back(Node **array, int value)
 {
     Node *temp = createNode(value);
@@ -1141,7 +1139,7 @@ void push_back(Node **array, int value)
 }
 ```
 ## 2. Hàm xóa 1 node ở cuối LIST
-```
+```c
 void pop_back(Node **array)
 {
     Node *p = *array;
@@ -1165,7 +1163,7 @@ void pop_back(Node **array)
 }
 ```
 ## 3. Hàm thêm 1 node ở đầu LIST
-```
+```c
 void push_front(Node **array, int value)
 {
     Node *new_node = createNode(value);
@@ -1186,7 +1184,7 @@ void pop_front(Node **array)
 }
 ```
 ## 5. Hàm thêm 1 node vị trí bất kỳ trong LIST
-```
+```c
 void insert(Node **array, int value, int pos)
 {
     Node *new_node = createNode(value);
@@ -1207,7 +1205,7 @@ void insert(Node **array, int value, int pos)
 }
 ```
 ## 6. Hàm xóa 1 node vị trí bất kỳ trong LIST
-```
+```c
 void delete_list(Node **array, int pos)
 {
     // Con trỏ tạm để thao tác với danh sách
