@@ -229,7 +229,7 @@ _VD1:_ Ta có 3 file
 
 _VD2: Static biến cục bộ_
 
-```
+```c
      #include<stdio.h>
      void count(){
           int a=5;
@@ -248,7 +248,7 @@ _VD2: Static biến cục bộ_
 - Sau khi hàm `count` đầu tiền hoàn thành, `a` sẽ bị hủy giá trị (cấp thoát địa chỉ) và các giá trị tiếp theo vẫn = 6. 
 - Nếu ở thêm biến `static` cục bộ vào `int a=5;` là `static int a=5;` thì giá trị `a` mới có thể tăng dần lên 7, 8,... theo số lần gọi hàm `count`.
 - Có thể dùng con trỏ để thay đổi giá trị 
-```
+```c
      #include<stdio.h>
 
      int *ptr = NULL;
@@ -290,7 +290,7 @@ _VD2: Static biến cục bộ_
 > Dùng trong code cho MCU, ép buộc 1 biến truy cập đến địa chỉ và nó không bị xóa khỏi bộ nhớ khi biến đó k được sử dụng.
 >
 
-```
+```c
      // Dùng trong code VDK
 
      #include "stm32f4xx.h"
@@ -327,7 +327,7 @@ Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 
 - _VD1: Tạo Menu sử dụng lệnh Goto_
    
-```
+```c
   #include<stdio.h>
 
   int main(int argc, char const *argv[])
@@ -394,7 +394,7 @@ Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 
 _- VD2:_
    
-```
+```c
    int i,j;
 
    while(1){
@@ -418,7 +418,7 @@ _- VD2:_
 ```
 - Sử dụng `goto` để thoát chương trình nhanh hơn.
 
-```
+```c
    int i,j;
 
    while(1){
@@ -444,14 +444,14 @@ _- VD2:_
 > Xử lý ngoại lệ 
 
 ### 1. Hàm setjmp
-```
+```c
    int setjmp(jmp_buf);
 ```
 
 - Khi gọi `setjmp` lần đầu, thì mặc định trả về 0.
 
 ### 2. Hàm longjmp
-```
+```c
    longjmp(jmp_buf, int value);
 ```
 
@@ -471,7 +471,7 @@ _- VD3:_
 > Kích thước của Struct = Tổng các kích thước dữ liệu + padding 
 
 
-```
+```c
     #include <stdio.h>
     #include <stdint.h> // Thư viện để sử dụng uint32_t, uint8_t, uint16_t
 
@@ -486,7 +486,7 @@ _- VD3:_
 ```
 
 hoặc:
-```
+```c
     typedef struct Data{
       int a;
       double b;
@@ -502,7 +502,7 @@ hoặc:
 
 _VD1:_
 
-```
+```c
     #include <stdio.h>
     #include <stdint.h> // Thư viện để sử dụng uint32_t, uint8_t, uint16_t
 
@@ -529,7 +529,7 @@ _VD1:_
 
 - Padding(đệm vào): Khi canh chỉnh, sắp xếp bộ nhớ còn dư ra 1 vài byte trên tổng số ổ đĩa thì đó là padding.
 
-```
+```c
     //double(8byte): Chia het 8, 0x00 0x08 0x10 0x18,..
     //int, int32_t, uint32_t(4byte): 0x00 0x04 0x08 0x0C...
     //float, init16_t, uint16_t(2byte): 0x00 0x02 0x04 0x06...
@@ -539,7 +539,7 @@ _VD1:_
   
 **_VD2: Tìm kích thước struct VD1_**
 
-```
+```c
     typedef struct {
       uint32_t var1; //Chia hết cho 8 (4byte) 
       uint8_t var2; //1byte
@@ -555,7 +555,7 @@ _VD1:_
 
 **_VD3: Tìm kích thước_**
 
-```
+```c
       uint8_t var1[9]; //1byte 
       uint64_t var2[3]; //8byte
       uint16_t var3[10]; //2byte
@@ -592,7 +592,7 @@ _VD1:_
 > Kích thước Union sẽ lấy kiểu dữ liệu có kích thước lớn nhất.
 
 **_VD4: Kiểm tra kích thước của Union_**
-```    
+```c    
 #include <stdio.h>
 #include <stdint.h>
 
@@ -625,7 +625,7 @@ int main(int argc, char const *argv[])
 
 **Trường hợp đặc biệt của VD4:**
 
-```
+```c
     int main(int argc, char const *argv[])
     {
     
@@ -672,7 +672,7 @@ int main(int argc, char const *argv[])
 > lưu các giá trị const, char *ptr.
 
 _- VD1:_
-```
+```c
     int const a = 10;
 
     int main(int argc, char const *argv[])
@@ -683,7 +683,7 @@ _- VD1:_
 ```
 và:
 
-```
+```c
     char *str = "hello word";
 
     int main(int argc, char const *agrv[])
@@ -705,7 +705,7 @@ và:
 
 _VD2:_
 
-```
+```c
     #include <stdio.h>
 
     int a = 5;
@@ -737,7 +737,7 @@ _VD2:_
 
 _VD3:_
 
-```
+```c
     #include <stdio.h>
 
     typedef struct
@@ -777,7 +777,7 @@ _VD3:_
 
 _VD4:_
 
-```
+```c
     #include <stdio.h>
 
     int total(int a, int b)
