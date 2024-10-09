@@ -1,4 +1,3 @@
-# C Advance & Algorithm
 
 # BÀI 3: POINTER
 
@@ -8,7 +7,7 @@
 ## I. Các loại con trỏ
 
 ### 1. Regular Pointer(Con trỏ với biến)
-```
+```c
     int a = 10;
     int * ptr = &a;
 
@@ -20,7 +19,7 @@
 
 ### 2. Array Pointer(Con trỏ mảng)
 
-```
+```c
     int arr[] = { 2, 3, 5, 7, 8 };
     int * ptr = arr;
 
@@ -38,12 +37,12 @@
    >Có thể trỏ đến bất kỳ kiểu dữ liệu nào (char, int, float, double,...), nhưng không thể được sử dụng trực tiếp để gọi hàm.
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
 
-```
+```c
     void * ptr; //Khai bao con tro Void
 ```
 - _VD1: Xuất giá trị kiểu int, char._
 
-```
+```c
     #include <stdio.h>
 
     int main{int argc, char const *argv[]){
@@ -64,13 +63,13 @@
 >
 >Đây là biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
 
-```
+```c
    void (*func_ptr)(int, int);  // Khai bao con tro
 ```
 
 - _VD2: Tổng, hiệu, tích, thương._
 
-```
+```c
     #include<stdio.h>
 
     void tong(int a, int b){
@@ -101,13 +100,13 @@
 >
 >Có thể trỏ đến nhiều địa chỉ khác nhau.
 
-```
+```c
     int const *ptr_const;
     const int *ptr_const;
 ```
 
 - _VD3:_
-```
+```c
     #include<stdio.h>
 
     int a = 10;
@@ -132,13 +131,13 @@
 >
 >Tại 1 địa chỉ trỏ đến có thể thay đổi giá trị.
 
-```
+```c
     int *const const_ptr = &value;
 ```
 
 - _VD4:_
 
-```
+```c
     #include<stdio.h>
 
     int a = 10;
@@ -173,14 +172,14 @@
 - Khi khai báo con trỏ mà chưa sử dụng thì dùng con trỏ NULL sẽ không bị **random** giá trị vào địa chỉ rác hoặc trùng lặp địa .
 - Khởi tạo và kết thúc phải gán NULL.
 
-```
+```c
     int *ptr = NULL;
 ```
    
 ### 8. Pointer to Pointer(Con trỏ đến con trỏ)
 >Là con trỏ mà có thể trỏ đến địa chỉ của các con trỏ khác, có nhiều cấp độ con trỏ (con trỏ cấp 2, 3,...).
 
-```
+```c
     int a = 10;
     int *ptr = &a;
     int **ptr = &ptr;
