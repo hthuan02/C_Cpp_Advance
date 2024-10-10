@@ -1,3 +1,26 @@
+# Bài 1: Complier - Marco
+
+IDE gồm:
+- editor: phần mềm soạn thảo
+- Complier: gcc cho C ,g++ cho C++
+
+## 1. Complier
+> Complier(trình biên dịch): Chuyển đổi ngôn ngữ bậc cao sang ngôn ngữ máy 0 1 
+
+## 2. Quá trình biên dịch của gcc?
+Gồm 4 bước chính:
+    - Tiền xử lý (Preprocessor)
+    - Complier
+    - Asembler
+    - Linker
+
+
+
+
+
+
+
+
 # BÀI 3: POINTER
 
 - Con trỏ là 1 biến, thay vì lưu giá trị thì dùng để lưu địa chỉ của 1 đối tượng(biến, hàm, mảng,...). 
