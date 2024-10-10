@@ -61,7 +61,7 @@ _VD:_  STM32/32bit ---> 4byte
 ```
 
 ## 4. Void Pointer
-   >Có thể trỏ đến bất kỳ kiểu dữ liệu như (char, int, float, double,...), nhưng không thể được sử dụng trực tiếp để gọi hàm.
+   >Có thể trỏ đến bất kỳ kiểu dữ liệu nào cũng được, nó không quan tâm các kiểu dữ liệu như (char, int, float, double,...).
 >
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc và thay đổi giá trị, với điều kiện phải ép kiểu con trỏ void.
 
