@@ -220,7 +220,7 @@ _VD:_  STM32/32bit ---> 4byte
 ```
 **Lưu ý:** 
 - Được sử dụng trong kiểu dữ liệu Json, cấu trúc dữ liệu list.
-- Đối với con trỏ cấp 2 là lưu địa chỉ của con trỏ cấp 1.             
+- Đối với con trỏ cấp 2 là lưu địa chỉ của con trỏ cấp 1, chứ không phải lưu địa chỉ mà con trỏ đang trỏ đến.             
 
 
 # BÀI 4: EXTERN - STATIC - VOLATILE - REGISTER
