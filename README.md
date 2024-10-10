@@ -131,7 +131,7 @@ _VD:_  STM32/32bit ---> 4byte
 
 > Khi trỏ đến 1 địa chỉ, không thể thay đổi đc giá trị tại địa chỉ đó (chỉ có thể đọc và không thể thay đổi).
 >
->Có thể trỏ đến nhiều địa chỉ khác nhau.
+> Có thể trỏ đến nhiều địa chỉ khác nhau.
 
 ```c
     int const *ptr_const;
