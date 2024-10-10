@@ -160,9 +160,10 @@ _VD:_  STM32/32bit ---> 4byte
         printf("%d\n", *ptr_const); //ptr_const = 15
 ```
 ## 7. Constant Pointer(Hằng con trỏ)
->Chỉ trỏ đến 1 địa chỉ cố đinh, khi đã trỏ đến 1 địa chỉ rồi thì không thể trỏ đến địa chỉ khác được nữa.
+
+> Tại địa chỉ trỏ đến không thể thay đổi được địa chỉ, còn giá trị có thể thay đổi được.
 >
->Tại địa chỉ trỏ đến không thể thay đổi địa chỉ, còn giá trị có thể thay đổi được.
+> Chỉ trỏ đến 1 địa chỉ cố đinh, khi đã trỏ đến 1 địa chỉ rồi thì không thể trỏ đến địa chỉ khác được nữa.
 
 ```c
     int *const const_ptr = &value;
