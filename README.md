@@ -61,7 +61,7 @@ _VD:_  STM32/32bit ---> 4byte
 ```
 
 ## 4. Void Pointer
-   > Là 1 biến, có thể trỏ đến bất kỳ kiểu dữ liệu nào cũng được, nó không quan tâm các kiểu dữ liệu như (char, int, float, double,...).
+   > Là 1 biến, có thể trỏ đến bất kỳ địa chỉ có kiểu dữ liệu nào cũng được, nó không quan tâm các kiểu dữ liệu như (char, int, float, double,...).
 
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc và thay đổi giá trị, với điều kiện phải ép kiểu con trỏ void.
 
