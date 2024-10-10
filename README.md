@@ -61,8 +61,8 @@ _VD:_  STM32/32bit ---> 4byte
 ```
 
 ## 4. Void Pointer
-   >Có thể trỏ đến bất kỳ kiểu dữ liệu nào cũng được, nó không quan tâm các kiểu dữ liệu như (char, int, float, double,...).
->
+   > Là 1 biến, có thể trỏ đến bất kỳ kiểu dữ liệu nào cũng được, nó không quan tâm các kiểu dữ liệu như (char, int, float, double,...).
+
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc và thay đổi giá trị, với điều kiện phải ép kiểu con trỏ void.
 
 ```c
@@ -87,9 +87,13 @@ _VD:_  STM32/32bit ---> 4byte
 ```
 
 ## 5. Function Pointer
->Có thể trỏ đến các hàm có kiểu dữ liệu cụ thể, giúp gọi hàm thông qua con trỏ.
+> Là 1 biến, có thể trỏ đến địa chỉ của 1 hàm có kiểu dữ liệu cụ thể.
 >
 >Đây là biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
+
+- Thông thường sử dụng theo 2 cách:
+    - Là tham số truyền vào của 1 hàm.
+    - Lưu trữ địa chỉ của 1 hàm. 
 
 ```c
    void (*func_ptr)(int, int);  // Khai bao con tro
