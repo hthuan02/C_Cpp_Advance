@@ -26,7 +26,14 @@ Gồm 4 bước chính:
 - Con trỏ là 1 biến, thay vì lưu giá trị thì dùng để lưu địa chỉ của 1 đối tượng(biến, hàm, mảng,...). 
 - Con trỏ không lưu giá trị mà nó lưu địa chỉ bộ nhớ nơi biến khác đang sử dụng.
 
-## 1. Regular Pointer(Con trỏ với biến)
+## 1. Kích thước của Con trỏ
+- Phụ thuộc vào kiến trúc của máy tinh và trình biên dịch(IDE).
+
+- Trên MCU phụ thuộc vào Vi xử lý
+_VD:_  STM32/32bit ---> 4byte
+
+       STM8/8bit ----> 1byte
+## 2. Regular Pointer(Con trỏ với biến)
 ```c
     int a = 10;
     int * ptr = &a;
@@ -37,7 +44,7 @@ Gồm 4 bước chính:
     printf("Gia tri tai dia chi: %d\n", *ptr); // a = 10
 ```
 
-## 2. Array Pointer(Con trỏ mảng)
+## 3. Array Pointer(Con trỏ mảng)
 
 ```c
     int arr[] = { 2, 3, 5, 7, 8 };
@@ -53,7 +60,7 @@ Gồm 4 bước chính:
 
 ```
 
-## 3. Void Pointer
+## 4. Void Pointer
    >Có thể trỏ đến bất kỳ kiểu dữ liệu nào (char, int, float, double,...), nhưng không thể được sử dụng trực tiếp để gọi hàm.
    - Ưu điểm: Tại địa chỉ trỏ đến có thể đọc thay đổi giá trị tại địa chỉ mình muốn thay đổi.
 
@@ -78,7 +85,7 @@ Gồm 4 bước chính:
     }
 ```
 
-## 4. Function Pointer
+## 5. Function Pointer
 >Có thể trỏ đến các hàm có kiểu dữ liệu cụ thể, giúp gọi hàm thông qua con trỏ.
 >
 >Đây là biến giữ địa chỉ của hàm, mỗi thời điểm chỉ trỏ 1 hàm.
@@ -115,7 +122,7 @@ Gồm 4 bước chính:
     }
 ```
 
-## 5. Pointer to Constant(Con trỏ hằng)
+## 6. Pointer to Constant(Con trỏ hằng)
 >Chỉ có thể đọc giá trị và không thể thay đổi giá trị tại địa chỉ nó trỏ đến.
 >
 >Có thể trỏ đến nhiều địa chỉ khác nhau.
@@ -146,7 +153,7 @@ Gồm 4 bước chính:
         printf("%p\n", ptr_const);
         printf("%d\n", *ptr_const); //ptr_const = 15
 ```
-## 6. Constant Pointer(Hằng con trỏ)
+## 7. Constant Pointer(Hằng con trỏ)
 >Chỉ trỏ đến 1 địa chỉ duy nhất, khi đã trỏ đến 1 địa chỉ rồi thì không thể trỏ đến địa chỉ khác được nữa.
 >
 >Tại 1 địa chỉ trỏ đến có thể thay đổi giá trị.
@@ -183,7 +190,7 @@ Gồm 4 bước chính:
 | 2 |Chỉ có thể đọc, không thể thay đổi giá trị(giá trị chỉ được thay đổi tại biến)| Có thể thay đổi giá trị |
 
    
-## 7. NULL Pointer
+## 8. NULL Pointer
 >Con trỏ trống, không trỏ đến vùng nhớ nào.
 >
 >Khai báo nhưng chưa sử dụng liền.
@@ -196,7 +203,7 @@ Gồm 4 bước chính:
     int *ptr = NULL;
 ```
    
-## 8. Pointer to Pointer(Con trỏ đến con trỏ)
+## 9. Pointer to Pointer(Con trỏ đến con trỏ)
 >Là con trỏ mà có thể trỏ đến địa chỉ của các con trỏ khác, có nhiều cấp độ con trỏ (con trỏ cấp 2, 3,...).
 
 ```c
