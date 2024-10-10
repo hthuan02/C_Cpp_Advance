@@ -128,7 +128,8 @@ _VD:_  STM32/32bit ---> 4byte
 ```
 
 ## 6. Pointer to Constant(Con trỏ hằng)
->Chỉ có thể đọc giá trị và không thể thay đổi giá trị tại địa chỉ nó trỏ đến.
+
+> Khi trỏ đến 1 địa chỉ, không thể thay đổi đc giá trị tại địa chỉ đó (chỉ có thể đọc và không thể thay đổi).
 >
 >Có thể trỏ đến nhiều địa chỉ khác nhau.
 
