@@ -1383,6 +1383,26 @@ Ngoài ra, nếu rỗng:
 
 > Phần tử cuối cùng của hàng đợi được kết nối với phần tử đầu tiên, tạo thành một vòng tròn.
 
+# BÀI 12: BINARY SEARCH
+
+## 1. Binary Search
+(Thuật toán tìm kiếm nhị phân)
+
+_VD:_
+
+```c
+    int arr[]= {13,11,15,30,18,16,21,25,20}
+```
+**Tìm ID: 25** (Dùng thuật toán tìm kiếm tuyến tính-LinearSearch)
+
+- Tìm ID duyệt từng phần tử
+
+- So sánh từng phần tử với số 25
+
+**Nhược điểm:** Đối với mảng lớn thì số lần lặp lại tìm kiếm nhiều lần: tốn bộ nhớ, tốn thời gian. 
+
+  ===>>>Để khắc phục thì dùng Binary Search
+
 
 
 
