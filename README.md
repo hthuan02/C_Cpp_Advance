@@ -1,24 +1,79 @@
-# Bài 1: Complier - Marco
+# Bài 1: Compiler - Marco
 
 IDE gồm:
 - editor: phần mềm soạn thảo
 - Complier: gcc cho C ,g++ cho C++
 
-## 1. Complier
-> Complier(trình biên dịch): Chuyển đổi ngôn ngữ bậc cao sang ngôn ngữ máy 0 1 
-
-## 2. Quá trình biên dịch của gcc?
+## I. Quá trình Compiler
 Gồm 4 bước chính:
     - Tiền xử lý (Preprocessor)
-    - Complier
+    - Compiler
     - Asembler
     - Linker
+### 1. Tiền xử lý
+(chuyển file.c, file.h thành file.i)
+
+> Copy toàn bộ mã nguồn vào file main
+>
+> Xóa cmt
+>
+> Nếu sử dụng macro #define thì bị thay thế, còn lại giữ nguyên
+
+`gcc -E main.c -o main`
+
+### 2. Complier
+(chuyển file.i thành file.s)
+
+> Tạo ra file hợp ngữ
+>
+> Thao tác trên RAM mượt mà hơn
+
+### 3. Assembler
+(chuyển file.s thành file.o)
+
+> Source code chuyển thành các đoạn mã 0 1(ngôn ngữ máy)
+>
+> Nếu code trên VDK thì chương trình lưu vào bộ nhớ Flash
+
+### 4. Linker
+(Liên kết các file.o, build lại thành file.exe)
+
+## II. Marcro
+
+> Trong giai đoạn 1 tiền xử lý của quá trình Compiler thì có cacs macro hỗ trợ xử lý
+>
+> Marco là từ chỉ thông tin được xử lý ở quá trình tiền xử lý (preprocessor).
+
+### 1. Macro chỉ thị bao hàm tệp
+
+- #include< >: Tìm kiếm trong thư mục cài đặt
+
+- #include" ": Tìm kiếm trong thư mục hiện tại
+
+### 2. Macro chỉ thị định nghĩa
+
+- #define: Định nghĩa 1 đối tượng(biến, hàm, mảng)
+
+- #undef: Xóa bỏ định nghĩa #define
+
+**Trong macro #define có 3 toán tử**
+
+- ##: Gộp(nhóm) các chuỗi
+
+- #: Chuyển kí tự --> chuỗi
+
+- Variadic: Cho phép 1 hàm có thể nhận số lượng tham số truyền vào không xác định.
 
 
+### 3. Macro chỉ thị biên dịch có điều kiện
 
+- #ifdef, #ifndef: Kiểm tra xem 1 macro có định nghĩa hay chưa
 
+    - #ifdef: Nếu đã định nghĩa -->> thực thi chương trình
+ 
+    - #ifndef: Nếu chưa định nghĩa -->> thì định nghĩa --> thực thi
 
-
+- #if, #else, #elif: đây là các macro kiểm tra điều kiện giống (if-else-else if)
 
 
 # BÀI 3: POINTER
@@ -1315,8 +1370,11 @@ Ngoài ra, nếu rỗng:
 
 ### 1. Linear Queue (hàng đợi tuyến tính)
 
+> Các phần tử được sắp xếp theo thứ tự tuyến tính, tức là mỗi phần tử đứng sau phần tử khác trong một hàng dọc.
+
 ### 2. Circular Queue (hàng đợi vòng tròn)
 
+> Phần tử cuối cùng của hàng đợi được kết nối với phần tử đầu tiên, tạo thành một vòng tròn.
 
 
 
