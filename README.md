@@ -341,7 +341,7 @@ Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 **(4):** Lấy giá trị trong thanh ghi trả về biến trong RAM, kết quả = 6.
 
 
-**- Ứng dụng của biến register:** (ít ứng dụng)
+**Ứng dụng của biến register:** (ít ứng dụng)
 
     - Khai báo biến register, thì chương trình chỉ thực hiện tính toán và lưu giá trị trên thanh ghi( bị lượt bỏ 2 bước đầu-cuối: Lưu trữ trên RAM và trả kqua từ thanh ghi lên RAM). Giúp rút ngắn thời gian chạy và tăng hiệu suất làm việc của chương trình.
      
