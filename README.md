@@ -238,7 +238,6 @@ _VD:_  STM32/32bit ---> 4byte
 **Ưu điểm quan trọng:** Tiết kiệm được bộ nhớ.
 
 - Muốn sử dụng lại các biến đã khai báo trong file trước đó. Theo thông thường ta phải khai báo `#include"file.h"` hoặc `#define_FILE1_H`, đối với xử lý nhiều file thì việc khai báo cho file main.c sẽ tốn rất nhiều bộ nhớ.
--  Vì vậy, để chia sẻ tài nguyên các biến các hàm trong nhiều file cùng 1 folder, chúng ta có thể dùng extern.
 
 _VD1:_ Ta có 3 file
      
@@ -252,12 +251,11 @@ _VD1:_ Ta có 3 file
 
 ## 2. Static
 
-### 2.1 Satic - local variables
+### 2.1 Satic - local variables(bss & data)
 
-> Giới hạn đối tượng trong phạm vi hàm sử dụng.
+> Được sử dụng, giới hạn phạm vi trong 1 hàm. 
 >
-> Cấp thoát địa chỉ tồn tại xuyên suốt chương trình.
->
+> Giữ lại giá trị sau những lần gọi hàm, địa chỉ tổn tại trong suốt chương trình.
 >
 > Static cục bộ không thể thay đổi giá trị bên ngoài, nếu muốn thay đổi thì sử dụng con trỏ.
 
@@ -303,10 +301,8 @@ _VD2: Static biến cục bộ_
 ```
 
 ### 2.2 Satic - global variables
->
-> Giới hạn phạm vị sử dụng trong 1 file (tránh việc khai báo trùng tên biến và hàm giữa các file). 
->
-> Những biến nào được khai báo static toàn cục thì chỉ được sử dụng trong đúng file đó, không thể liên kết file.
+
+> Giới hạn phạm vị sử dụng trong 1 file, không thể liên kết file (các file khác không dùng Extern để gọi ra được). 
 >
 > Không thể dùng con trỏ để thay đổi giá trị.
 
@@ -316,13 +312,9 @@ _VD2: Static biến cục bộ_
 
 ## 3. Volatile
 
-**Biên volatile là gì?** Nếu khai báo biến mà biến này không sử dụng, thì biến này mặc dù vẫn còn ở chương trình nhưng nó đã bị xóa khỏi bộ nhớ chương trình nhằm để làm giảm bộ nhớ.
+**Biến volatile là gì?** Khai báo biến mà biến này không sử dụng, tránh bị complier tối ưu hóa xóa cái biến này đi.
 
-➡️ Biến volatile giúp khắc phục tình trạng đó.
-
->
 > Dùng trong code cho MCU, ép buộc 1 biến truy cập đến địa chỉ và nó không bị xóa khỏi bộ nhớ khi biến đó k được sử dụng.
->
 
 ```c
      // Dùng trong code VDK
@@ -350,7 +342,7 @@ Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 
 
 **- Ứng dụng của biến register:** (ít ứng dụng)
-     - Khai báo biến register, bỏ qua 2 giai đoạn (1) và (4). Giúp giảm thời gian chạy và tăng hiệu suất làm việt của chương trình (Lấy giá trị từ thanh ghi và trả kết quả về thanh ghi).
+     - Khai báo biến register, bỏ qua 2 giai đoạn (1) và (4) (Lưu trữ trong RAM, & Lấy giá trị trong thanh ghi, trả về biến trong RAM). Giúp giảm thời gian chạy và tăng hiệu suất làm việt của chương trình (Lấy giá trị từ thanh ghi và trả kết quả về thanh ghi).
      - Chỉ sử dụng cho biến cục bộ.
 
 
