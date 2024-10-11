@@ -1274,11 +1274,48 @@ void delete_list(Node **array, int pos)
 }
 ```
 
+# BÀI 11: STACK - QUEUE
+
+## I. Stack
+(Last in - First Out) --> Ngăn xếp
+
+- Phần vào sau cùng thì lấy ra tước tiên và ngược lại.
+
+- Gồm 3 thao tác:
+
+      - push: Thêm phần tử vào ở đỉnh stack(top++)
+  
+      - pop: Xóa 1 phần tử đỉnh stack(top--)
+  
+      - top: giá trị phần tử của đỉnh (Maxtop = size -1)
 
 
+## II. Queue
+(First in - First out) --> Hàng đợi 
 
+- Phần tử vào đầu thì ra đầu, vào cuối thì ra cuối
 
+- Gổm 3 thao tác:
 
+      - enqueue: Thêm phần tử cuối hàng đợi (rear++)
+  
+      - dequeue: Lấy(loại bỏ) phần tử đầu hàng đợi (front++)
+
+      - front: Lấy giá trị phẩn tử đầu hàng đợi
+
+      - rear: Lấy giá trị phần tủ cuối hàng đợi
+
+Ngoài ra, nếu rỗng:
+
+- Max_front = Max_rear = size -1 
+
+- enqueue = -1
+
+- dequeue = -1
+
+### 1. Linear Queue (hàng đợi tuyến tính)
+
+### 2. Circular Queue (hàng đợi vòng tròn)
 
 
 
