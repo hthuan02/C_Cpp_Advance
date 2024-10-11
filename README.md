@@ -229,7 +229,7 @@ _VD:_  STM32/32bit ---> 4byte
 
 ## 1. Extern
 
-> Giúp file trong cùng 1 folder chia sẻ các biến, hàm với nhau.
+> Cho phép những file trong cùng 1 thư mục chia sẻ tài nguyên với nhau (biến, hàm, mảng).
 >
 > Các biến chỉ khai báo, không được khởi tạo.
 >
