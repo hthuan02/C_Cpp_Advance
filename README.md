@@ -342,7 +342,7 @@ Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 
 
 **- Ứng dụng của biến register:** (ít ứng dụng)
-     - Khai báo biến register, bỏ qua 2 giai đoạn (1) và (4) (Lưu trữ trong RAM, & Lấy giá trị trong thanh ghi, trả về biến trong RAM). Giúp giảm thời gian chạy và tăng hiệu suất làm việt của chương trình (Lấy giá trị từ thanh ghi và trả kết quả về thanh ghi).
+     - Khai báo biến register, thì chương trình chỉ thực hiện tính toán và lưu giá trị trên thanh( bị lượt bỏ 2 bước đầu-cuối: Lưu trữ trên RAM và trả kqua từ thanh ghi lên RAM). Giúp rút ngắn thời gian chạy và tăng hiệu suất làm việt của chương trình.
      - Chỉ sử dụng cho biến cục bộ.
 
 
