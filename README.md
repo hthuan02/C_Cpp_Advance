@@ -343,9 +343,9 @@ Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 
 **- Ứng dụng của biến register:** (ít ứng dụng)
 
-     - Khai báo biến register, thì chương trình chỉ thực hiện tính toán và lưu giá trị trên thanh( bị lượt bỏ 2 bước đầu-cuối: Lưu trữ trên RAM và trả kqua từ thanh ghi lên RAM). Giúp rút ngắn thời gian chạy và tăng hiệu suất làm việt của chương trình.
+    - Khai báo biến register, thì chương trình chỉ thực hiện tính toán và lưu giá trị trên thanh ghi( bị lượt bỏ 2 bước đầu-cuối: Lưu trữ trên RAM và trả kqua từ thanh ghi lên RAM). Giúp rút ngắn thời gian chạy và tăng hiệu suất làm việc của chương trình.
      
-     - Chỉ sử dụng cho biến cục bộ.
+    - Chỉ sử dụng cho biến cục bộ.
 
 
 # BÀI 5: GOTO - SETJMP.H
