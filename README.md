@@ -75,6 +75,13 @@ Gồm 4 bước chính:
 
 - #if, #else, #elif: đây là các macro kiểm tra điều kiện giống (if-else-else if)
 
+## SỬ DỤNG MACRO VÀ FUNCTION CÓ GÌ KHÁC NHAU? 
+
+- Function: Không cấp phát bộ nhớ, vì có bộ nhớ riêng, tốc độ châm, đầu tiên lưu vào stack --> lấy vào địa
+
+- Macro: Tốn bộ nhớ chương trình, để khởi tạo và lưu lại, tốc độ nhanh hơn--> bộ đếm chương trình tuần tự
+
+
 
 # BÀI 3: POINTER
 
