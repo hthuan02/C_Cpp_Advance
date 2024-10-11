@@ -870,7 +870,7 @@ _VD5:_
 
 ### 1. Hàm Malloc()
 
-> `malloc`: Là hàm Cấp phát bộ nhớ động vùng nhớ với kích thước, không khởi tạo giá trị.
+> `malloc`: Cấp phát bộ nhớ động, không khởi tạo giá trị.
 >
 > Giá trị của hàm trả về là 1 `*void`, cần ép kiểu dữ liệu.
 >
