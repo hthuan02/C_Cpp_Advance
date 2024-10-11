@@ -617,7 +617,7 @@ _VD1:_
 >
 > Union sử dụng chung vùng nhớ, các thành phần đều chung địa chỉ -> Giá trị này thay đổi thì những giá trị khác sẽ thay đổi.
 >
-> Kích thước Union sẽ lấy kiểu dữ liệu có kích thước lớn nhất.
+> Kích thước Union = Tổng member có kích thước lớn nhất + padding.
 
 **_VD4: Kiểm tra kích thước của Union_**
 ```c    
