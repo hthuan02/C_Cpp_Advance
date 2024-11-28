@@ -1,5 +1,7 @@
-# Bài 1: Compiler - Marco
-
+# C
+<details>
+  <summary><h2>Bài 1: Compiler - Marco</h2></summary>
+    
 IDE gồm:
 - editor: phần mềm soạn thảo
 - Complier: gcc cho C ,g++ cho C++
@@ -81,9 +83,11 @@ Gồm 4 bước chính:
 
 - Macro: Tốn bộ nhớ chương trình, để khởi tạo và lưu lại, tốc độ nhanh hơn--> bộ đếm chương trình tuần tự
 
+</details>
 
 
-# BÀI 3: POINTER
+<details>
+  <summary><h2>BÀI 3: POINTER</h2></summary>
 
 - Con trỏ là 1 biến, thay vì lưu giá trị thì dùng để lưu địa chỉ của 1 đối tượng(biến, hàm, mảng,...). 
 - Con trỏ không lưu giá trị mà nó lưu địa chỉ bộ nhớ nơi biến khác đang sử dụng.
@@ -284,8 +288,11 @@ _VD:_  STM32/32bit ---> 4byte
 - Được sử dụng trong kiểu dữ liệu Json, cấu trúc dữ liệu list.
 - Đối với con trỏ cấp 2 là lưu địa chỉ của con trỏ cấp 1, chứ không phải lưu địa chỉ mà con trỏ đang trỏ đến.             
 
+</details>
 
-# BÀI 4: EXTERN - STATIC - VOLATILE - REGISTER
+
+<details>
+  <summary><h2>BÀI 4: EXTERN - STATIC - VOLATILE - REGISTER</h2></summary> 
 
 - Đây là các từ khóa đi kèm khi khai báo các biến "đặc biệt".
 
@@ -409,8 +416,10 @@ Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
      
     - Chỉ sử dụng cho biến cục bộ.
 
+</details>
 
-# BÀI 5: GOTO - SETJMP.H
+<details>
+  <summary><h2> BÀI 5: GOTO - SETJMP.H</h2></summary>
 
 ## I. Goto
 >Cho phép đoạn code nhảy đến label(nhãn) mà mình chỉ , label có để đặt bất cứ vị trí nào trong cùng 1 hàm.
@@ -552,7 +561,11 @@ _- VD3:_
 
 ### 3. Xử lý ngoại lệ(TRY, CATCH, THROW)
 
-# BÀI 7: STRUCT & UNION
+</details>
+
+
+<details>
+  <summary><h2>BÀI 7: STRUCT & UNION</h2></summary>
 
 ## 1. Struct
 
@@ -747,7 +760,10 @@ int main(int argc, char const *argv[])
 
     -  var3: 2byte = 65534 (0x01+0x02)
 
-# BÀI 8: MEMORY LAYOUT
+</details>
+
+<details>
+  <summary><h2>BÀI 8: MEMORY LAYOUT</h2></summary>
 
 - Memory Layout: Là sự tổ chức và sắp xếp các vùng nhớ (chứa mã lệnh, biến, và dữ liệu) trong bộ nhớ RAM khi chương trình thực thi.  
 
@@ -1161,9 +1177,11 @@ _VD2: Khởi tạo vùng nhớ quá lớn_
 ```c
     int *A = (int *)malloc(18446744073709551615);
 ```
-  
 
-# BÀI 10: LIKED LIST
+</details>
+
+<details>
+  <summary><h2>BÀI 10: LIKED LIST</h2></summary> 
 
 - Liked list (danh sách liên kết): Là cấu trúc dữ liệu gồm chuổi các node(nút) liên kết với nhau, mỗi node gồm 2 thành phần: Data và con trỏ (*Next).
 
@@ -1204,10 +1222,12 @@ _VD2: Khởi tạo vùng nhớ quá lớn_
         bool empty(node *array); // kiem tra list co rong hay khong
         //Không có hàm kiểm tra đầy, vì nó k quan tâm đến số lượng
     ```
+    **Ứng dụng: Liked List giúp quản lý danh sách tốt hơn mảng.**
+  
+</details>
 
-**Ứng dụng: Liked List giúp quản lý danh sách tốt hơn mảng.**
-
-# BÀI 11: STACK - QUEUE
+<details>
+  <summary><h2>BÀI 11: STACK - QUEUE</h2></summary> 
 
 ## I. Stack
 (Last in - First Out) --> Ngăn xếp
@@ -1254,7 +1274,10 @@ Ngoài ra, nếu rỗng:
 
 > Phần tử cuối cùng của hàng đợi được kết nối với phần tử đầu tiên, tạo thành một vòng tròn.
 
-# BÀI 12: BINARY SEARCH
+</details>
+
+<details>
+  <summary><h2>BÀI 12: BINARY SEARCH</h2></summary>
 
 ## 1. Binary Search
 (Thuật toán tìm kiếm nhị phân)
@@ -1274,8 +1297,11 @@ _VD:_
 
   ===>>>Để khắc phục thì dùng Binary Search
 
+</details>
 
-# Bài 13: Class
+# CPP
+<details>
+  <summary><h2>Bài 13: Class</h2></summary>
 
 ## 1. Định nghĩa
 Kiểu dữ liệu người dùng tự định nghĩa (tương tự struct & union).
@@ -1556,7 +1582,549 @@ int main(int argc, char const *argv[])
 
 - **static method**: Chỉ làm việc được với property static.
 
+</details>
 
+<details>
+  <summary><h2>Bài 14: OOP</h2></summary>
+
+<details>
+  <summary><h3>Part 1: Encapsulation - Tính đóng gói</h3></summary>
+
+# I. Tính đóng gói
+
+- Đóng gói Là ẩn đi các property "mật" khỏi người dùng.
+
+- Là khai báo property, method trong phạm vi private. Các object bên ngoài không thể gọi ra được.
+
+- Khi muốn đọc hoặc ghi có property này, thì truy cập gián tiếp thông qua method phạm vi public.
+
+## Phạm vi private:
+
+- Chỉ có giá trị trong nội bộ class (chỉ những method bên trong mới truy cập được property của private).
+
+- Object không thể truy cập tới.
+
+- Khắc phục việc truyền 1 chuỗi vào object, sẽ không kiểm tra được cái chuỗi này có hợp lệ hay không 
+
+VD:
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class SinhVien
+{
+public:
+    string ten;
+    string id;
+    int age;
+
+    SinhVien(string ten, string id, int age) : ten(ten), id(id), age(age)
+    {
+    }
+    void display()
+    {
+        cout << "Tên: " << ten << endl;
+        cout << "ID: " << id << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+
+int main(int argc, char const *argv[])
+{
+    SinhVien sv1("Huỳnh Minh Thuận123@", "hthuan02", 22);
+    sv1.display();
+    return 0;
+}
+```
+
+->> Chuỗi `Ten` truyền vào ở object `sv1` không hợp lệ.
+
+->> Những method trong phạm vi public có thể thêm điều kiện kiểm tra chuỗi.
+
+### Lưu ý:
+
+- Khi viết thêm method để kiểm tra chu thì không khởi tạo thông qua Constructor mà tạo method khác như: `setter method`, `getter mehod`.
+
+_Khắc phục VD1:_
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class SinhVien
+{
+private:
+    string name;
+    int id;
+    int age;
+
+public:
+    SinhVien()
+    {
+        static int ID = 0;
+        ID++;
+        id = ID;
+
+        /* - ID truy cập vào id phạm vi private bên trong Constructor SinhVien
+         * - propety static: khi gọi object ra thì tự động khởi tạo ID cho SinhVien,
+         * ID tự động tăng lên, tránh việc trùng lặp ID.
+         */
+    }
+
+    // setter method: dùng khởi tạo giá trị cho property
+    void setName(string newName)
+    {
+        // kiểm tra chuỗi truyền vào
+        // có ký tự đặc biệt, số -> yêu cầu người dùng nhập lại
+        name = newName;
+    }
+
+    // setter method
+    void setAge(int age)
+    {
+        // kiểm tra số nhập vào
+        age = age;
+    }
+
+    // getter method: đặt/trả dữ liệu về
+    string getName()
+    {
+        return name;
+    }
+
+    // getter method
+    int getAge()
+    {
+        return age;
+    }
+
+    // getter method
+    int getID()
+    {
+        return id;
+    }
+
+    void display()
+    {
+        cout << "Tên: " << getName() << endl;
+        cout << "ID: " << getID() << endl;
+        cout << "Age: " << getAge() << endl;
+    }
+};
+
+int main(int argc, char const *argv[])
+{
+    SinhVien sv1, sv2;
+    sv1.setName("Thuan");
+    sv1.display();
+
+    sv2.setName("Tuan");
+    sv2.display();
+    return 0;
+}
+```
+</details>
+
+<details>
+  <summary><h3>Part 2: Abstraction - Tính trừu tượng</h3></summary>
+
+Static đi với 1 hàm, thì giới hạn trong nội bộ 1 file. Những file bên ngoài không thể gọi ra được kể cả dùng `Extern`. Gọi là quá trình tạo ra kết quả (VD: Tính delta pt bậc 2)
+
+- Tính trừu tượng là ẩn đi quá trình xử lý logic, quá trình tính toán, thuật toán (**method** thuật toán xử lý để tạo ra kết quả) -> private 
+
+_VD: Giải phương trình bậc 2_
+
+```cpp
+class GiaiPhuongTrinh{
+    private:	// a,b,c,x1,x2,delta: Tính đóng gói
+        double a;
+        double b;
+        double c;
+        double x1;
+        double x2;
+        double delta;
+
+        // Tính trừu tượng: quả trình tính delta sẽ bị ẩn đi
+        void tinhNghiem(){	
+            delta = b*b - 4*a*c;
+            if (delta < 0){
+                delta = -1;
+            }
+            else if (delta == 0){
+                x1 = x2 = -b/ (2*a);
+            }
+            else if (delta > 0){
+                x1 = (-b + sqrt(delta))/(2*a);
+                x2 = (-b - sqrt(delta))/(2*a);
+            }
+        }
+       
+    public:
+        void enterNumber(double num_a, double num_b, double num_c);
+        void printResult();
+};
+```
+- Quá trình tạo ra kết quả (tính delta) người dùng không thể truy cập. Chỉ được phép: Truyền vào tham số cho method cần tính và in ra kết quả.
+
+```cpp
+int main()
+{
+  GiaiPhuongTrinh phuongtrinh1;
+  phuongtrinh1.enterNumber(1,5,4);
+  phuongtrinh1.printResult();
+  return 0;
+}
+```
+</details>
+
+<details>
+  <summary><h3>Part 3: Inheritance - Tính kế thừa</h3></summary>
+
+#### Phạm vi truy cập:
+
+- **public**: method, property bên trong và object bên ngoài có thể truy cập.
+
+- **protected**:  
+    - Object bên ngoài không thể truy cập method, property (giống private).
+    - Class con kế thừa có thể truy cập.
+
+- **private**: 
+    - Class con kế thừa không thể truy cập (chỉ có phạm vi trong nội bộ class: method, property trong nội bộ class mới truy cập được)
+
+# III. Tính kế thừa
+
+> Kế thừa là khả năng sử dụng lại các property, method class khác.
+>
+> Có 3 kiểu kế thừa: public, private, protected. 
+>
+> Có 2 cách dùng: ghi đè (Override) hoặc sử dụng lại. 
+
+## 1. Kế thừa public
+(Giữ nguyên)
+
+- Các thành viên của Class cha phạm vi public, protected sẽ giữ nguyên phạm vi kế thừa khi sang class con. 
+
+- Thành viên phạm vi private thì class con không thể kế thừa.
+
+_VD1: (Code minh họa Complier chạy)_
+
+```cpp
+class DoiTuong{
+    private:
+        string a;
+    
+    protected:
+        int b;
+
+    public:
+        string ten;
+        int id;
+};
+
+class SinhVien  : public DoiTuong{
+    protected:
+        int b;
+    public:
+        string ten;
+        int id;
+
+    public:
+        string chuyenNganh;
+};
+```
+
+### Đặc điểm của kế thừa:
+
+- Có thể ghi đè lên method của class mà nó kế thừa gọi là **Override**.
+
+_VD2:_
+
+```cpp
+class DoiTuong{
+    protected:
+        string ten;
+        int id;
+
+    public:
+        DoiTuong(){  
+            static int ID = 1;
+            id = ID;
+            ID++;
+        }
+
+        void setName(string _ten){
+            // check chuỗi nhập vào
+            ten = _ten;
+        }
+
+        void display(){
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+        }
+};
+
+class SinhVien : public DoiTuong{ 
+    protected:
+        string chuyenNganh;
+
+    public:
+        void setChuyenNganh(string _nganh){
+            chuyenNganh = _nganh;
+        }
+
+        // method display được ghi đè
+        void display(){ // override: ghi đè
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+            cout << "chuyen nganh: " << chuyenNganh << endl;
+        }
+};
+
+class HocSinh : public DoiTuong{
+    protected:
+        string lop;
+   
+    public:
+        void setLop(string _lop){
+            lop = _lop;
+        }
+
+        void display(){ // override
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+            cout << "lop: " << lop << endl;
+        }
+};
+
+class GiaoVien : public DoiTuong{
+    protected:
+        string chuyenMon;
+
+    public:
+        void setChuyenMon(string _mon){
+            chuyenMon = _mon;
+        }
+
+        void display(){ // override
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+            cout << "chuyen mon: " << chuyenMon << endl;
+        }
+};
+```
+- Để phân biệt được 3 method `display()` cùng tên với nhau, thì dựa vào object mà nó tạo ra  
+
+```cpp
+int main(int argc, char const *argv[])
+{
+    SinhVien sv1;
+    sv1.setName("Trung");
+    sv1.setChuyenNganh("TDH");
+    sv1.display();
+
+    cout << endl;
+
+    HocSinh hs1;
+    hs1.setName("Tuan");
+    hs1.setLop("12A1");
+    hs1.display();
+
+    cout << endl;
+
+    GiaoVien gv1;
+    gv1.setName("Hoang");
+    gv1.setChuyenMon("Toan");
+    gv1.display();
+    return 0;
+}
+```
+## 2. Kế thừa protected
+(Thay đổi)
+
+- Tất cả các thành viên của Class cha phạm vi public, protected sẽ chuyển protected ở Class con khi kế thừa.
+
+#### Đặc điểm:
+
+- Thành viên của Class cha phạm vi `private` thì class con không thể kế thừa.
+
+- (Giống kế thừa Private): Object bên ngoài không thể truy cập property, method bên trong nó. 
+
+->> Chỉ có thể truy cập thông qua class con kế thừa nó. 
+
+- (Khác kế thừa Private): Class con khi kế thừa có thể sử dụng thành viên trong phạm vi protected.
+
+_VD3: (Code minh họa Complier chạy)_
+
+- Vì ở phạm vi protected, khi tạo object thuộc `class SinhVien` không thể truy cập method, property được.
+
+_VD3:_
+
+```cpp
+class DoiTuong{
+    protected:
+        string ten;
+        int id;
+
+    public:
+        DoiTuong(){  
+            static int ID = 1;
+            id = ID;
+            ID++;
+        }
+
+        void setName(string _ten){
+            // check chuỗi nhập vào
+            ten = _ten;
+        }
+
+        void display(){
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+        }
+};
+
+class SinhVien : protected DoiTuong{
+    protected:
+        string ten;
+        int id;
+    protected:
+        DoiTuong(){  
+            static int ID = 1;
+            id = ID;
+            ID++;
+        }
+
+        void setName(string _ten){
+            // check chuỗi nhập vào
+            ten = _ten;
+        }
+
+        void display(){
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+        }
+   
+    // phạm vi của class chuyên ngành 
+    protected:
+        string chuyenNganh;
+
+    public:
+        void setChuyenNganh(string _nganh){
+            chuyenNganh = _nganh;
+        }
+
+        void display(){ // override
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+            cout << "chuyen nganh: " << chuyenNganh << endl;
+        }
+};
+```
+## 3. Kế thừa private
+
+- Giống với protected, các thành viên kế thừa thì chuyển về private hết.
+
+_VD4:(Code minh họa Complier chạy)_
+
+- Object của `class SinhVien` không thể truy cập được các thành viên.
+
+- Nếu có class con kế thừa `class SinhVien` thì không thể sử dụng các thành viên kế thừa lại được nữa. 
+
+_VD4:_
+
+```cpp
+class DoiTuong{
+    protected:
+        string ten;
+        int id;
+
+    public:
+        DoiTuong(){  
+            static int ID = 1;
+            id = ID;
+            ID++;
+        }
+
+        void setName(string _ten){
+            // check chuỗi nhập vào
+            ten = _ten;
+        }
+
+        void display(){
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+        }
+};
+
+class SinhVien : private DoiTuong{
+
+    private:
+        string ten;
+        int id;
+
+    private:
+        DoiTuong(){  
+            static int ID = 1;
+            id = ID;
+            ID++;
+        }
+
+        void setName(string _ten){
+            // check chuỗi nhập vào
+            ten = _ten;
+        }
+
+        void display(){
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+        }
+
+    protected:
+        string chuyenNganh;
+
+    public:
+        void setChuyenNganh(string _nganh){
+            chuyenNganh = _nganh;
+        }
+
+        void display(){ // override
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+            cout << "chuyen nganh: " << chuyenNganh << endl;
+        }
+};
+```
+
+## 4. Đa kế thừa
+ 
+- Class con có thể kế thừa từ nhiều class cha, phạm vi thì tương tự.
+
+_VD5:_
+
+```cpp
+class SinhVien : public DoiTuong, protected HocSinh, private SinhVien{
+}
+```
+ 
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</details>
 
     
 
