@@ -1,4 +1,6 @@
 # Phần I: C & Algorithm
+---
+
 <details>
   <summary><h3>Bài 1: Compiler - Marco</h3></summary>
     
@@ -1300,6 +1302,7 @@ _VD:_
 </details>
 
 # Phần II: C++
+---
 <details>
   <summary><h3>Bài 13: Class</h3></summary>
 
