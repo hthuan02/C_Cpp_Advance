@@ -1,5 +1,5 @@
 <details>
-  <summary><h1>Nhấn để xem chi tiết</h1></summary>
+  <summary><h2>Nhấn để xem chi tiết</h2></summary>
 
-  Nội dung chi tiết được hiển thị ở đây.
+  Nội dung 
 </details>
