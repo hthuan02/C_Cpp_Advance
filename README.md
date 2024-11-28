@@ -1277,7 +1277,7 @@ Ngoài ra, nếu rỗng:
 </details>
 
 <details>
-  <summary><h3>BÀI 12: Binary Searchj</h3></summary>
+  <summary><h3>BÀI 12: Binary Search</h3></summary>
 
 ## 1. Binary Search
 (Thuật toán tìm kiếm nhị phân)
