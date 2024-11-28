@@ -1,4 +1,4 @@
-# C
+# Phần I: C & Algorithm
 <details>
   <summary><h3>Bài 1: Compiler - Marco</h3></summary>
     
@@ -87,7 +87,7 @@ Gồm 4 bước chính:
 
 
 <details>
-  <summary><h3>BÀI 3: POINTER</h3></summary>
+  <summary><h3>BÀI 3: Pointer</h3></summary>
 
 - Con trỏ là 1 biến, thay vì lưu giá trị thì dùng để lưu địa chỉ của 1 đối tượng(biến, hàm, mảng,...). 
 - Con trỏ không lưu giá trị mà nó lưu địa chỉ bộ nhớ nơi biến khác đang sử dụng.
@@ -292,7 +292,7 @@ _VD:_  STM32/32bit ---> 4byte
 
 
 <details>
-  <summary><h3>BÀI 4: EXTERN - STATIC - VOLATILE - REGISTER</h3></summary> 
+  <summary><h3>BÀI 4: Extern - Static - Volatile - Register</h3></summary> 
 
 - Đây là các từ khóa đi kèm khi khai báo các biến "đặc biệt".
 
@@ -419,7 +419,7 @@ Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 </details>
 
 <details>
-  <summary><h3> BÀI 5: GOTO - SETJMP.H</h3></summary>
+  <summary><h3> BÀI 5: Goto - setjmp.h</h3></summary>
 
 ## I. Goto
 >Cho phép đoạn code nhảy đến label(nhãn) mà mình chỉ , label có để đặt bất cứ vị trí nào trong cùng 1 hàm.
@@ -565,7 +565,7 @@ _- VD3:_
 
 
 <details>
-  <summary><h3>BÀI 7: STRUCT & UNION</h3></summary>
+  <summary><h3>BÀI 7: Struct & Union</h3></summary>
 
 ## 1. Struct
 
@@ -763,7 +763,7 @@ int main(int argc, char const *argv[])
 </details>
 
 <details>
-  <summary><h3>BÀI 8: MEMORY LAYOUT</h3></summary>
+  <summary><h3>BÀI 8: Memory Layout</h3></summary>
 
 - Memory Layout: Là sự tổ chức và sắp xếp các vùng nhớ (chứa mã lệnh, biến, và dữ liệu) trong bộ nhớ RAM khi chương trình thực thi.  
 
@@ -1181,7 +1181,7 @@ _VD2: Khởi tạo vùng nhớ quá lớn_
 </details>
 
 <details>
-  <summary><h3>BÀI 10: LIKED LIST</h3></summary> 
+  <summary><h3>BÀI 10: Liked list</h3></summary> 
 
 - Liked list (danh sách liên kết): Là cấu trúc dữ liệu gồm chuổi các node(nút) liên kết với nhau, mỗi node gồm 2 thành phần: Data và con trỏ (*Next).
 
@@ -1227,7 +1227,7 @@ _VD2: Khởi tạo vùng nhớ quá lớn_
 </details>
 
 <details>
-  <summary><h3>BÀI 11: STACK - QUEUE</h3></summary> 
+  <summary><h3>BÀI 11: Stack - Queue</h3></summary> 
 
 ## I. Stack
 (Last in - First Out) --> Ngăn xếp
@@ -1277,7 +1277,7 @@ Ngoài ra, nếu rỗng:
 </details>
 
 <details>
-  <summary><h3>BÀI 12: BINARY SEARCH</h3></summary>
+  <summary><h3>BÀI 12: Binary Searchj</h3></summary>
 
 ## 1. Binary Search
 (Thuật toán tìm kiếm nhị phân)
@@ -1299,7 +1299,7 @@ _VD:_
 
 </details>
 
-# CPP
+# Phần II: C++
 <details>
   <summary><h3>Bài 13: Class</h3></summary>
 
