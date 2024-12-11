@@ -19,3 +19,13 @@
 Phanh tái sinh thường được kích hoạt trong hai trường hợp chính:
 - Khi người lái nhả bàn đạp ga: Khi không còn tín hiệu đầu vào từ bàn đạp ga, hệ thống sẽ kích hoạt phanh tái sinh để thu hồi năng lượng.
 - Khi người lái nhấn phanh: Khi phanh được nhấn, ECU có thể kích hoạt phanh tái sinh đồng thời với phanh cơ khí để giảm hao mòn và tăng hiệu quả.
+
+**Cảm biến bàn đạp ga (SimulateAcceleratorPedalSignal)**:
+- 1: Bàn đạp ga không còn được nhấn -> ECU sẽ kích hoạt phanh tái sinh, vì xe không còn nhận đầu vào tăng tốc từ bàn đạp ga nữa.
+
+- 0: Bàn đạp ga đang được nhấn -> hệ thống sẽ không kích hoạt phanh tái sinh, vì xe đang còn tăng tốc, và không có lý do để thu hồi năng lượng.
+  
+**Cảm biến phanh (SimulateBrakePedalSignal)**:
+- 1: Bàn đạp phanh đã được nhấn -> hệ thống có kích hoạt phanh tái sinh để giảm tốc độ và thu hồi năng lượng từ động năng của xe.
+
+- 0: Đạp phanh không được nhấn -> hệ thống không kích hoạt phanh tái sinh, vì không có nhu cầu giảm tốc hoặc thu hồi năng lượng.
