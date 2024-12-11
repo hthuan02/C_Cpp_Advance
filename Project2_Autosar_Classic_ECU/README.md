@@ -1,4 +1,4 @@
-## The Engine Control Unit (ECU) in a Car
+## The Engine Control Unit (ECU) in a Car (Hoàn thành được 70%)
 ---
 # Task: Regenerative Braking Control (Quản lý phanh tái sinh)
 
