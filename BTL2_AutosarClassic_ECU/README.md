@@ -6,6 +6,8 @@
 ## I. Giới thiệu 
 Hệ thống quản lý hệ thống phanh tái sinh (Regenerative Braking Control) trong xe điện hoặc xe hybrid nhằm tận dụng chuyển động năng thành điện năng để nạp vào pin. Hệ thống bao gồm nhiều cảm biến để đo đạc tình trạng xe và điều chỉnh phanh tái sinh.
 
+ <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/BTL2_AutosarClassic_ECU/img/regen_brake_control_in_car.jpeg" alt="Memory Layout" width="850"/>
+ 
 ---
 ## II. Chức năng quản lý phanh tái sinh
 
