@@ -1,6 +1,6 @@
-## (Hoàn thành được 70%)
+ECU: Task 2
 ---
-# Task: Regenerative Braking Control (Quản lý phanh tái sinh)
+# Regenerative Braking Control (Quản lý phanh tái sinh)
 
 ## I. Chức năng quản lý phanh tái sinh:
   **Chức năng phanh tái sinh** giúp thu hồi năng lượng từ quá trình phanh hoặc nhả ga, chuyển động năng thành điện năng để nạp lại vào pin, cải thiện hiệu suất và tăng quãng đường di chuyển.
