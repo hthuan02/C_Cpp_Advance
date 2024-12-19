@@ -1,31 +1,84 @@
-ECU: Task 2
+## ( Autosar Classic: Project 2 )
+# ECU: Quản lý phanh tái sinh (Regenerative Braking Control)
+
 ---
-# Regenerative Braking Control (Quản lý phanh tái sinh)
 
-## I. Chức năng quản lý phanh tái sinh:
-  **Chức năng phanh tái sinh** giúp thu hồi năng lượng từ quá trình phanh hoặc nhả ga, chuyển động năng thành điện năng để nạp lại vào pin, cải thiện hiệu suất và tăng quãng đường di chuyển.
+## I. Giới thiệu 
+Hệ thống quản lý hệ thống phanh tái sinh (Regenerative Braking Control) trong xe điện hoặc xe hybrid nhằm tận dụng chuyển động năng thành điện năng để nạp vào pin. Hệ thống bao gồm nhiều cảm biến để đo đạc tình trạng xe và điều chỉnh phanh tái sinh.
 
-## II. Nguyên lý hoạt động
-### 1. Chuyển động năng thành điện năng
-- Khi xe đang di chuyển, động cơ điện sử dụng điện năng từ pin để tạo ra mô-men xoắn, giúp xe tăng tốc. Tuy nhiên, khi người lái nhả bàn đạp ga hoặc nhấn phanh, ECU (Electronic Control Unit) sẽ kích hoạt chế độ phanh tái sinh.
-- Ở chế độ này, động cơ điện thay vì tiêu thụ điện năng sẽ hoạt động như một máy phát điện. Lúc này, động cơ sẽ chuyển đổi động năng của xe (năng lượng do xe đang di chuyển) thành điện năng, và nạp lại vào pin để lưu trữ.
+---
+## II. Chức năng quản lý phanh tái sinh
 
-**Tiến hành thực hiện:**
-- Tính giá trị của 2 cảm biến tốc độ và tải trọng.
-- Sau khi có được m(kg) và v(km/h), tính động năng của xe
-- Chuyển động năng sang điện năng nạp vào pin. 
+### 1. Thu hồi năng lượng
 
-### 2. Kích hoạt phanh tái sinh
-Phanh tái sinh thường được kích hoạt trong hai trường hợp chính:
-- Khi người lái nhả bàn đạp ga: Khi không còn tín hiệu đầu vào từ bàn đạp ga, hệ thống sẽ kích hoạt phanh tái sinh để thu hồi năng lượng.
-- Khi người lái nhấn phanh: Khi phanh được nhấn, ECU có thể kích hoạt phanh tái sinh đồng thời với phanh cơ khí để giảm hao mòn và tăng hiệu quả.
+- Tận dụng chuyển động năng khi phanh hoặc nhả ga.  
+- Biến chuyển động năng thành điện năng để nạp vào pin.  
+- Cải thiện hiệu suất sử dụng năng lượng, tăng quãng đường di chuyển.  
 
-**Cảm biến bàn đạp ga (SimulateAcceleratorPedalSignal)**:
-- 1: Bàn đạp ga không còn được nhấn -> ECU sẽ kích hoạt phanh tái sinh, vì xe không còn nhận đầu vào tăng tốc từ bàn đạp ga nữa.
+### 2. Giảm hao mòn
 
-- 0: Bàn đạp ga đang được nhấn -> hệ thống sẽ không kích hoạt phanh tái sinh, vì xe đang còn tăng tốc, và không có lý do để thu hồi năng lượng.
-  
-**Cảm biến phanh (SimulateBrakePedalSignal)**:
-- 1: Bàn đạp phanh đã được nhấn -> hệ thống có kích hoạt phanh tái sinh để giảm tốc độ và thu hồi năng lượng từ động năng của xe.
+- Hạn chế sử dụng phanh truyền thống, giảm hao mòn phanh.  
 
-- 0: Đạp phanh không được nhấn -> hệ thống không kích hoạt phanh tái sinh, vì không có nhu cầu giảm tốc hoặc thu hồi năng lượng.
+---
+
+## III. Nguyên lý hoạt động
+
+### 1. Cảm biến tốc độ
+
+- Đọc giá trị tốc độ hiện tại của xe.  
+- Tính toán:  
+  - Lực phanh tái sinh (Đơn vị: N).  
+  - Công suất tái sinh (Đơn vị: W).  
+  - Năng lượng tái sinh (Đơn vị: Wh).  
+- Kiểm tra bàn đạp ga nhả hoặc phanh được nhấn, và tốc độ có đủ điều kiện.  
+
+### 2. Cảm biến trạng thái pin
+
+- Đo trạng thái sạc của pin (SOC).  
+- Kiểm tra nhiệt độ pin.  
+- Ngăn chặn tái nạp khi nhiệt độ pin quá cao.  
+- Tính phần trăm pin được nạp từ năng lượng tái sinh.  
+
+### 3. Cảm biến độ nghiêng
+
+- Đo góc nghiêng xe (Đơn vị: °).  
+- Xác định xe đang lên dốc, xuống dốc hoặc trên mặt phẳng.  
+- Điều chỉnh lực phanh tái sinh dựa vào góc nghiêng.  
+
+### 4. Cảm biến tải trọng
+
+- Đo khối lượng xe hiện tại.  
+- Điều chỉnh lực phanh tái sinh dựa vào tải trọng xe.  
+
+---
+
+## IV. Các tầng chính trong dự án 
+Hệ thống quản lý phanh tái sinh (Regenerative Braking Control) được xây dựng dựa trên ba tầng chính của kiến trúc AUTOSAR: Software Component (SWC), Runtime Environment (RTE) và Basic Software (BSW). Dưới đây là mô tả chi tiết về từng tầng trong dự án :
+
+### 1. Software Component (SWC)
+
+
+
+### 1. `RegenBrakeControl_Init`
+
+- Khởi tạo các cảm biến: tốc độ, trạng thái pin, độ nghiêng, tải trọng.  
+- Kiểm tra trạng thái khởi tạo và báo lỗi nếu thất bại.  
+
+### 2. `RegenBrakeControl_Update`
+
+- Đọc dữ liệu từ các cảm biến.  
+- Tính toán:  
+  - Lực phanh tái sinh.  
+  - Công suất tái sinh.  
+  - Năng lượng tái sinh.  
+  - Phần trăm pin được nạp.  
+- Kiểm tra điều kiện hoạt động phanh tái sinh.  
+- Điều chỉnh lực phanh theo:  
+  - Góc nghiêng.  
+  - Tải trọng.  
+
+---
+
+## V. Kết luận
+
+Hệ thống quản lý phanh tái sinh không chỉ cải thiện hiệu suất năng lượng mà còn giảm hao mòn phanh, tăng tuổi thọ của xe. Đây là một giải pháp bền vững, hỗ trợ phát triển các phương tiện giao thông thân thiện với môi trường.
