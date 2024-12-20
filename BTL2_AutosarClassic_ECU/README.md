@@ -163,6 +163,8 @@ Các chức năng chính trong từng loại cảm biến:
    - `IoHwAb_LoadAccess_Init`: Khởi tạo cảm biến tải trọng, cấu hình tải trọng tối đa.
   
    - `IoHwAb_LoadAccess_Read`: Đọc và trả về giá trị tải trọng.
+ 
+---
 
 ## V. Kết luận
 
