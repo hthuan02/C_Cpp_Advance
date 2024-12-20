@@ -114,7 +114,7 @@ Giới thiệu về vai trò của tầng RTE trong hệ thống phanh tái sinh
  
    - `Rte_Read_RpLoadAccess_Load`: Đọc tải trọng.
  
-  ### 3. Bassic Software (BSW)
+### 3. Bassic Software (BSW)
 Basic Software (BSW) là tầng thấp nhất của kiến trúc AUTOSAR, đóng vai trò nền tảng để hỗ trợ phần mềm ứng dụng (SWC) hoạt động trên phần cứng. BSW cung cấp các dịch vụ cơ bản như quản lý phần cứng, giao tiếp, chẩn đoán, và các dịch vụ hệ thống.
 
 Cấu trúc chính của BSW:
