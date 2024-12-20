@@ -1607,9 +1607,7 @@ int main(int argc, char const *argv[])
 
 - Object không thể truy cập tới.
 
-- Khắc phục việc truyền 1 chuỗi vào object, sẽ không kiểm tra được cái chuỗi này có hợp lệ hay không 
-
-VD:
+_VD: Khắc phục việc truyền 1 chuỗi vào object, sẽ không kiểm tra được cái chuỗi này có hợp lệ hay không._ 
 
 ```cpp
 #include <iostream>
@@ -1643,8 +1641,6 @@ int main(int argc, char const *argv[])
 ```
 
 ->> Chuỗi `Ten` truyền vào ở object `sv1` không hợp lệ.
-
-->> Những method trong phạm vi public có thể thêm điều kiện kiểm tra chuỗi.
 
 ### Lưu ý:
 
