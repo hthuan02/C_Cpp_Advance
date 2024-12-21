@@ -1,4 +1,4 @@
-## ( Autosar Classic: Project 2 )
+## (Autosar Classic: Project 2)
 # ECU: Quản lý phanh tái sinh (Regenerative Braking Control)
 
 ---
