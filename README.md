@@ -2110,25 +2110,178 @@ class SinhVien : public DoiTuong, protected HocSinh, private SinhVien{
  
 </details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
 </details>
 
     
+<details>
+  <summary><h3>Bài 15: Virtual Function</h3></summary>
+  
+## I. Virtual Function & Override
+
+### 1. Hàm ảo (Virtual Function)
+
+> Hàm ảo là một hàm (method) trong class cha được khai báo với từ khóa `virtual`.
+
+**Sự khác nhau: Tính đa hình & Tính kế thừa**
+
+- Tính kế thừa là method, property đang thuộc class nào, thì object gọi ra method trong class đó.
+
+- Tính đa hình (run-time) thì dựa vào đối tượng đang trỏ đến.
+
+(Vì trong thời điểm chạy, object mới xác định gọi method của class nào). 
+
+#### method bình thường -> ghi đè -> tính kế thừa
+#### method ảo (virtual) -> ghi đè -> tính đa hình (run-time)
+
+### 2. Ghi đè lên hàm ảo (Override)
+
+- Override tính kế thừa: dựa vào object của class . (Ghi đè trên method thường).
+
+- Override tính đa hình: dựa vào con trỏ đang trỏ đến object. (Ghi đè trên method của hàm ảo).
+
+_VD1:_
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class DoiTuong{
+        string ten;
+        int id;
+
+    public:
+        DoiTuong(){  
+            static int ID = 1;
+            id = ID;
+            ID++;
+        }
+
+        void setName(string _ten){
+            // check chuỗi nhập vào
+            ten = _ten;
+        }
+
+        virtual void display(){
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+        }
+};
+
+class SinhVien : public DoiTuong{
+    protected:
+        string chuyenNganh;
+
+    public:
+        void setChuyenNganh(string _nganh){
+            chuyenNganh = _nganh;
+        }
+
+        void display() overrride { // override
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+            cout << "chuyen nganh: " << chuyenNganh << endl; // Ghi đè (Override)
+        }
+};
+
+int main(int argc, char const *argv[])
+{
+    SinhVien sv1;
+    sv1.setName("Trung");
+    sv1.setChuyenNganh("TDH");
+    // sv1.display();
+
+    cout << endl;
+
+    // Tạo 1 object(1 ptr *dt1) thuộc class DoiTuong
+    DoiTuong *dt1 = &sv1; 
+    dt1->display(); // In ra method class SinhVien
+    return 0;
+}
+```
+
+- Mặc dù object `*dt1` trỏ đến địa chỉ `sv1` của `class SinhVien`. Nhưng vẫn in ra method `display` của `class DoiTuong`.
+
+- Để khắc phục, in ra đúng method `display` mà object đã trỏ đến thì dùng tính đa hình (run-time).
+    
+    - Thêm từ khóa `virtual` ở method của class cha.
+
+    ```cpp
+        virtual void display(){
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+        }    
+    
+    ```
+
+    - Thêm từ khóa `override` ngay sau method của class con để ghi đè.
+    
+    ```cpp
+        void display() overrride { // override
+            cout << "ten: " << ten << endl;
+            cout << "id: " << id << endl;
+            cout << "chuyen nganh: " << chuyenNganh << endl; // Ghi đè (Override)
+        }
+    ```
+
+### II. Pure Virtual Function
+
+> Hàm ảo thuần túy là hàm ảo (virtual) nhưng không có nội dung nào.
+
+```cpp
+    // Pure virtual
+    virtual void display() = 0; // phải gán =0, tránh warning
+```
+
+#### Chú ý quan trọng:
+
+- Class có ít nhất 1 hàm ảo thuần túy (pure virtual function) bên trong thì được gọi là **class trừu tượng**.
+
+```c
+// class trừu tượng
+class DoiTuong {
+    public:
+        // Pure virtual
+        virtual void display() = 0;
+};
+```
+
+- Class trừu tượng, không thể tạo object theo kiểu bình thường được. 
+
+_(Vì object sẽ truy cập đến method và property trong class, mà hàm ảo thuần túy thì không biết rõ nội dung bên trong nó là gì.)_
+
+```cpp
+int main(int argc, char const *argv[]) {
+    DoiTuong dt3; // ERROR!!!
+}
+```
+
+- Để object truy cập được thì sử dụng con trỏ.
+
+_(Vì con trỏ sẽ trỏ đến 1 object khác và object đó sẽ có nội dung đầy đủ chứ không phải là hàm ảo thuần túy.)_
+
+```cpp
+
+int main(int argc, char const *argv[])
+{
+    // Tạo 1 object: Là 1 ptr thuộc class DoiTuong, trỏ đến địa chỉ class SinhVien
+    DoiTuong *dt1 = &sv1; 
+    dt1->display();
+
+    dt1 = &hs1;
+    dt1->display();
+
+    dt1 = &gv1;
+    dt1->display();
+    
+    // DoiTuong dt3; // ERROR!!!
+    return 0;    
+}
+```
 
 
 
+</details>
 
 
 
