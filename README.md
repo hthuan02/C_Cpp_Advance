@@ -1593,10 +1593,21 @@ int main(int argc, char const *argv[])
 <details>
   <summary><h3>Bài 14: OOP</h3></summary>
 
+#### Phạm vi truy cập:
+
+- **public**: method, property bên trong và object bên ngoài có thể truy cập.
+
+- **protected**:  
+    - Object bên ngoài không thể truy cập method, property (giống private).
+    - Class con kế thừa có thể truy cập(trong nội bộ class concon).
+
+- **private**: 
+    - Class con kế thừa không thể truy cập (chỉ có phạm vi trong nội bộ class chacha: method, property trong nội bộ class mới truy cập được)
+
 <details>
   <summary><h3>Part 1: Encapsulation - Tính đóng gói</h3></summary>
   
-# I. Tính đóng gói (Encapsulation)
+# I. Tính đóng gói
 
 - Đóng gói Là ẩn đi các property "mật" khỏi người dùng.
 
@@ -1734,6 +1745,8 @@ int main(int argc, char const *argv[])
 <details>
   <summary><h3>Part 2: Abstraction - Tính trừu tượng</h3></summary>
 
+# II. Tính trừu tượng
+
 Static đi với 1 hàm, thì giới hạn trong nội bộ 1 file. Những file bên ngoài không thể gọi ra được kể cả dùng `Extern`. Gọi là quá trình tạo ra kết quả (VD: Tính delta pt bậc 2)
 
 - Tính trừu tượng là ẩn đi quá trình xử lý logic, quá trình tính toán, thuật toán (**method** thuật toán xử lý để tạo ra kết quả) -> private .
@@ -1786,17 +1799,6 @@ int main()
 
 <details>
   <summary><h3>Part 3: Inheritance - Tính kế thừa</h3></summary>
-
-#### Phạm vi truy cập:
-
-- **public**: method, property bên trong và object bên ngoài có thể truy cập.
-
-- **protected**:  
-    - Object bên ngoài không thể truy cập method, property (giống private).
-    - Class con kế thừa có thể truy cập(trong nội bộ class concon).
-
-- **private**: 
-    - Class con kế thừa không thể truy cập (chỉ có phạm vi trong nội bộ class chacha: method, property trong nội bộ class mới truy cập được)
 
 # III. Tính kế thừa (Inheritance)
 
