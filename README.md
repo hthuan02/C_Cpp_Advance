@@ -399,7 +399,7 @@ _VD2: Static biến cục bộ_
 
 ## 4. Register
 
-![](https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai4_Extern_Static_Volatile_Register/register.png)
+![](https://github.com/hthuan02/C_Cpp_Advance/blob/main/C_Advance/Bai4_Extern_Static_Volatile_Register/img/register.png)
 
 Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 
@@ -412,11 +412,11 @@ Khi thực thi 1 chương trình sẽ trải qua 4 giai đoạn:
 **(4):** Lấy giá trị trong thanh ghi trả về biến trong RAM, kết quả = 6.
 
 
-**Ứng dụng của biến register:** (ít ứng dụng)
+**Ứng dụng của biến register:**
 
-    - Khai báo biến register, thì chương trình chỉ thực hiện tính toán và lưu giá trị trên thanh ghi( bị lượt bỏ 2 bước đầu-cuối: Lưu trữ trên RAM và trả kqua từ thanh ghi lên RAM). Giúp rút ngắn thời gian chạy và tăng hiệu suất làm việc của chương trình.
+- Khai báo biến register, thì chương trình chỉ thực hiện tính toán và lưu giá trị trên thanh ghi( bị lượt bỏ 2 bước đầu-cuối: Lưu trữ trên RAM và trả kqua từ thanh ghi lên RAM). Giúp rút ngắn thời gian chạy và tăng hiệu suất làm việc của chương trình.
      
-    - Chỉ sử dụng cho biến cục bộ.
+- Chỉ sử dụng cho biến cục bộ.
 
 </details>
 
@@ -771,7 +771,7 @@ int main(int argc, char const *argv[])
 
 - Gồm có 5 phân vùng bộ nhớ, theo thứ tự từ trên xuống:
 
-    <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai8_Memory-layout/images/memorylayout.png" alt="Memory Layout" width="500"/>
+    <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/C_Advance/Bai8_Memory-layout/img/memorylayout.png" alt="Memory Layout" width="500"/>
 
 ## 1. Text segment
 
@@ -1131,7 +1131,7 @@ _VD4:_
 
 # STACK & HEAP SEGMENT
 
-<img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai8_Memory-layout/images/stack_heap.png" alt="Memory Layout" width="220"/>
+<img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/C_Advance/Bai8_Memory-layout/img/stack_heap.png" alt="Memory Layout" width="220"/>
 
 ## So sánh giống và khác nhau:
 
@@ -1200,7 +1200,7 @@ _VD2: Khởi tạo vùng nhớ quá lớn_
   ➡️➡️➡️➡️➡️
 - Liked list: Tạo 5 node
 
-    <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Bai10_Linked-List/liked_list.png" alt="Memory Layout" width="800"/>
+    <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/C_Advance/Bai10_Linked-List/liked_list.png" alt="Memory Layout" width="800"/>
 
     - Trong danh sách liên kết này có thể thêm hoặc thu hồi tùy ý các phần tử.
  
