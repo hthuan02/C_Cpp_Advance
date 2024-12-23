@@ -1344,7 +1344,8 @@ public:
     double chieuDai;  // property: thuộc tính (biến/mảng)
     double chieuRong; // property: thuộc tính
     void DienTich()
-    { // method: phương thức (hàm)
+    { 
+        // method: phương thức (hàm)
         cout << "Dien tich = " << chieuDai * chieuRong;
     }
 };
@@ -1391,12 +1392,12 @@ int main(int argc, char const *argv[])
 ```
 
 #### Lưu ý: 
-- Tương tự với struct & union, biến thì có địa chỉ. Khi báo 1 object thì Complier sẽ cấp địa chỉ để lưu những thành phần bên trong nó 
+- Tương tự với struct & union, biến thì có địa chỉ. Khi khai báo 1 object thì Complier sẽ cấp địa chỉ để lưu những thành phần bên trong nó 
 
 ```cpp
 int main(int argc, char const *argv[])
 {
-    HinhChuNhat.hcn; // object
+    HinhChuNhat.hcn; // object // 0xc0
     hcn.chieuDai = 10;
     hcn.chieuRong = 20;
     hcn.DienTich();
@@ -1423,7 +1424,7 @@ public:
 >
 > Được khai báo trong 3 phạm vi (public, private, protected).
 >
-> Tự động khởi chạy khi khai báo 1 object: Có 4 cách.
+> **Tự động khởi chạy** khi khai báo 1 object: Có 4 cách khai báo constructor.
 
 - Cách 1: Truy cập vào property từ bên ngoài.
 
@@ -1480,19 +1481,20 @@ int main(int argc, char const *argv[])
 ```
 ### 2.3 Destructor
 
->Cùng là method có tên trùng với tên Class, nhưng có thêm dấu `~` ở trước.
+> Cùng là method có tên trùng với tên Class, nhưng có thêm dấu `~` ở trước.
 >
 > Có thể nằm ở bất kỳ phạm vi nào (public, private, protected).
 >
 > Tự động khởi chạy khi tạo ra 1 object.
 
-- Chạy constructor trước, destructor thực hiện cuối sau khi thực hiện các thao tác khác xong hết.
+- Chạy Constructor trước, Destructor thực hiện cuối sau khi thực hiện các thao tác khác xong hết.
 
 - Thu hồi lại object.
 
-**Ứng dụng**
+**Ứng dụng**:
 
-- Cấp phát động cho 1 con trỏ 
+- Cấp phát động cho 1 con trỏ.
+
 - Khi sử dụng xong con trỏ, thay vì gán NULL. Mình có thể tự động thu hồi vùng nhớ bằng hàm Destructor.
 
 _VD: Cách thức hoạt động của Constructor vs Destructor_
@@ -1520,7 +1522,7 @@ public:
     /* Static
      * - Địa chỉ của biến static sẽ tồn tại xuyên suốt chương trình.
      * - Để sử dụng thì phải cấp phát địa chỉ thông qua truy cập từ class.
-     * - Những object khác vùng địa chỉ sẽ được sử dụng chung biến var.
+     * - Tất cả object khác vùng địa chỉ sẽ được sử dụng chung biến var.
      */
     static int var; // property // 0xa0 - 0xa3 (chung cho cả 2object)
 };
@@ -1542,7 +1544,7 @@ int main(int argc, char const *argv[])
 
 - Giống với static property, đều thuộc chung class -> Không cần khai báo object để gọi nó ra. Gọi trực tiếp bằng tên của Class.
 
-- Method Static chỉ gọi ra được property đi kèm với Static, không thể gọi property khác.
+- Static method chỉ gọi ra được property đi kèm với Static, không thể gọi property khác.
 
 
 ```cpp
@@ -1583,7 +1585,8 @@ int main(int argc, char const *argv[])
 
 - **static property**: Truy cập vào bên trong  Class, để cấp phát địa chỉ tồn tại xuyên suốt chương trình. Tất cả object khai báo ra sẽ dùng chung địa chỉ này.
 
-- **static method**: Chỉ làm việc được với property static.
+- **static method**: Chỉ làm việc được với static property.
+
 
 </details>
 
@@ -1592,12 +1595,12 @@ int main(int argc, char const *argv[])
 
 <details>
   <summary><h3>Part 1: Encapsulation - Tính đóng gói</h3></summary>
-
-# I. Tính đóng gói
+  
+# I. Tính đóng gói (Encapsulation)
 
 - Đóng gói Là ẩn đi các property "mật" khỏi người dùng.
 
-- Là khai báo property, method trong phạm vi private. Các object bên ngoài không thể gọi ra được.
+- Là khai báo property trong phạm vi private. Các object bên ngoài không thể gọi ra được.
 
 - Khi muốn đọc hoặc ghi có property này, thì truy cập gián tiếp thông qua method phạm vi public.
 
@@ -1607,7 +1610,7 @@ int main(int argc, char const *argv[])
 
 - Object không thể truy cập tới.
 
-_VD: Khắc phục việc truyền 1 chuỗi vào object, sẽ không kiểm tra được cái chuỗi này có hợp lệ hay không._ 
+_VD: Khắc phục việc truyền 1 chuỗi vào object, không kiểm tra được cái chuỗi này có hợp lệ hay không. _
 
 ```cpp
 #include <iostream>
@@ -1644,7 +1647,7 @@ int main(int argc, char const *argv[])
 
 ### Lưu ý:
 
-- Khi viết thêm method để kiểm tra chu thì không khởi tạo thông qua Constructor mà tạo method khác như: `setter method`, `getter mehod`.
+- Khi viết thêm method để kiểm tra chuỗi thì không khởi tạo thông qua Constructor mà tạo method khác như: `setter method`, `getter method`.
 
 _Khắc phục VD1:_
 
@@ -1668,7 +1671,7 @@ public:
         id = ID;
 
         /* - ID truy cập vào id phạm vi private bên trong Constructor SinhVien
-         * - propety static: khi gọi object ra thì tự động khởi tạo ID cho SinhVien,
+         * - static propety: khi gọi object ra thì tự động khởi tạo ID cho SinhVien,
          * ID tự động tăng lên, tránh việc trùng lặp ID.
          */
     }
@@ -1725,6 +1728,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 ```
+
 </details>
 
 <details>
@@ -1732,12 +1736,12 @@ int main(int argc, char const *argv[])
 
 Static đi với 1 hàm, thì giới hạn trong nội bộ 1 file. Những file bên ngoài không thể gọi ra được kể cả dùng `Extern`. Gọi là quá trình tạo ra kết quả (VD: Tính delta pt bậc 2)
 
-- Tính trừu tượng là ẩn đi quá trình xử lý logic, quá trình tính toán, thuật toán (**method** thuật toán xử lý để tạo ra kết quả) -> private 
+- Tính trừu tượng là ẩn đi quá trình xử lý logic, quá trình tính toán, thuật toán (**method** thuật toán xử lý để tạo ra kết quả) -> private .
 
 _VD: Giải phương trình bậc 2_
 
 ```cpp
-class GiaiPhuongTrinh{
+class GiaiPhuongTrinh {
     private:	// a,b,c,x1,x2,delta: Tính đóng gói
         double a;
         double b;
@@ -1777,6 +1781,7 @@ int main()
   return 0;
 }
 ```
+
 </details>
 
 <details>
@@ -1788,16 +1793,16 @@ int main()
 
 - **protected**:  
     - Object bên ngoài không thể truy cập method, property (giống private).
-    - Class con kế thừa có thể truy cập.
+    - Class con kế thừa có thể truy cập(trong nội bộ class concon).
 
 - **private**: 
-    - Class con kế thừa không thể truy cập (chỉ có phạm vi trong nội bộ class: method, property trong nội bộ class mới truy cập được)
+    - Class con kế thừa không thể truy cập (chỉ có phạm vi trong nội bộ class chacha: method, property trong nội bộ class mới truy cập được)
 
-# III. Tính kế thừa
+# III. Tính kế thừa (Inheritance)
 
 > Kế thừa là khả năng sử dụng lại các property, method class khác.
 >
-> Có 3 kiểu kế thừa: public, private, protected. 
+> Có 3 kiểu kế thừa: public, protected, private. 
 >
 > Có 2 cách dùng: ghi đè (Override) hoặc sử dụng lại. 
 
@@ -1811,7 +1816,7 @@ int main()
 _VD1: (Code minh họa Complier chạy)_
 
 ```cpp
-class DoiTuong{
+class DoiTuong {
     private:
         string a;
     
@@ -1823,7 +1828,7 @@ class DoiTuong{
         int id;
 };
 
-class SinhVien  : public DoiTuong{
+class SinhVien : public DoiTuong{
     protected:
         int b;
     public:
@@ -1957,7 +1962,7 @@ int main(int argc, char const *argv[])
 
 _VD3: (Code minh họa Complier chạy)_
 
-- Vì ở phạm vi protected, khi tạo object thuộc `class SinhVien` không thể truy cập method, property được.
+Ở phạm vi protected, khi tạo object thuộc `class SinhVien` không thể truy cập method, property được.
 
 _VD3:_
 
@@ -2006,7 +2011,6 @@ class SinhVien : protected DoiTuong{
             cout << "id: " << id << endl;
         }
    
-    // phạm vi của class chuyên ngành 
     protected:
         string chuyenNganh;
 
@@ -2030,7 +2034,7 @@ _VD4:(Code minh họa Complier chạy)_
 
 - Object của `class SinhVien` không thể truy cập được các thành viên.
 
-- Nếu có class con kế thừa `class SinhVien` thì không thể sử dụng các thành viên kế thừa lại được nữa. 
+- Nếu có class con kế thừa `class SinhVien` thì không thể sử dụng các thành viên kế thừa lại được nữa. Vì các thành viên của nó phạm vi private. 
 
 _VD4:_
 
@@ -2101,13 +2105,142 @@ class SinhVien : private DoiTuong{
  
 - Class con có thể kế thừa từ nhiều class cha, phạm vi thì tương tự.
 
-_VD5:_
-
 ```cpp
 class SinhVien : public DoiTuong, protected HocSinh, private SinhVien{
 }
 ```
  
+_VD5:_
+ 
+**Cách 1: Truy cập object method trung gian qua class**
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class A {
+    public:
+        A(){ cout << "Constructor A\n"; } // tự động khởi chạy, khi khai báo object
+
+        void hienThiA(){ cout << "Day la lop A\n"; }
+};
+
+class B : public A {
+    public:
+        B(){ cout << "Constructor B\n"; }
+
+        void hienThiB(){ cout << "Day la lop B\n"; }
+};
+
+class C : public A {
+    public:
+        C(){ cout << "Constructor C\n"; }
+
+        void hienThiC(){ cout << "Day la lop C\n"; }
+};
+
+class D : public B, public C {
+    public:
+        D(){ cout << "Constructor D\n"; }
+
+        void hienThiD(){ cout << "Day la lop D\n"; }
+};
+
+int main() {
+    D d;
+
+    d.hienThiD();
+    d.hienThiB();
+    d.hienThiC();
+    // d.hienThiA(); // ERROR!!! 
+    
+    /* 
+     * - Vì method hienthiA bị lặp 2 lần.
+     * - Complier không rõ phải gọi method hienthiA ở class nào.
+     */
+
+    // Gọi method của class A trung gian qua B và C
+    d.B::hienThiA(); // Gọi hàm hienThiA từ lớp A thông qua B
+    d.C::hienThiA(); // Gọi hàm hienThiA từ lớp A thông qua C
+
+    return 0;
+}
+```
+## 5. Kế thừa ảo
+
+> Kế thừa ảo, là kiểu kế thừa có thêm từ khóa `virtual`. 
+>
+> Tránh việc xuất hiện nhiều phiên bản, nhiều method giống nhau trong class cuối cùng. Các phiên bản sẽ được gộp lại thành 1 bản sao duy nhất (đây là diamond problem).
+
+**Diamond Problem**: 
+
+```cpp
+      A
+     / \
+    B   C
+     \ /
+      D
+```
+ 
+Ta có, 4 class: Class A, B, C, D
+
+- Class B,C: cùng kể thừa class A
+
+- Class D: Đa kế thừa của class B,C
+
+-->> Nếu không dùng kế thừa ảo, class D sẽ nhận 2 bản sao của class A (từ class B,C). Dẫn đến complier không biết truy cập thành viên nào.
+
+_VD5:_
+
+**Cách 2: Sử dụng kế thừa ảo (virtual)**
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class A {
+    public:
+        A(){ cout << "Constructor A\n"; }
+
+        void hienThiA(){ cout << "Day la lop A\n"; }
+};
+
+class B : virtual public A {
+    public:
+        B(){ cout << "Constructor B\n"; }
+
+        void hienThiB(){ cout << "Day la lop B\n"; }
+};
+
+class C : virtual public A {
+    public:
+        C(){ cout << "Constructor C\n"; }
+
+        void hienThiC(){ cout << "Day la lop C\n"; }
+};
+
+class D : public B, public C {
+    public:
+        D(){ cout << "Constructor D\n"; }
+
+        void hienThiD(){ cout << "Day la lop D\n"; }
+};
+
+int main() {
+    D d;
+
+    d.hienThiD();
+    d.hienThiB();
+    d.hienThiC();
+
+    // 2 phiên bản hienthiA đã được gộp lại, class D gọi ra chỉ 1 bản sao duy nhất
+    d.hienThiA();
+
+    return 0;
+}
+```
 </details>
 
 </details>
