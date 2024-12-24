@@ -2254,6 +2254,60 @@ int main() {
 
     <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Cpp_Advance/Bai14_OOP/Polymorphism/polymorphism_runtime.png" alt="Memory Layout" width="500"/>
 
+## I. Đa hình Run-time (Bài 15)
+
+## II. Đa hình Compile-time
+
+### 1. Function Overloading (Nạp chồng hàm)
+
+> Xảy ra khi những hàm trong cùng 1 class hoặc hàm toàn cục có cùng tên hàm. Nhưng khác nhau về số lượng tham số truyền vào 
+> 
+> Khi Complier chạy sẽ xác định gọi hàm nào, dựa trên tham số truyền vào. 
+
+_VD1:_
+
+_(Trong C++ cho phép viết nhiều hàm cùng tên, tham số truyền vào khác nhau/C không làm được)_
+
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// 1 method có thể có nhiều input parameter, return type khác nhau
+class TinhToan{
+    private:
+        int a;
+        int b;
+    public:
+        int tong(int a, int b){
+            return a+b;
+        }
+        double tong(int a, int b, double c){
+            return (double)a+b+c;
+        }
+        double tong(int a, double b){
+            return (double)a+b;
+        }
+};
+
+int main(int argc, char const *argv[]){
+
+    TinhToan th1, th2, th3;
+    cout << th1.tong(2, 5) << endl;     // 7
+    cout << th2.tong(2, 5.6) << endl;   // 7.6
+    cout << th3.tong(2.5,6) << endl;    // 8
+    cout << th1.tong(1,2, 4.5) << endl; // 7.5
+
+    /*
+     * preproccessor -> complier(xảy ra ở đây) -> assembler -> linker
+     */
+
+    return 0;
+}
+```
+
+### 2. Operator Overloading () 
   
 </details>
 
