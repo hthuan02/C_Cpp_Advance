@@ -2307,7 +2307,76 @@ int main(int argc, char const *argv[]){
 }
 ```
 
-### 2. Operator Overloading () 
+### 2. Operator Overloading (Nạp chồng toán tử)
+
+_Trong C/C++ không hỗ trợ việc tinh toán đối với kiểu dự liệu tự định nghĩa (như class)._
+
+_VD2:_
+
+```cpp
+{
+    PhanSo p1(1,2); // p1 = 1/2
+    PhanSo p2(3,4); // p2 = 3/4
+
+    PhanSo p3 = p1 + p2;
+    return 0;
+}
+```
+- 2 object của class **KHÔNG THỂ** tính toán, vì `Phanso` là kiểu dữ liệu tự định nghĩa.
+
+->> Khắc phục bằng cách định nghĩa lại toán tử cộng `+`.
+
+> Nạp chồng toán tử là việc định nghĩa lại các toán tử `+`, `-`, `*`, `/`,... 
+
+> Cú pháp tổng quát định nghĩa toán tử:
+
+```cpp
+    <return_type> operator symbol (parameters) {
+        // logic...
+    }
+```
+
+_VD3:_
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class PhanSo {
+    private:
+        int tuso;
+        int mauso;
+
+    public: 
+        // Truyền tham số ban đầu, tránh mẫu số = 0
+        PhanSo(int tuso = 0, int mauso = 1): tuso(tuso), mauso(mauso){}
+
+        PhanSo operator + (PhanSo other){
+            PhanSo ketqua;
+            // Object trong nội bộ class có thể gọi property private
+            ketqua.tuso = (PhanSo::tuso * other.mauso) + (PhanSo::mauso * other.tuso);  // Cách 1
+            ketqua.mauso = PhanSo::mauso * other.mauso;
+
+            return ketqua;
+        }
+
+        void display(){
+            cout << "Tử số: " << tuso << " , Mấu số: " << mauso << endl;
+        }
+};
+
+int main(int argc, char const *argv[])
+{
+    PhanSo p1(1,2); // p1 = 1/2
+    PhanSo p2(3,4); // p2 = 3/4
+
+    PhanSo p3 = p1 + p2;
+    p3.display();
+    return 0;
+}
+
+```
   
 </details>
 
