@@ -2262,8 +2262,16 @@ int main() {
     
 <details>
   <summary><h3>Bài 15: Virtual Function</h3></summary>
+
+## I. Đa hình Run-time
+
+- Đa hình run-time xảy ra khi việc quyết định method nào (phiên bản của class cha hay của class con) sẽ được gọi ra ngay tại thời điểm chạy chương trình.
+
+- Đa hình runtiime này thực hiện bằng cách sử dụng hàm ảo (virtual function) ở class cha và ghi đè lên hàm ảo ở class con.
+
+- Ưu điểm là giúp chương trình linh hoạt hơn, cho phép việc mở rộng chức năng mà không cần sửa đổi mã nguồn hiện tại.
   
-## I. Virtual Function & Override
+## II. Virtual Function & Override
 
 ### 1. Hàm ảo (Virtual Function)
 
@@ -2371,7 +2379,7 @@ int main(int argc, char const *argv[])
         }
     ```
 
-### II. Pure Virtual Function
+## III. Pure Virtual Function
 
 > Hàm ảo thuần túy là hàm ảo (virtual) nhưng không có nội dung nào.
 
