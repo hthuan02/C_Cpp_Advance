@@ -1595,25 +1595,23 @@ int main(int argc, char const *argv[])
 
 #### Phạm vi truy cập:
 
-- **public**: method, property bên trong và object bên ngoài có thể truy cập.
-
-- **protected**:  
-    - Object bên ngoài không thể truy cập method, property (giống private).
-    - Class con kế thừa có thể truy cập(trong nội bộ class concon).
-
-- **private**: 
-    - Class con kế thừa không thể truy cập (chỉ có phạm vi trong nội bộ class chacha: method, property trong nội bộ class mới truy cập được)
+> **Public**: method, property bên trong và object bên ngoài có thể truy cập.
+>
+> **Protected**:  
+>    - Object bên ngoài không thể truy cập method, property (giống private).
+>    - Class con kế thừa có thể truy cập(trong nội bộ class concon).
+>
+> **Private**: 
+>    - Class con kế thừa không thể truy cập (chỉ có phạm vi trong nội bộ class chacha: method, property trong nội bộ class mới truy cập được)
 
 <details>
   <summary><h3>Part 1: Encapsulation - Tính đóng gói</h3></summary>
   
-# I. Tính đóng gói
-
-- Đóng gói Là ẩn đi các property "mật" khỏi người dùng.
-
-- Là khai báo property trong phạm vi private. Các object bên ngoài không thể gọi ra được.
-
-- Khi muốn đọc hoặc ghi có property này, thì truy cập gián tiếp thông qua method phạm vi public.
+> Đóng gói Là ẩn đi các property "mật" khỏi người dùng.
+>
+> Là khai báo property trong phạm vi private. Các object bên ngoài không thể gọi ra được.
+>
+> Khi muốn đọc hoặc ghi có property này, thì truy cập gián tiếp thông qua method phạm vi public.
 
 ## Phạm vi private:
 
@@ -1621,7 +1619,7 @@ int main(int argc, char const *argv[])
 
 - Object không thể truy cập tới.
 
-_VD: Khắc phục việc truyền 1 chuỗi vào object, không kiểm tra được cái chuỗi này có hợp lệ hay không. _
+_VD: Khắc phục việc truyền 1 chuỗi vào object, không kiểm tra được cái chuỗi này có hợp lệ hay không._
 
 ```cpp
 #include <iostream>
@@ -1745,11 +1743,9 @@ int main(int argc, char const *argv[])
 <details>
   <summary><h3>Part 2: Abstraction - Tính trừu tượng</h3></summary>
 
-# II. Tính trừu tượng
+(Static đi với 1 hàm, thì giới hạn trong nội bộ 1 file. Những file bên ngoài không thể gọi ra được kể cả dùng `Extern`. Gọi là quá trình tạo ra kết quả, VD: Tính delta pt bậc 2).
 
-Static đi với 1 hàm, thì giới hạn trong nội bộ 1 file. Những file bên ngoài không thể gọi ra được kể cả dùng `Extern`. Gọi là quá trình tạo ra kết quả (VD: Tính delta pt bậc 2)
-
-- Tính trừu tượng là ẩn đi quá trình xử lý logic, quá trình tính toán, thuật toán (**method** thuật toán xử lý để tạo ra kết quả) -> private .
+> Tính trừu tượng là ẩn đi quá trình xử lý logic, quá trình tính toán, thuật toán (**method** thuật toán xử lý để tạo ra kết quả) -> private .
 
 _VD: Giải phương trình bậc 2_
 
@@ -1799,8 +1795,6 @@ int main()
 
 <details>
   <summary><h3>Part 3: Inheritance - Tính kế thừa</h3></summary>
-
-# III. Tính kế thừa (Inheritance)
 
 > Kế thừa là khả năng sử dụng lại các property, method class khác.
 >
@@ -2243,6 +2237,24 @@ int main() {
     return 0;
 }
 ```
+</details>
+
+<details>
+  <summary><h3>Part 4: Polymorphism - Tính đa hình</h3></summary>
+
+> Tính đa hình là có "nhiều dạng" và nó xảy ra khi có nhiều class có liên quan với nhau thông qua tính kế thừa.
+>
+> Tính đa hình chia thành 2 loại:
+
+- Đa hình tại thời điểm biên dịch (**Compile-time Polymorphism**).
+
+- Đa hình tại thời điểm chạy (**Run-time Polymorphism**).
+    
+    - Liên quan đến hàm ảo (**Virtual Function**) ->> Liên quan đến tính kế thừa ảo.
+
+    <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Cpp_Advance/Bai14_OOP/Polymorphism/polymorphism_runtime.png" alt="Memory Layout" width="500"/>
+
+  
 </details>
 
 </details>
