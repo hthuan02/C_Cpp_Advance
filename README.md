@@ -2252,7 +2252,7 @@ int main() {
     
     - Liên quan đến ghi đè và hàm ảo (**Virtual Function**) ->> Liên quan đến tính kế thừa ảo.
 
-    <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Cpp_Advance/Bai14_OOP/Polymorphism/polymorphism_runtime.png" alt="Memory Layout" width="500"/>
+    <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Cpp_Advance/Bai14_OOP/Polymorphism/polymorphism_runtime.png" alt="Memory Layout" width="750"/>
 
 ## I. Đa hình Run-time (Bài 15)
 
