@@ -2309,7 +2309,7 @@ int main(int argc, char const *argv[]){
 
 ### 2. Operator Overloading (Nạp chồng toán tử)
 
-_Trong C/C++ không hỗ trợ việc tinh toán đối với kiểu dự liệu tự định nghĩa (như class)._
+_(Trong C/C++ không hỗ trợ việc tinh toán đối với kiểu dự liệu tự định nghĩa (như class).)_
 
 _VD2:_
 
