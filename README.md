@@ -2377,6 +2377,37 @@ int main(int argc, char const *argv[])
 }
 
 ```
+
+Có 2 cách gọi ra tử số và mẫu số khi nạp chồng toán tử
+
+- **Cách 1**:
+
+```cpp
+ketqua.tuso = (PhanSo::tuso * other.mauso) + (PhanSo::mauso * other.tuso);
+ketqua.mauso = PhanSo::mauso * other.mauso;
+```
+hoặc
+
+```cpp
+ketqua.tuso = (tuso * other.mauso) + (mauso * other.tuso); 
+ketqua.mauso = mauso * other.mauso;
+```
+
+- **Cách 2**: Dùng con trỏ `this`
+
+```cpp
+ketqua.tuso = this->tuso * other.mauso + this->mauso * other.tuso;
+ketqua.mauso = this->mauso * other.mauso;
+```
+
+Là hằng con trỏ: không thể thay đổi địa chỉ, có thể thay đổi giá trị
+
+- Đây là con trỏ có sẵn trong member của class.
+
+- Tự động truyền vào khi 1 method trong class được gọi ra `p1 +` (Trỏ đến object hiện tại đang gọi `object p1`).
+
+- Chỉ tồn tại trong method của class đang khai báo. 
+
   
 </details>
 
