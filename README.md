@@ -2250,7 +2250,7 @@ int main() {
 
 - Đa hình tại thời điểm chạy (**Run-time Polymorphism**).
     
-    - Liên quan đến hàm ảo (**Virtual Function**) ->> Liên quan đến tính kế thừa ảo.
+    - Liên quan đến ghi đè và hàm ảo (**Virtual Function**) ->> Liên quan đến tính kế thừa ảo.
 
     <img src="https://github.com/hthuan02/C_Cpp_Advance/blob/main/Cpp_Advance/Bai14_OOP/Polymorphism/polymorphism_runtime.png" alt="Memory Layout" width="500"/>
 
