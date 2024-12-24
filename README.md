@@ -1301,62 +1301,10 @@ _VD:_
 
 </details>
 
-<details>
-  <summary><h3>Bài 13: Thư viện Pthread</h3></summary>
-  
-(Thư viện giả lập RTOS -> chạy trên C )
-## 1. Tạo mới một thread
-
-```c
-pthread_create(pthread_t *th, const pthread_attr_t *attr, void *(*func)(void*), void *arg);
-```
-- Tham số 1: Là con trỏ, trỏ đến biến kiểu `pthread_t` ->> Lưu id thread thứ nhất mới tạo ra, địa chỉ biến t1.
-
-- Tham số 2: Là con trỏ thuộc kiểu `pthread_attr_t`, con trỏ `*attr` trỏ đến cấu trúc pthread có thuộc tính như:
-
-    - Lặp lịch: Phân chia thời gian chạy các task như thế nào.
-    
-    - stack, độ ưu tiên.
-
-->> Chưa sử dụng để NULL: Cấu hình mặc định của thuộc tính thread.
-
-- Tham số 3: Là con trỏ hàm `void *(*func)(void*)`. Muốn luồng tạo ra thực thi hàm nào, tác vụ nào thì truyền vào địa chỉ của hàm đó.
-->> Truyền vào địa chỉ task 1, task 2.
-
-- Tham số 4: Là con trỏ void `void *arg`, là tham số truyền vào cho task 1, không truyền vào là NULL
-
-```c
-    pthread_create(&t1, NULL, task1, NULL);
-    pthread_create(&t2, NULL, task2, NULL);
-```
-
-## 2. Hàm chờ một thread kết thúc
-
-```c
-pthread_join(pthread_t t, void **res);
-```
-
-- Tham số 1: id của luồng muốn chờ, id của biến t1.
-
-- Tham số 2: Là con trỏ cấp 2 `**res`, lưu kết quả trả về từ thread, nếu không cần kiểm tra kết quả trả về là NULL.
-
-```c
-    pthread_join(t1, NULL);
-    pthread_join(t2, NULL);
-```
-
-</details>
-
-<details>
-  <summary><h3>Bài 14: Autosar Classic</h3></summary>
-
-
-</details>
-
 # Phần II: C++
 ---
 <details>
-  <summary><h3>Bài 15: Class</h3></summary>
+  <summary><h3>Bài 13: Class</h3></summary>
 
 ## 1. Định nghĩa
 Kiểu dữ liệu người dùng tự định nghĩa (tương tự struct & union).
@@ -1643,7 +1591,7 @@ int main(int argc, char const *argv[])
 </details>
 
 <details>
-  <summary><h3>Bài 16: OOP</h3></summary>
+  <summary><h3>Bài 14: OOP</h3></summary>
 
 #### Phạm vi truy cập:
 
@@ -2301,7 +2249,7 @@ int main() {
 
     
 <details>
-  <summary><h3>Bài 17: Virtual Function</h3></summary>
+  <summary><h3>Bài 15: Virtual Function</h3></summary>
   
 ## I. Virtual Function & Override
 
